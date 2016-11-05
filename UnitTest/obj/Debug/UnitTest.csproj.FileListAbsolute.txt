@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\AutoMapper.Net4.dll
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\MoneyCarCar.BLL.dll
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\MoneyCarCar.Models.dll
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\MoneyCarCar.BLL.pdb
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\bin\Debug\MoneyCarCar.Models.pdb
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\user\Desktop\MoneyCarCar\UnitTest\obj\Debug\UnitTest.pdb

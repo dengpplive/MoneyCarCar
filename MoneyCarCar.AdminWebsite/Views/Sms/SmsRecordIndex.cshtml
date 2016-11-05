@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "SmsRecordIndex";
+}
+<style type="text/css">
+    .search m_left {
+        float: left;
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div class="tableShow" id="mainContent" data-options="region:'center',border:0">
+        <div id="toolbar" style="padding: 5px 1px;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="clear: both;">
+                            <div class="search">
+                                发送手机号：<input type="text" id="sendMobile" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.sendMobile" />
+                                接收手机号：<input type="text" id="acceptMobile" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.acceptMobile" />
+                                记录日期：<input type="text" id="startdate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.startDate" />-
+                                <input type="text" id="enddate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.endDate" />
+                            </div>
+                        </div>
+                    </td>
+                    <td style=" text-align: center; vertical-align: middle;">
+                        <a id="btnSearch" href="javascript:void()" class="easyui-linkbutton" style="width:100px;" data-options="iconCls:'icon-search'" data-bind="click:$root.searchClick">查询</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="dg" class="easyui-datagrid" title="短信记录" data-optins="checkOnSelect:true">
+        <thead>
+            <tr bgcolor="#daeef5">
+                <th data-options="field:'SendMobile',align:'center',width:160">发送手机号</th>
+                <th data-options="field:'AcceptMobile',width:250">接收手机号</th>
+                <th data-options="field:'SendContent',width:250">发送内容</th>
+                <th data-options="field:'SendTime',width:250">发送时间</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section scripts{   
+    <script src="/Scripts/common/extend.js"></script>
+    <script src="/Scripts/common/ko.custombinding.js"></script>
+    <script src="/Scripts/common/commonViewModel.js"></script>
+
+    <script src="/Scripts/Js/js_formGetData.js"></script>
+    <script src="/Scripts/Js/js_Validate.js"></script>
+    <script src="/Scripts/Js/js_Cursor.js"></script>
+
+    <script type="text/javascript">
+        var vm={
+            d_grid:null,
+            d_Sdate:null,
+            d_Edate:null,
+            d_dlg:null,
+            model:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)),
+            init:function(){
+                try {
+                    this.d_Sdate=$("#startdate");
+                    this.d_Edate=$("#enddate");
+                    this.d_grid= $('#dg');
+                    this.d_grid.datagrid({
+                        //data: this.model.list,
+                        url:this.model.urls.search,
+                        singleSelect: true,
+                        autoRowHeight: true,
+                        rownumbers: true,
+                        //multiSort:true,
+                        remoteSort:true,//--非本地排序
+                        pagination: true,
+                        pageSize: 10,
+                        // pageList:[10,20,30,40,50],
+                        toolbar: '#mainContent',
+                        nowrap: false,
+                        fit: true,
+                        queryParams: ko.toJS(this.model.searchForm)
+                    });
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            searchClick: function () {
+                var sendMobile=$("#sendMobile").textbox("getValue");
+                var acceptMobile=$("#acceptMobile").textbox("getValue");
+
+                this.model.searchForm.sendMobile=sendMobile;
+                this.model.searchForm.acceptMobile=acceptMobile;
+
+                var sdate=this.d_Sdate.datebox("getValue");
+                var edate=this.d_Edate.datebox("getValue");
+                this.model.searchForm.startDate=sdate;
+                this.model.searchForm.endDate=edate;
+
+                vm.d_grid.datagrid('load', ko.toJS(this.model.searchForm));
+            }
+        };
+        vm.init();
+        ko.applyBindings(vm);
+    </script>
+}

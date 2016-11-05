@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "GiveVirtualMoney";
+}
+<style type="text/css">
+    .red {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100px;
+    }
+</style>
+<div class="easyui-layout" fit="true">
+    <div class="easyui-panel" region="center">
+        <form method="post" id="form1">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>赠送金额(￥)：</td>
+                                <td>
+                                    <input class="easyui-textbox red" validtype="integer" type="text" name="GiveAmount" id="GiveAmount" maxlength="9" data-options="required:true,width:50"></input>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>赠送用户:</td>
+                                <td>
+                                    <label for="rd1">
+                                        <input type="radio" name="ugroup" id="rd1" value="1" />所有用户
+                                    </label>
+                                    <label for="rd2">
+                                        <input type="radio" name="ugroup" id="rd2" value="0" checked="checked" />下列用户
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div id="selUser" class="easyui-panel" title="赠送用户" style="width:99%;height:370px;">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <div region="south" style="height: 30px; text-align: center;">
+        <a id="btnGive" class="easyui-linkbutton" data-options="iconCls:'icon-save'">赠送</a>
+    </div>
+</div>
+@section scripts{  
+    <script src="~/Scripts/Js/js_Validate.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var userList = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.user));
+            var html='';
+            for (var i = 0; i < userList.length; i++) {
+                html+= '<label><input type="checkbox" name="ubox" id="_'+i.toString()+'" value="'+userList[i].Id+'" />'+userList[i].RealName+"("+userList[i].UserName+")"+'</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+            }
+            $("#selUser").panel({
+                content:(html==''?"暂无数据":html)
+            });
+
+            //赠送虚拟本金
+            $("#btnGive").click(function () {
+                var money = $("#GiveAmount").val();
+                var isSelType = $("input[name='ugroup']:checked").val();
+                var idsArr=[];
+                $("#selUser input[name='ubox']:checked").each(function(index,row){
+                    idsArr.push($(this).val());
+                });
+                if(isSelType=="0"&& idsArr.length==0)
+                {
+                    window.parent.msgShow("提示", "请选择赠送的用户", "info");
+                }else
+                {
+                    var ids = idsArr.join(',');
+                    var isPass = $("#form1").form('validate');
+                    if (isPass) {
+                        //显示遮罩
+                        window.parent.showMask();
+                        var url = '@Url.Action("PostGiveVirtualMoney", "BusinessPop")';
+                        var json = {};
+                        json.ids = ids;
+                        json.isAllUser = isSelType;
+                        json.money =parseInt(money,10);
+                        $.post(url, json, function (data) {
+                            try {
+                                data = JSON.parse(data);
+                                window.parent.msgShow("提示", data.message, "info");
+                            } catch (e) {
+                                window.parent.msgShow("提示", e.message, "info");
+                            } finally {
+                                window.parent.hideMask();
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+}

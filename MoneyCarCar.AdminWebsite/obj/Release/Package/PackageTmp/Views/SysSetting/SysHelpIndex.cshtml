@@ -1,0 +1,308 @@
+﻿@{
+    ViewBag.Title = "SysHelpIndex";
+}
+@using MoneyCarCar.Models;
+<style type="text/css">
+    .search m_left {
+        float: left;
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+
+    .area {
+        width: 400px;
+        max-width: 350px;
+        height: 180px;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div class="tableShow" id="mainContent" data-options="region:'center',border:0">
+        <div id="toolbar" style="padding: 5px 1px;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="clear: both;">
+                            <div class="search">
+                                提问内容：<input type="text" id="askContent" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.askContent" />
+                                提问账户：<input type="text" id="askAccount" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.askAccount" />
+                                提问类型：<select id="selType" class="easyui-combobox" name="selType" style="width: 100px;">
+                                    <option value="">---类型---</option>
+                                    @{
+                                        List<SystemDictionary> data = ViewBag.HelpType as List<SystemDictionary>;
+                                        if (data != null && data.Count > 0)
+                                        {
+                                            foreach (var item in data)
+                                            {
+                                                <option value="@item.DicValue">@item.DicValue</option>
+                                            }
+                                        }
+                                    }
+                                </select>
+
+                                提问日期：<input type="text" id="startdate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.startDate" />-
+                                <input type="text" id="enddate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.endDate" />
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 150px; text-align: center; vertical-align: middle;">
+                        <a id="btnSearch" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-search'" data-bind="click:$root.searchClick">查询</a>
+                        <a id="btnAdd" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-add'" data-bind="click:$root.showDlg()">发布问题</a>
+                        @*<a id="btnPatchDel" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" data-bind="click:$root.patchDelNews">删除</a>*@
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="dg" class="easyui-datagrid" title="帮助" data-optins="checkOnSelect:true">
+        <thead>
+            <tr bgcolor="#daeef5">
+                @*<th data-options="field:'ck',width:100,checkbox:true,align:'left'"></th>*@
+                <th data-options="field:'AskContent',align:'center',width:260">提问</th>
+                <th data-options="field:'ReplyConent',align:'center',width:260">回答</th>
+                <th data-options="field:'AskAccount',width:80">提问账户</th>
+                <th data-options="field:'HelpType',align:'center',width:80,formatter:vm.showType">类型</th>
+                <th data-options="field:'AskDate',width:80,sortable:true,align:'center',formatter:dateTimeFormater">提问时间</th>
+                <th data-options="field:'Id',width:80,align:'center',formatter:vm.formatHTML">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="w_dlg" class="easyui-window" collapsible="false" minimizable="false"
+     maximizable="false" icon="icon-save" style="padding: 5px;
+        background: #fafafa;">
+    <div class="easyui-layout" fit="true">
+        <div region="center" border="false" style="padding: 10px; background: #fff; border: 1px solid #ccc;">
+            <form id="helpfm" method="post">
+                <table cellpadding="3">
+                    <tr>
+                        <td>提问账号：</td>
+                        <td>
+                            <input id="AskAccount" name="AskAccount" validtype="isEmpty" data-options="required:true" type="text" maxlength="20" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>提问分类：</td>
+                        <td>
+                            <select id="selHelpType" class="easyui-combobox" data-options="required:true" name="HelpType" style="width: 100px;">
+                                @{
+                                    if (data != null && data.Count > 0)
+                                    {
+                                        foreach (var item in data)
+                                        {
+                                            <option value="@item.DicValue">@item.DicValue</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>提问内容：</td>
+                        <td><input id="AskContent" name="AskContent" validtype="isEmpty" data-options="required:true" type="text" maxlength="500" /></td>
+                    </tr>
+                    <tr>
+                        <td>回答内容：</td>
+                        <td>
+                            <textarea id="ReplyConent" class="area" validtype="isEmpty" name="ReplyConent" maxlength="500" data-options="required:true"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>提问时间：</td>
+                        <td>
+                            <input type="text" id="AskDate" name="AskDate" validtype="isDateTime['date']" class="easyui-datebox" data-options="required:true" style="width: 100px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>回答时间：</td>
+                        <td>
+                            <input type="text" id="ReplyDate" name="ReplyDate" validtype="isDateTime['date']" class="easyui-datebox" data-options="required:true" style="width: 100px;" />
+                        </td>
+                    </tr>
+                </table>
+                <input type="hidden" id="Id" name="Id" value="-1" />
+                <input type="hidden" id="ReplyAccount" name="ReplyAccount" value="" />
+            </form>
+        </div>
+        <div region="south" border="false" style="text-align: center; height: 30px; line-height: 30px;overflow:hidden;">
+            <a id="btn_Save" class="easyui-linkbutton" icon="icon-ok" href="javascript:vm.addEdit();">发布</a>
+            <a id="btn_Cancel" class="easyui-linkbutton" icon="icon-cancel" href="javascript:vm.closeDlg()">取消</a>
+        </div>
+    </div>
+</div>
+@section scripts{
+    @Styles.Render("~/easyui/css")
+    @Scripts.Render("~/bundles/easyui")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/common")
+    <script src="~/Scripts/Js/js_formGetData.js"></script>
+    <script src="~/Scripts/Js/js_Validate.js"></script>
+    <script type="text/javascript">
+        var dicData= @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(data))
+        var vm={
+            d_grid:null,
+            d_Sdate:null,
+            d_Edate:null,
+            d_dlg:null,
+            model:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)),
+            init:function(){
+                try {
+                    //初始化控件和数据
+                    this.d_Sdate= $("#startdate");
+                    this.d_Edate= $("#enddate");
+                    this.d_dlg= $('#w_dlg').window({
+                        width: 600,
+                        modal: true,
+                        shadow: true,
+                        closed: true,
+                        height: 450,
+                        resizable: false
+                    });
+                    this.d_grid= $('#dg');
+                    this.d_grid.datagrid({
+                        //data: this.model.list,
+                        url:this.model.urls.search,
+                        singleSelect: true,
+                        autoRowHeight: true,
+                        rownumbers: true,
+                        //multiSort:true,
+                        remoteSort:true,//--非本地排序
+                        pagination: true,
+                        pageSize: 10,
+                        // pageList:[10,20,30,40,50],
+                        toolbar: '#mainContent',
+                        nowrap: false,
+                        fit: true,
+                        queryParams: ko.toJS(this.model.searchForm)
+                    });
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            searchClick: function () {
+                try {
+                    var sdate=this.d_Sdate.datebox("getValue");
+                    var edate=this.d_Edate.datebox("getValue");
+                    var askContent=$("#askContent").textbox("getValue");
+                    var askAccount=$("#askAccount").textbox("getValue");
+                    var helpType=$("#selType").combobox("getValue");
+
+                    this.model.searchForm.askContent=askContent;
+                    this.model.searchForm.askAccount=askAccount;
+                    this.model.searchForm.helpType=helpType;
+
+                    this.model.searchForm.startDate=sdate;
+                    this.model.searchForm.endDate=edate;
+                    vm.d_grid.datagrid('load', ko.toJS(this.model.searchForm));
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            formatHTML:function(val,row,index)
+            {
+                //操作按钮的地方
+                var html= '';
+                html+='<a href="javascript:vm.showDlg('+index+')" >编辑</a></br>';
+                html+='<a href="javascript:vm.delHelp('+index+')" >删除</a></br>';
+                return html;
+            },
+            showType:function(val,row,index)
+            {
+                for (var i = 0; i < dicData.length; i++) {
+                    if(dicData[i].ID==row.HelpType)
+                    {
+                        val=dicData[i].DicValue;
+                        break;
+                    }
+                }
+                return val;
+            },
+            showDlg:function(index)
+            {
+                try {
+                    $("#helpfm").form("clear");
+                    this.d_dlg.window('setTitle',"发布帮助");
+                    if(index!=null&&index>=0)
+                    {
+                        this.d_grid.datagrid('selectRow',index);
+                        var row=this.d_grid.datagrid('getSelected',index);
+                        $("#helpfm").form("load", row);
+                        this.d_dlg.window('setTitle',"编辑帮助");
+                    }
+                    this.d_dlg.window("open");
+                } catch (e) {
+                }
+            },
+            closeDlg:function()
+            {
+                this.d_dlg.window("close");
+            },
+            addEdit:function()
+            {
+                try {
+                    var isPass = $("#helpfm").form('validate');
+                    if(isPass)
+                    {
+                        var row = getFormData('helpfm', true);
+                        window.parent.showMask();
+                        $.post(vm.model.urls.addEdit,row,
+                            function (data) {
+                                try {
+                                    data = JSON.parse(data);
+                                    var message = data.message;
+                                    if(data.status==1)
+                                    {
+                                        vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                    }
+                                    //隐藏遮罩
+                                    window.parent.hideMask();
+                                    window.parent.msgShow("提示", message, "info");
+                                } catch (e) {
+                                    alert(e.message);
+                                }
+                            });
+                    }else
+                    {
+                        window.parent.msgShow("提示", "输入错误", "info");
+                    }
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            delHelp:function(index){
+                $.messager.confirm("提示","确定要删除该条帮助？",
+                  function(r){
+                      if(r){
+                          try {
+                              //显示遮罩
+                              window.parent.showMask();
+                              vm.d_grid.datagrid('selectRow',index);
+                              var d=vm.d_grid.datagrid('getSelected',index);
+                              $.post(
+                               vm.model.urls.del,
+                               d,
+                               function (data) {
+                                   try {
+                                       data=JSON.parse(data);
+                                       vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                       var message="删除"+data.message;
+                                       //隐藏遮罩
+                                       window.parent.hideMask();
+                                       window.parent.msgShow("提示",message ,"info");
+                                   } catch (e) {
+                                       alert(e.message);
+                                   }
+                               });
+                          } catch (e) {
+                              alert(e.message);
+                          }
+                      }
+                  });
+            }
+        };
+        vm.init();
+        ko.applyBindings(vm);
+    </script>
+}
+

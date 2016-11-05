@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\bin\Debug\MoneyCarCar.Models.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\bin\Debug\MoneyCarCar.Models.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\bin\Debug\MoneyCarCar.Commons.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\bin\Debug\MoneyCarCar.Commons.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\obj\Debug\MoneyCarCar.Models.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\obj\Debug\MoneyCarCar.Models.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Models\obj\Debug\MoneyCarCar.Models.pdb

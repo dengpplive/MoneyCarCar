@@ -1,0 +1,240 @@
+﻿@{
+    ViewBag.Title = "ShowPageClaimsDetails";
+}
+<style type="text/css">
+    ul, ul li {
+        list-style-type: none;
+        margin: 0px;
+        padding: 2px;
+    }
+
+    body {
+        font: 12px "宋体","Arial Narrow",HELVETICA;
+        background: #fff;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+        .main table {
+            width: 100%;
+            margin: 0 auto;
+            border: 1px solid #dadada;
+            border-width: 1px 0 0 1px;
+        }
+
+            .main table td {
+                line-height: 20px;
+                border: 1px solid #dadada;
+                border-width: 0 1px 1px 0;
+                /*color: #f00;*/
+                padding: 8px 5px;
+                font-weight: 600;
+                text-align: left;
+            }
+
+                .main table td span {
+                    display: block;
+                    width: 100%;
+                    text-align: right;
+                    color: #666;
+                }
+
+    .title_td {
+        background: #f5f5f5;
+    }
+
+    .details table {
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid #dadada;
+        border-width: 1px 0 0 1px;
+    }
+
+    .details {
+        width: 100%;
+        height: 100%;
+    }
+
+        .details table td {
+            border: 1px solid #dadada;
+            border-width: 0 1px 1px 0;
+            font-weight: 600;
+            text-align: left;
+            padding: 5px 5px;
+        }
+
+            .details table td span {
+                display: block;
+                width: 100%;
+                text-align: right;
+                color: #666;
+            }
+</style>
+
+<div class="easyui-layout" fit="true">
+    <div class="easyui-panel" region="center" style="padding:0;margin:0;">
+
+        @model MoneyCarCar.Models.ModelDto.ResParam.ClaimsDetailsDto
+        @if (Model.UserInfoList.Count == 0)
+        {
+            <p>暂无数据</p>
+        }
+        else
+        {
+            <ul>
+                <li>
+                    <div class="easyui-panel" title="债权" data-options="fit:true">
+                        <div class="main">
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="title_td"><span>标题：</span></td>
+                                    <td>@Model.ClaimsInfo.Title</td>
+                                    <td class="title_td"><span>借款方:</span></td>
+                                    <td>@Model.ClaimsInfo.Borrower</td>
+                                    <td class="title_td"><span>借款期限:</span></td>
+                                    <td>@Model.ClaimsInfo.LoanPeriod</td>
+                                    <td class="title_td"><span>年利率(%):</span></td>
+                                    <td>@Model.ClaimsInfo.APR</td>
+                                </tr>
+                                <tr>
+                                    <td class="title_td"><span>借款金额(￥)：</span></td>
+                                    <td>@Model.ClaimsInfo.LoanAmount</td>
+                                    <td class="title_td"><span>已投金额(￥):</span></td>
+                                    <td>@Model.ClaimsInfo.AlreadyAmount</td>
+                                    <td class="title_td"><span>投资结束日期:</span></td>
+                                    <td>@Model.ClaimsInfo.InvestmentEndTime</td>
+                                    <td class="title_td"><span>收益起始时间:</span></td>
+                                    <td>@Model.ClaimsInfo.EarningsStartTime</td>
+                                </tr>
+                                <tr>
+                                    <td class="title_td"><span>审核状态:</span></td>
+                                    <td>
+                                        @if (Model.ClaimsInfo.IsApproved)
+                                            {
+                                            <b>通过</b>
+                                            }
+                                            else
+                                            {
+                                            <b>未通过</b>
+                                            }
+                                    </td>
+                                    <td class="title_td"><span></span></td>
+                                    <td></td>
+                                    <td class="title_td"><span></span></td>
+                                    <td></td>
+                                    <td class="title_td"><span></span></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="easyui-panel" title="明细" data-options="fit:true" style="height:330px;">
+                        <div class="details">
+                            @foreach (var itemUser in Model.UserInfoList)
+                                {
+                                <ul>
+                                    <li>
+                                        <table cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td></td>
+                                                <td class="title_td"><span>投资用户:</span></td>
+                                                <td colspan="3">@itemUser.User.UserName</td>
+
+                                                <td class="title_td"><span>用户姓名:</span> </td>
+                                                <td colspan="4">@itemUser.User.RealName</td>
+
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        @{
+                                    var i = 0;
+                                    foreach (var item in itemUser.ClaimsDetailsList)
+                                    {
+                                        i++;
+                                            <table cellpadding="0" cellspacing="0" style="margin-top:5px;">
+                                                <tr>
+                                                    <td class="title_td"><span>序号:</span></td>
+                                                    <td>@(i)</td>
+                                                    <td class="title_td"><span>手机号码:</span> </td>
+                                                    <td>@item.InvestorsCellPhone</td>
+                                                    <td class="title_td"><span>投资金额:</span></td>
+                                                    <td>@item.InvestorMoney</td>
+                                                    <td class="title_td"><span>投资时间: </span></td>
+                                                    <td>@item.InvestorsTime</td>
+                                                    <td class="title_td"><span>到期收益:</span></td>
+                                                    <td>@item.ExpireEarnings</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="title_td"><span></span></td>
+                                                    <td></td>
+                                                    <td class="title_td"><span>认购状态:</span> </td>
+                                                    <td>
+                                                        @if (item.PayStatus == 0)
+                                                    {
+                                                    <b>未认购</b>
+                                                    }
+                                                    else if (item.PayStatus == 1)
+                                                    {
+                                                    <b>认购中</b>
+                                                    }
+                                                    else if (item.PayStatus == 2)
+                                                    {
+                                                    <b>认购完成</b>
+                                                    }
+                                                    else if (item.PayStatus == 3)
+                                                    {
+                                                    <b>认购失败-过期</b>
+                                                    }
+                                                    </td>
+                                                    <td class="title_td"><span>支付说明:</span></td>
+                                                    <td colspan="5">@item.PayMark</td>
+                                                </tr>
+                                            </table>
+                                    }
+                                        }
+                                    </li>
+                                </ul>
+                                }
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        }
+    </div>
+    <div region="south" style="height: 30px; text-align: center;">
+        <a id="btnGoBack" class="easyui-linkbutton" data-options="iconCls:'icon-save'">返回</a>
+    </div>
+</div>
+@section scripts{
+
+    <link href="/Scripts/easyui/themes/icon.css" rel="stylesheet" />
+    <link href="/Scripts/easyui/themes/default/easyui.css" rel="stylesheet" />
+
+    <script src="/Scripts/easyui/jquery.js"></script>
+    <script src="/Scripts/easyui/jquery.easyui.js"></script>
+    <script src="/Scripts/easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    @*金额格式化库*@
+    <script src="~/Scripts/easyui/plugins/accounting.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var options = {
+                symbol: "￥",
+                decimal: ".",
+                thousand: ",",
+                precision: 2,
+                format: "%s%v"
+            };
+            $("#btnGoBack").click(function () {
+                history.go(-1);
+            });
+        });
+    </script>
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<yeepay>
+  <platformNo>10040011137</platformNo>
+  <actionUrl>http://119.161.147.110:8088/member/bha/</actionUrl>
+  <serviceUrl>http://119.161.147.110:8088/member/bhaexter/bhaController</serviceUrl>
+  <input_charset>UTF-8</input_charset>
+  <callbackUrl>http://192.168.1.1/YeePayCallBack</callbackUrl>
+  <notifyUrl>http://192.168.1.1/YeePayNotify</notifyUrl>
+</yeepay>

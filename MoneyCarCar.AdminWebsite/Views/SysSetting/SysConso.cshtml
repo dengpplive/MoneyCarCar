@@ -1,0 +1,234 @@
+﻿@{
+    ViewBag.Title = "SysConso";
+}
+<style type="text/css">
+    .search m_left {
+        float: left;
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div class="tableShow" id="mainContent" data-options="region:'center',border:0">
+        <div id="toolbar" style="padding: 5px 1px;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="clear: both;">
+                            <div class="search">
+                                键名：<input type="text" id="DicKey" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.DicKey" />
+                                值数据：<input type="text" id="DicValue" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.DicValue" />
+                                类型：<input type="text" id="DicType" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.DicType" />
+                            </div>
+                        </div>
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <a id="btnSearch" href="javascript:void()" class="easyui-linkbutton" style="width:100px;" data-options="iconCls:'icon-search'" data-bind="click:vm.searchClick()">查询</a>
+                        <a id="btnAdd" href="javascript:void()" class="easyui-linkbutton" style="width:100px;" data-options="iconCls:'icon-add'" data-bind="click: vm.showAddEdit()">添加</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="dg" class="easyui-datagrid" title="字典列表" data-optins="checkOnSelect:true">
+        <thead>
+            <tr bgcolor="#daeef5">
+                @*<th data-options="field:'ck',width:100,checkbox:true,align:'left'"></th>*@
+                <th data-options="field:'DicKey',align:'center',width:160">键名</th>
+                <th data-options="field:'DicValue',align:'center',width:460">值</th>
+                <th data-options="field:'DicType',align:'center',width:160">类型</th>
+                <th data-options="field:'Id',align:'center',width:100,formatter:vm.showHTML">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div id="dlg" class="easyui-dialog" title="添加字典"     
+     data-options="closed:true,iconCls:'icon-save',buttons:'#dlg-buttons',resize:true,width:500,height:250">
+    <form id="dicff" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td>键名:</td>
+                <td><input class="easyui-textbox" validtype="maxLength[200]" type="text" id="DicKey" style="height:32px;" name="DicKey" data-options="required:true,width:300"></input></td>
+            </tr>
+            <tr>
+                <td>键值:</td>
+                <td><input class="easyui-textbox" id="DicValue" name="DicValue" type="text" style="height:32px;" data-options="required:true,width:300"></input></td>
+            </tr>
+            <tr>
+                <td>类型:</td>
+                <td><input class="easyui-textbox" validtype="maxLength[20]" type="text" id="DicType" style="height:32px;" name="DicType" data-options="required:true,width:300"></input></td>
+            </tr>
+        </table>
+        <input type="hidden" id="ID" name="ID" value="-1" />
+    </form>
+</div>
+<div id="dlg-buttons" style="text-align:center;">
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save'" onclick="javascript:vm.addEdit()">保存</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" onclick="javascript:vm.closeDlg()">关闭</a>
+</div>
+@section scripts{ 
+<script src="/Scripts/common/extend.js"></script>
+<script src="/Scripts/common/ko.custombinding.js"></script>
+<script src="/Scripts/common/commonViewModel.js"></script>
+    <script src="~/Scripts/Js/js_formGetData.js"></script>
+    <script src="~/Scripts/Js/js_Validate.js"></script>
+    <script type="text/javascript">
+        var vm={
+            d_grid:null,
+            d_dlg:null,
+            model:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)),
+            init:function(){
+                try {
+                    //初始化控件和数据
+                    this.d_grid= $('#dg');
+                    this.d_dlg=$("#dlg");
+                    this.d_grid.datagrid({
+                        //data: this.model.list,
+                        url:this.model.urls.search,
+                        singleSelect: true,
+                        autoRowHeight: true,
+                        rownumbers: true,
+                        //multiSort:true,
+                        remoteSort:true,//--非本地排序
+                        pagination: true,
+                        pageSize: 10,
+                        // pageList:[10,20,30,40,50],
+                        toolbar: '#mainContent',
+                        nowrap: false,
+                        fit: true,
+                        queryParams: ko.toJS(this.model.searchForm)
+                    });
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            searchClick: function () {
+                try {
+                    // alert(1);
+                    var DicKey=$("#DicKey").textbox("getValue");
+                    var DicValue=$("#DicValue").textbox("getValue");
+                    var DicType=$("#DicType").textbox("getValue");
+                    this.model.searchForm.DicKey=DicKey;
+                    this.model.searchForm.DicValue=DicValue;
+                    this.model.searchForm.DicType=DicType;
+                    vm.d_grid.datagrid('load', ko.toJS(this.model.searchForm));
+                } catch (e) {
+
+                }
+            },
+            showHTML:function(val,row,index){
+                var html='';
+                html+= '<a  href="javascript:vm.showAddEdit('+index+')" >编辑</a><br />';
+                html+= '<a  href="javascript:vm.delDic('+index+')" >删除</a><br />';
+                return html;
+            },
+            showAddEdit:function(index)
+            {
+                try {
+                    $("#dicff").form("clear");
+                    if(index!=null&&index>=0)
+                    {
+                        this.d_grid.datagrid('selectRow',index);
+                        var dic_row=this.d_grid.datagrid('getSelected',index);
+                        $("#dicff").form('load',dic_row);
+                        this.d_dlg.dialog("setTitle","编辑字典");
+                    }else
+                    {
+                        this.d_dlg.dialog("setTitle","添加字典");
+                    }
+                    this.d_dlg.dialog("open");
+                } catch (e) {
+                    //  alert(e.message);
+                }
+            },
+            addEdit:function()
+            {
+                try {
+                    var isPass = $("#dicff").form('validate');
+                    if (isPass) {
+                        var dic_row = getFormData('dicff', true);
+                        if(dic_row.ID=="")
+                        {
+                            dic_row.ID="-1";
+                            dic_row.opType=2;
+                        }else
+                        {
+                            dic_row.opType=1;
+                        }
+                        // alert(JSON.stringify(dic_row));
+                        //显示遮罩
+                        window.parent.showMask();
+                        $.post(vm.model.urls.addEdit,
+                         dic_row,
+                         function (data) {
+                             try {
+                                 data = JSON.parse(data);
+                                 vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                 message=data.message;
+                                 //隐藏遮罩
+                                 window.parent.hideMask();
+                                 window.parent.msgShow("提示",message,"info",function(){
+                                 });
+                             } catch (e) {
+                                 alert(e.message);
+                             }
+                         });
+                    }
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            closeDlg:function()
+            {
+                try {
+                    this.d_dlg.dialog("close");
+                } catch (e) {
+                }
+            },
+            delDic:function(index)
+            {
+                $.messager.confirm("提示","确定要删除该条字典？",
+                   function(r){
+                       if(r){
+                           try {
+                               //显示遮罩
+                               window.parent.showMask();
+                               vm.d_grid.datagrid('selectRow',index);
+                               var dic_row=vm.d_grid.datagrid('getSelected',index);
+                               //alert(index);
+                               //alert(JSON.stringify(dic_row));
+                               if(dic_row!=null&& dic_row.ID!=null){
+                                   //alert(dic_row);
+                                   var url=vm.model.urls.del+"?Id="+dic_row.ID;
+                                   //alert(url);
+                                   $.get(url,
+                                    function (data) {
+                                        try {
+                                            data=JSON.parse(data);
+                                            vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                            var message="删除"+data.message;
+                                            //隐藏遮罩
+                                            window.parent.hideMask();
+                                            window.parent.msgShow("提示",message ,"info");
+                                        } catch (e) {
+                                            alert(e.message);
+                                        }
+                                    });
+                               }else
+                               {
+                                   //隐藏遮罩
+                                   window.parent.hideMask();
+                                   window.parent.msgShow("提示","删除失败" ,"info");
+                               }
+                           } catch (e) {
+                               alert(e.message);
+                           }
+                       }
+                   });
+            }
+        };
+        vm.init();
+        ko.applyBindings(vm);
+    </script>
+}

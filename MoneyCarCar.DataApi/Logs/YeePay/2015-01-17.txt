@@ -1,0 +1,675 @@
+记录时间：2015/1/17 11:25:41
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:25:43
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:25:43
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException: -26</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:26:35
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:26:36
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:26:36
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException: -26</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:28:19
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:28:19
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:28:19
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:28:49
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:28:49
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:28:49
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:30:03
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:30:03
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:30:03
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:44:44
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:44:45
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:44:45
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:45:26
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:45:27
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:45:27
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:53:03
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:53:04
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:53:04
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:59:06
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:59:06
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 11:59:06
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 12:29:31
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 12:29:33
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 12:29:33
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:31:35
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:31:36
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:31:36
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:31:51
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:31:52
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:31:52
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:32:01
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:32:01
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:32:01
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:32:04
+内    容: ActionFrom:catch无法连接到远程服务器
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:32:04
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e5%88%b0%e8%bf%9c%e7%a8%8b%e6%9c%8d%e5%8a%a1%e5%99%a8:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 13:32:04
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>3</code>
+    <description>验签失败:java.lang.ArrayIndexOutOfBoundsException</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:30:38
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:30:38
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:40:48
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:40:48
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:43:33
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:55:41
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:55:41
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:57:25
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:57:25
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:59:26
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 20:59:26
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:00:44
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:00:44
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:00:53
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:00:53
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:01:15
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:01:15
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:02:25
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:02:25
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:07:26
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:07:26
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:09:35
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:09:35
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:15:03
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 21:15:03
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:37:19
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:37:20
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:38:07
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:38:07
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:40:16
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:40:16
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:41:38
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10012425968"><platformUserNo>10012425968</platformUserNo></request>&sign=MIIFMAYJKoZIhvcNAQcCoIIFITCCBR0CAQExCzAJBgUrDgMCGgUAMC8GCSqGSIb3DQEHAaAiBCA2MDU1NTdhMzA0MDg0NmU5OWJlMDkyMjMwZmMzMzUyY6CCA%2fIwggPuMIIDV6ADAgECAhB1%2fWwgKemgL04mvTDdRfysMA0GCSqGSIb3DQEBBQUAMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTIwHhcNMTUwMTEzMDkyMjE4WhcNMTgwMTEzMDkyMjE4WjCBiDELMAkGA1UEBhMCQ04xGzAZBgNVBAoTEkNGQ0EgT3BlcmF0aW9uIENBMjEWMBQGA1UECxMNcmEueWVlcGF5LmNvbTEUMBIGA1UECxMLRW50ZXJwcmlzZXMxLjAsBgNVBAMUJTA0MUBaMTAwMTI0MjU5NjhAbW9uZXljYXJjYXJAMDAwMDAwMDEwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKNdbF%2b2gueeG48faG3cPsuDpYxt7yjP6Pu2THB6fDR77yVSrrJzxK2r9WClM9MJCNqyKXdkWOcfNGY6FvXBnVkuvdZJS3LE9%2fbT0M%2b0fK4u%2bdFJKKOEMTEcl33zFtUvoEuBLqN3lFZ0o7Ml4LSsRsNOP8l1lFkhxLsrUH14%2bCYXAgMBAAGjggG0MIIBsDAfBgNVHSMEGDAWgBTwje2zQbv77wgeVQLDMTfvPBROzTAdBgNVHQ4EFgQU4h4l7v9IjKtb3AzCyN%2bMc6qU80QwCwYDVR0PBAQDAgTwMAwGA1UdEwQFMAMBAQAwOwYDVR0lBDQwMgYIKwYBBQUHAwEGCCsGAQUFBwMCBggrBgEFBQcDAwYIKwYBBQUHAwQGCCsGAQUFBwMIMIH%2fBgNVHR8EgfcwgfQwV6BVoFOkUTBPMQswCQYDVQQGEwJDTjEbMBkGA1UEChMSQ0ZDQSBPcGVyYXRpb24gQ0EyMQwwCgYDVQQLEwNDUkwxFTATBgNVBAMTDGNybDEwNF8xMjQ2NTCBmKCBlaCBkoaBj2xkYXA6Ly9jZXJ0ODYzLmNmY2EuY29tLmNuOjM4OS9DTj1jcmwxMDRfMTI0NjUsT1U9Q1JMLE89Q0ZDQSBPcGVyYXRpb24gQ0EyLEM9Q04%2fY2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9iYXNlP29iamVjdGNsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MBQGAypWAQQNEwsxMDAxMjQyNTk2ODANBgkqhkiG9w0BAQUFAAOBgQBidk%2fhw%2fS3iV77CMTQCWYBx3hHxlvYuvzQdC9warVq52VKq2MBNeGGE0q9FRnCmXak1VvZ%2bXfIfjRSlKBoSWa%2fwK4M1f2Jx%2fFeLfB26Npx%2fmeCOIu7MFIEZdOxLrCVbo0yffBwGxrr0ez7fE%2fgexW91AmM8qKqDxPGDg2ODuVghTGB4zCB4AIBATA%2bMCoxCzAJBgNVBAYTAkNOMRswGQYDVQQKExJDRkNBIE9wZXJhdGlvbiBDQTICEHX9bCAp6aAvTia9MN1F%2fKwwCQYFKw4DAhoFADANBgkqhkiG9w0BAQEFAASBgDiWkhQerjl86Ha50MprUlxb6AQUFuP7QMzwwJoAwXNgdYS%2b8NWj1zwqPTsgYp%2bPzOfo7yK%2fL8dN%2b9qcCfn%2bgFGcyDvdJblKGYm775Fhwe9m1mKHYdKAVG12NwXagd2L%2fs20z0%2bA2WjmDUSnucrx1RR%2bv9N15Azb8q1N%2fsYmpNt%2f:serviceUrlhttps://member.yeepay.com/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/17 22:41:38
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10012425968">
+    <code>101</code>
+    <description>会员不存在</description>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+

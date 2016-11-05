@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计信息</title>
+<link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/user_menu.js"></script>
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+<script type="text/javascript">
+		var myMenu;
+		window.onload = function() {
+			myMenu = new SDMenu("user_menu");
+			myMenu.init();
+		};
+	</script>
+</head>
+
+<body>
+	<!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <span class="fr"><a href="login.html" class="reg">亲，请登录</a> <a href="reg.html">免费注册</a></span>
+            </div>
+        </div>	        
+        <div class="header_top wrap_1200_content">
+            <a href="###" class="logo"><img src="images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+					<li class="nav_link on"><a href="index.html" title="首页">首页</a></li>
+					<li class="nav_link"><a href="Investment.html" title="投资">投资</a></li>
+					<li class="nav_link"><a href="about.html" title="关于我们">关于我们</a></li>
+					<li class="nav_link"><a href="xszy.html" title="新手指引">新手指引</a></li>
+					<li class="nav_link"><a href="help.html" title="帮助中心">帮助中心</a></li>
+				</ul>
+        </div>	
+	</div>
+	<!--header end-->
+	<div class="info">
+    	<p><a href="###">首页</a>><a href="###">用户管理</a>><a href="###">账户概况</a></p>
+    </div>
+	<div class="main">
+    	<div class="left">
+      	  <div id="user_menu" class="user_menu">
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_1"></span>账户管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+						<a href="user.html">账户概况</a>
+						<a href="userinfo.html">个人信息</a>
+						<a href="userbank.html">银行卡</a>
+						<a href="usermessage.html">系统信息</a>
+						<a href="login_usermessage.html">登录日志</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_2"></span>投资管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+                        <a href="totalrevenue.html">投资统计</a>
+						<a href="transactionpurchased.html">已投产品</a>
+						<a href="transactionissued.html">到期产品</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_3"></span>消化管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userpurchase.html">我的收购</a>                       
+						<a href="usersell.html">我的卖出</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_4"></span>资金管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userrecords.html">交易记录</a>
+						<a href="pay.html">立即充值</a>
+						<a class="user_menu_on" href="usertixian.html">马上提现</a>
+						<a href="usertixian2.html">提现记录</a>
+					</div>
+				</div>
+        </div>
+        <div class="right">
+        	<div class="user_right_content">
+		<h2 class="user_plate_title">账户提现</h2>
+		<div class="warn_box_max">
+			<div class="warn_box_max_content">
+				<b>注意事项</b>
+				<div> 
+						1. 提现处理时间为周一至周五,下午3点以前.<br>
+						2. 正常工作日提现为T+1到帐,因为银行工作安排原因，遇节假日顺延.<br>
+						<font style="color:red">3. 充值后在十个工作日内提现,将收取充值提现部分1%的手续费！</font><br>
+						<font style="color:red">4. 第三方支付平台提现手续费：对公转账单笔6元,对私帐户单笔3元,对私单笔提现金额大于1000元或对公单笔提现金额大于1500元，第三方支付平台将按提现金额的千分之3.5收取手续费.</font><br>
+						5. 对私同一个账户单日提现限额为50万元，对公账户为200万元.<br>
+						6. 最低提款限额为10元.
+				</div>
+			</div>
+		</div>
+
+		<form action="" method="post" id="tixian" class="tixian_form">
+			<table border="1" cellpadding="0" cellspacing="0" class="user_table_tixian">
+				<tbody>
+					<tr>
+						<td class="user_table_text_right" width="100">您的真实姓名:</td>
+						<td>
+***峰（必须和您银行账户姓名一致）</td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right">联络手机:</td>
+						<td>15928663241 (第三方支付平台处理提现申请时会通知您处理结果)&nbsp; &nbsp;<a href="http://www.hellomoney.com/index.php?run=phone&amp;c=userinfo" class="button_blue_1">点此修改</a></td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right">可提现金额:</td>
+						<td><b style="font-size:20px;color:red;font-family:'微软雅黑'">￥0.000元</b></td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right" style="color:#F00">手续费:</td>
+						<td style="line-height:22px; color:#F00">
+							1. 充值后在十个工作日内提现,将收取充值提现部分1%的手续费!<br>
+							2. 第三方支付平台收取手续费: 对公转账单笔6元,对私帐户单笔3元,对私单笔提现金额大于1000元或对公单笔提现金额大于1500元，第三方支付平台将按提现金额的千分之3.5收取手续费. 
+						</td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right"><strong>*</strong>提现银行卡:</td>
+						<td style="padding:30px 14px">
+							<p class="input_and_button fl" style="width:326px">
+                            <a href="http://www.hellomoney.com/index.php?c=userbank" class="button_blue_1" style="width:90px;margin:2px 0 0 20px;display: inline-block;">点此新增银行卡</a>
+                            
+						</p></td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right"><strong>*</strong>提现金额:</td>
+						<td style="padding:30px 14px">
+							<p class="input_and_button fl">
+								<input type="text" value="" autocomplete="off" class="input" datatype="n10" errormsg="提现金额最少为10元!" nullmsg="请填写提现金额" sucmsg="&nbsp;" name="totalamount" id="totalamount">
+							<span class="Validform_checktip"></span></p>
+							<a href="javascript:void(0)" onclick="all_tixian();" class="button_blue_1" style="width:80px;margin:2px 0 0 20px;display: inline-block;">提取所有余额</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right"><strong>*</strong>交易密码:</td>
+						<td style="padding:30px 14px">
+							<p class="input_and_button fl" >
+								<input type="password" autocomplete="off" name="txtPassword" id="txtPassword" class="input hover fl" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写交易密码" sucmsg="&nbsp;">
+							<span class="Validform_checktip"></span></p>
+							<a href="/index.php?c=userinfo" class="button_blue_1 fl" style="width:80px;margin:2px 0 0 20px;display: inline-block;">忘记密码</a>
+							<span class="title_hot_ico fl" style="padding:0 6px;display:block;width:160px;margin:8px 0 0 20px">初始交易密码为你的登陆密码!</span>
+							
+						</td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right"><strong>*</strong>手机验证:</td>
+						<td style="padding:30px 14px">
+							<p class="input_and_button Validform_right_3" style="width:330px">
+                            <input type="hidden" value="a12b905ac31fe493" id="token" name="token">
+								<input type="text" name="txtPhoneCode" id="txtPhoneCode" class="input hover fl" datatype="e4-4" errormsg="验证码位数不正确,为4位!" sucmsg="&nbsp;" nullmsg="请填写验证码!" style="width:116px">		
+								<a href="javascript:void(0);" class="button_blue button_yellow no_hover_right_tips fr" style="width:90px;margin-top:0px;padding:5px" title="<b>推荐使用语音验证</b>，您会接到本公司400电话400-697-6662为您语音播报验证码！" id="sendmobileyy" onclick="sendmobilesyy()">语音验证(推荐)</a>
+								<a href="javascript:void(0);" id="sendmobile" onclick="sendMobileValidSMSCode()" class="button_blue fr" style="width:50px;margin:0px 6px 0 0">短信验证</a>
+							<span class="Validform_checktip"></span></p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="padding:25px 14px;text-align:center!important;background:#f9f9f9"><a href="javascript:void(0);" class="button_blue" style="padding:12px 152px;font-size:14px" onclick="tixian()">提现</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+        </div>
+    </div>
+</body>
+</html>

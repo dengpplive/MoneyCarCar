@@ -1,0 +1,409 @@
+﻿@{
+    ViewBag.Title = "AddAndEditClaims";
+}
+<div class="easyui-layout" fit="true">
+    <div class="easyui-panel" region="center" title='@(Model.ID > 0 ? "编辑债权" : "发布债权")'>
+        <div style="width:900px;height:460px;padding:0;margin:0;" scroll="no">
+            <form id="form1" method="post">
+                <table cellpadding="5">
+                    <tr>
+                        <td>标题:</td>
+                        <td><input class="easyui-textbox" type="text" name="Title" data-options="required:true" value="@Model.Title"></input></td>
+                    </tr>
+                    <tr>
+                        <td>标题图片:</td>
+                        <td>
+                            <input class="easyui-textbox" type="text" name="Title" data-options="required:true" value="@Model.TitleImagePath"></input>
+                            <input type="file" id="titleImg" name="titleImg" value="上传" />
+                            <span id="sapn_16" style="display:none;"><img style="width: 64px; height: 64px;" id="img_16" border="0" /></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>借款金额:</td>
+                        <td><input class="easyui-textbox" validtype="money" type="text" name="LoanAmount" data-options="required:true" value="@Model.LoanAmount"></input></td>
+                    </tr>
+                    <tr>
+                        <td>年利率（%）:</td>
+                        <td><input class="easyui-textbox" validtype="intRange[0,100]" type="text" name="APR" data-options="required:true" value="@Model.APR"></input></td>
+                    </tr>
+                    <tr>
+                        <td>借款期限（月）:</td>
+                        <td><input class="easyui-textbox" validtype="integer" type="text" name="LoanPeriod" data-options="required:true" value="@Model.LoanPeriod"></input></td>
+                    </tr>
+                    <tr>
+                        <td>单份金额:</td>
+                        <td><input class="easyui-textbox" validtype="integer" type="text" name="SingleAmount" data-options="required:true" value="@Model.SingleAmount"></input></td>
+                    </tr>
+                    <tr>
+                        <td>可售价格:</td>
+                        <td><input class="easyui-textbox" validtype="money" type="text" name="SellingPrice" data-options="required:true" value="@Model.SellingPrice"></input></td>
+                    </tr>
+                    <tr>
+                        <td>担保方式:</td>
+                        <td><input class="easyui-textbox" type="text" name="GuaranteeWay" data-options="required:true" value="@Model.GuaranteeWay"></input></td>
+                    </tr>
+                    <tr>
+                        <td>还款方式:</td>
+                        <td><input class="easyui-textbox" type="text" name="RepaymentWat" data-options="required:true" value="@Model.RepaymentWat"></input></td>
+                    </tr>
+                    <tr>
+                        <td>投资结束日期:</td>
+                        <td><input class="easyui-datebox" validtype="isDateTime['date']" type="text" name="InvestmentEndTime" data-options="required:true" value="@Model.InvestmentEndTime"></input></td>
+                    </tr>
+                    <tr>
+                        <td>收益起始时间:</td>
+                        <td><input class="easyui-datebox" validtype="isDateTime['date']" type="text" name="EarningsStartTime" data-options="required:true" value="@Model.EarningsStartTime"></input></td>
+                    </tr>
+                    <tr>
+                        <td>借款方:</td>
+                        <td><input class="easyui-textbox" validtype="CHS" type="text" name="Borrower" data-options="required:true" value="@Model.Borrower"></input></td>
+                    </tr>
+                    <tr>
+                        <td>借款方ID:</td>
+                        <td><input class="easyui-textbox" validtype="CHS" type="text" name="BorrowerID" data-options="required:true" value="@Model.BorrowerID"></input></td>
+                    </tr>
+                    <tr>
+                        <td>抵押物规格:</td>
+                        <td><input class="easyui-textbox" type="text" name="PawnSpec" data-options="required:true" value="@Model.PawnSpec"></input></td>
+                    </tr>
+                    <tr>
+                        <td>发布人用户名:</td>
+                        <td><input class="easyui-textbox" validtype="CHS" type="text" name="Publisher" data-options="required:true" value="@Model.Publisher"></input></td>
+                    </tr>
+                    <tr>
+                        <td>动态小图标:</td>
+                        <td><input class="easyui-textbox" type="text" name="Icons" data-options="required:true" value="@Model.Icons"></input></td>
+                    </tr>
+                    <tr>
+                        <td>详细图片1:</td>
+                        <td>
+                            <textarea name="DetailsImages1" id="myeditor1" data-options="required:true" style="width: 100%; height: 100%">@Model.DetailsImages1</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>详细图片2:</td>
+                        <td>
+                            <textarea name="DetailsImages2" id="myeditor2" data-options="required:true" style="width: 100%; height: 100%">@Model.DetailsImages2</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>详细图片3:</td>
+                        <td>
+                            <textarea name="DetailsImages3" id="myeditor3" data-options="required:true" style="width: 100%; height: 100%">@Model.DetailsImages3</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>详细图片4:</td>
+                        <td>
+                            <textarea name="DetailsImages4" id="myeditor4" data-options="required:true" style="width: 100%; height: 100%">@Model.DetailsImages4</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>详细图片5:</td>
+                        <td>
+                            <textarea name="DetailsImages5" id="myeditor5" data-options="required:true" style="width: 100%; height: 100%">@Model.DetailsImages5</textarea>
+                        </td>
+                    </tr>
+                </table>
+                @*其他的隐藏信息可以不填  *@
+                <input type="hidden" name="ID" value="@Model.ID"></input>
+                <input type="hidden" name="AlreadyAmount" value="@Model.AlreadyAmount"></input>
+                <input type="hidden" name="SellingPrice" value="@Model.SellingPrice"></input>
+                <input type="hidden" name="PublishTime" value="@Model.PublishTime"></input>
+                <input type="hidden" name="IsApproved" value="@Model.IsApproved"></input>
+                <input type="hidden" name="ApproverUserName" value="@Model.ApproverUserName"></input>
+                <input type="hidden" name="ApproverTime" value="@Model.ApproverTime"></input>
+                <input type="hidden" name="BorrowerID" value="@Model.BorrowerID"></input>
+                <input type="hidden" name="Icons" value="@Model.Icons"></input>
+            </form>
+        </div>
+    </div>
+    <div region="south" style="height:50px;text-align:center;">
+        <a id="btnSave" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+        <a id="btnGo" href='@Url.Action("Index", "Claims")' class="easyui-linkbutton" data-options="iconCls:'icon-undo'">返回</a>
+    </div>
+</div>
+<div id="QID_webApplogo" class="fileQueue"></div>
+@section scripts{  
+    <script src="~/kindeditor-4.1.4/kindeditor.js"></script>
+    <script src="~/Scripts/Js/js_formGetData.js"></script>
+    <script src="~/Scripts/Js/js_Validate.js"></script>
+    <link href="~/Scripts/uploadify-v2.1.4/uploadify.css" rel="stylesheet" />
+    <script src="~/Scripts/uploadify-v2.1.4/swfobject.js"></script>
+    <script src="~/Scripts/uploadify-v2.1.4/jquery.uploadify.v2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#titleImg").uploadify({
+                'uploader': '../Scripts/uploadify-v2.1.4/uploadify.swf',//进度条，Uploadify里面含有
+                'script': '../Scripts/uploadify-v2.1.4/UploadHandler.ashx',//一般处理程序
+                'cancelImg': '../Scripts/uploadify-v2.1.4/cancel.png',//取消图片路径
+                'folder': 'Imagelogo',//上传文件夹名
+                'auto': true, //文件添加到上传队列后，自动进行上传。默认为false
+                'multi': false,//是否允许多文件上传。默认为false
+                'fileExt': '*.gif;*.jpg;*.jpeg;*.png',//允许上传的文件类型，使用分号(”;)”分割 例如:*.jpg;*.gif,默认为null(所有文件类型)
+                'fileDesc': '不超过2M的图片 (*.gif;*.jpg;*.png)',
+                'sizeLimit': 20480000,  //允许上传的文件大小(kb)  此为20M
+                'onSelectOnce': function (event, data) { //在单文件或多文件上传时，选择文件时触发
+                    //event 事件对象(the event object)
+                    //data 选择的操作信息
+                    //data.filesSelected 选择文件操作中选中的文件数量
+                    $('#status-message').text(data.filesSelected + ' 文件正在等待上传…….');
+                },
+                'onComplete': function (event, queueID, fileObj, response, data) {//当单个文件上传完成后触发
+                    //event:事件对象(the event object)
+                    //ID:该文件在文件队列中的唯一表示
+                    //fileObj:选中文件的对象，他包含的属性列表
+                    //response:服务器端返回的Response文本，我这里返回的是处理过的文件名称
+                    //data：文件队列详细信息和文件上传的一般数据
+
+                    //alert("文件:" + fileObj.name + " 上传成功！");
+                    //设置图片名称
+                    //$("#applogo").attr("value", response);
+                    ////设置输入框的值
+                    //$("#text_webApplogo").attr("value", fileObj.name);
+                    ////设置图片路径
+                    //$("#img_64").attr("src", "Imagelogo/64_" + response);
+                    //$("#img_48").attr("src", "Imagelogo/48_" + response);
+                    //$("#img_32").attr("src", "Imagelogo/32_" + response);
+                    //$("#img_16").attr("src", "Imagelogo/16_" + response);
+                    ////图片路径设置完成后，显示图片
+                    //$("#webApplogo_tab").css("display", "block");
+                    $("#sapn_16").show();
+                    $("#img_16").attr("src", "Imagelogo/64_" + response);
+                },
+                'onError': function (event, queueID, fileObj) {//当单个文件上传出错时触发
+                    alert("文件:" + fileObj.name + " 上传失败！");
+                },
+                // 'buttonImg': 'Images/bn_04.gif',//浏览按钮的图片路径
+                'width': 60,//浏览按钮的宽和高
+                'height': 24,
+                'queueID': 'QID_webApplogo'//页面上作为文件上传队列的元素的ID
+            });
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            try {
+                // 关闭过滤模式，保留所有标签
+                //KindEditor.options.filterMode = false;
+                KindEditor.basePath = '../kindeditor-4.1.4/';
+                //创建多个编辑器共同显示
+                window.editor1 = KindEditor.create('textarea[name="DetailsImages1"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 900,
+                    height: 350,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor2 = KindEditor.create('textarea[name="DetailsImages2"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 900,
+                    height: 350,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor3 = KindEditor.create('textarea[name="DetailsImages3"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 900,
+                    height: 350,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor4 = KindEditor.create('textarea[name="DetailsImages4"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 900,
+                    height: 350,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor5 = KindEditor.create('textarea[name="DetailsImages5"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 900,
+                    height: 350,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+
+
+        $("#btnSave").click(function () {
+            try {
+                var form = $("#form1");
+                var claims = getFormData('form1', true);
+
+                claims.DetailsImages1 = escape(news.DetailsImages1);
+                claims.DetailsImages2 = escape(news.DetailsImages2);
+                claims.DetailsImages3 = escape(news.DetailsImages3);
+                claims.DetailsImages4 = escape(news.DetailsImages4);
+                claims.DetailsImages5 = escape(news.DetailsImages5);
+
+
+                var isPass = $("#form1").form('validate');
+                if (isPass) {
+                    var url = '@Url.Action("AddUpdateClaims", "Claims")';
+                    //显示遮罩
+                    window.parent.showMask();
+                    $.post(url, claims, function (data) {
+                        try {
+                            data = JSON.parse(data);
+                            var message = data.message;
+                            //隐藏遮罩
+                            window.parent.hideMask();
+                            window.parent.msgShow("提示", message, "info", function () {
+                                //....
+                            });
+                        } catch (e) {
+                            alert(e.message);
+                        }
+                    });
+                }
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+    </script>
+}
+

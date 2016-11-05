@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计信息</title>
+<link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/user_menu.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- 动画控制 -->
+<script src="js/wow.min.js"></script>
+	<!-- 弹窗组件-->
+<script type="text/javascript" src="http://www.hellomoney.com/public/js/artDialog.js?skin=opera"></script>
+	<!--表单验证插件-->
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script> 
+    <!-- 验证码和短信倒计时 重要-->
+<script type="text/javascript" src="js/jquery.form.js"></script>
+	<!-- 特效库 重要-->
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.source.js"></script>
+	<!-- 其他效果 函数 重要-->
+<script type="text/javascript" src="js/other.js"></script> 
+	<!--tips 提示框 重要-->
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+<script type="text/javascript">
+		var myMenu;
+		window.onload = function() {
+			myMenu = new SDMenu("user_menu");
+			myMenu.init();
+		};
+</script>
+</head>
+
+<body>
+	<!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <span class="fr"><a href="login.html" class="reg">亲，请登录</a> <a href="reg.html">免费注册</a></span>
+            </div>
+        </div>	        
+        <div class="header_top wrap_1200_content">
+            <a href="###" class="logo"><img src="images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+					<li class="nav_link on"><a href="index.html" title="首页">首页</a></li>
+					<li class="nav_link"><a href="Investment.html" title="投资">投资</a></li>
+					<li class="nav_link"><a href="about.html" title="关于我们">关于我们</a></li>
+					<li class="nav_link"><a href="xszy.html" title="新手指引">新手指引</a></li>
+					<li class="nav_link"><a href="help.html" title="帮助中心">帮助中心</a></li>
+				</ul>
+        </div>	
+	</div>
+	<!--header end-->
+	<div class="info">
+    	<p><a href="###">首页</a>><a href="###">用户管理</a>><a href="###">账户概况</a></p>
+    </div>
+	<div class="main">
+    	<div class="left">
+      	  <div id="user_menu" class="user_menu">
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_1"></span>账户管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+						<a href="user.html">账户概况</a>
+						<a href="userinfo.html">个人信息</a>
+						<a class="user_menu_on" href="userbank.html">银行卡</a>
+						<a href="usermessage.html">系统信息</a>
+						<a href="login_usermessage.html">登录日志</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_2"></span>投资管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+                        <a href="totalrevenue.html">投资统计</a>
+						<a href="transactionpurchased.html">已投产品</a>
+						<a href="transactionissued.html">到期产品</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_3"></span>消化管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userpurchase.html">我的收购</a>                       
+						<a href="usersell.html">我的卖出</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_4"></span>资金管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userrecords.html">交易记录</a>
+						<a href="pay.html">立即充值</a>
+						<a href="usertixian.html">马上提现</a>
+						<a href="usertixian2.html">提现记录</a>
+					</div>
+				</div>
+        </div>
+        <div class="right">
+        	<div class="user_right_content">
+		<h2 class="user_plate_title">银行卡管理
+<span class="title_hot_ico">您还没有添加银行卡</span>
+</h2>
+		
+		<!--注意事项 start-->
+		<div id="bank_form_read" style="display:none;width:500px">
+			<div class="warn_box_min">
+				<div class="warn_box_min_conten">
+					<font style="font-size:20px;font-weight:bold;font-family:'微软雅黑'" color="#ED3C3C">请确保你填写的银行卡信息为真实正确的,<br>如果信息错误您的提现申请在审核时会失败,<br>导致无法提现!</font>
+				</div>
+			</div>
+		</div>
+
+		<div class="user_plate_box">
+        	<ul class="bank_card_list">
+            	<li>
+                	<span class="bank_name"><img src="images/bank/cmb.png" /></span><a href="###" class="bank_clear">解锁</a>
+                    <div class="bank_card"><span>****</span><span>****</span><span>****</span><span>0908</span></div>
+                    <p class="bank_address">成都市顺城大街341号</p>                    
+                    <p  class="bank_name_r">高 斌</p>
+                </li>
+            </ul>
+			<ul class="bank_card_list">
+				<a href="#" class="add_bank_card" onclick="bank_form_read();"><span class="hover">+</span>添加新的银行卡</a>
+			</ul>
+			<div class="break_10"></div>
+					<!-- 添加新的收货地址 start-->
+					<div class="clear"></div> 
+					<div id="add_bank" style="width:300px;display:none">
+						<form class="add_bank" id="addbank"> 
+							<h2 class="form_h2_title">银行账户户主姓名:<span id="spname">
+***峰</span></h2>
+							<div class="break_10"></div>
+							<p class="input_lable"><strong>*</strong>卡号所属银行</p>
+							<p class="input_and_button">
+								<select name="bankname" id="bankname" style="width: 120px;padding:5px 0;text-indent:4px" class="input fl" onchange="selectBank1(this)">
+									<option value="招商银行">招商银行</option>
+									<option value="中国银行">中国银行</option>
+									<option value="中国工商银行">中国工商银行</option>
+									<option value="中国建设银行">中国建设银行</option>
+									<option value="中国农业银行">中国农业银行</option>
+									<option value="交通银行">交通银行</option>
+									<option value="上海浦东发展银行">上海浦东发展银行</option>
+									<option value="中国民生银行">中国民生银行</option>
+									<option value="兴业银行">兴业银行</option>
+									<option value="光大银行">光大银行</option>
+									<option value="平安银行">平安银行</option>
+									<option value="广发银行">广发银行</option>
+									<option value="宁波银行">宁波银行</option>
+									<option value="华夏银行">华夏银行</option>
+									<option value="天津银行">天津银行</option>
+									<option value="上海银行">上海银行</option>
+									<option value="南京银行">南京银行</option>
+									<option value="中信银行">中信银行</option>
+									<option value="邮政储蓄银行">邮政储蓄银行</option>
+									<option value="other_bank">其他</option>
+								</select> 
+									<input id="otherbankname" name="otherbankname" class="input fr" style="width:170px;display:none" type="text">
+								
+								</p><div class="clear"></div>
+							<p></p>
+							<div class="break_5"></div>
+							<p class="input_lable"><span class="fl"><strong>*</strong>银行卡号</span><font class="fr" color="red">(信用卡帐号无法提现，请不要使用)</font></p>
+							<div class="clear"></div>
+							<p class="input_and_button">
+								<input class="input hover" id="number" name="number" datatype="*" errormsg="请填写银行卡号!" nullmsg="请填写银行卡号" sucmsg="&nbsp;" type="text">
+							<span class="Validform_checktip"></span></p>
+							<div class="break_5"></div>
+							<p class="input_lable"><strong>*</strong>重复银行卡号</p>
+							<p class="input_and_button">
+								<input class="input hover" id="number1" name="number1" recheck="number" datatype="*" errormsg="两次输入的银行卡号不一致!" nullmsg="请重复银行卡号" sucmsg="&nbsp;" type="text">
+							<span class="Validform_checktip"></span></p>
+							<div class="break_5"></div>
+							<p class="input_lable"><strong>*</strong>开户银行所在地区</p>
+							<div class="break_5"></div>
+								<select id="s_province" name="s_province" class="input" style="width:87px;padding:5px 0;line-height:26px\9"><option value="">省份</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="上海市">上海市</option><option value="重庆市">重庆市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西">广西</option><option value="海南省">海南省</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾省">台湾省</option></select>&nbsp;&nbsp;
+			    			    <select id="s_city" name="s_city" class="input_text" style="width:87px;padding:5px 0;line-height:26px\9"><option value="">地级市</option></select>&nbsp;&nbsp;
+			    			<div class="break_5"></div>
+							<p class="input_lable"><strong>*</strong>开户行支行名称</p>
+							<p class="input_and_button">
+								<input class="input hover no_hover_top_tips" title="<font color='red'>请确保你的开户行支行名称的正确性,否者提现申请会失败!</font>&nbsp;&nbsp;&nbsp;(你可以联系所在银行客服得知开户行信息)" datatype="*" errormsg="请填写正确的开户行支行名称" sucmsg="&nbsp;" nullmsg="请填写正确的开户行支行名称!" name="zhihangming" id="zhihangming" type="text">
+							<span class="Validform_checktip"></span></p>
+							<div class="break_5"></div>
+							<p class="input_lable"><strong>*</strong>验证码</p>
+							<p class="input_and_button Validform_right_3">
+								<input class="input hover fl" datatype="e4-4" errormsg="验证码位数不正确,为4位!" sucmsg="&nbsp;" nullmsg="请填写验证码!" style="width:86px" id="txt_smsCode" name="txt_smsCode" type="text">			<input value="e30d4290d9b16645" id="token" name="token" type="hidden">
+								<a href="javascript:void;" class="button_blue button_yellow yuyin_tips fr" style="width:90px;margin-top:2px;padding:5px" title="<b>推荐使用语音验证</b>，您会接到本公司400电话400-697-6662为您语音播报验证码！" id="sendmobileyy" onclick="sendmobilesyy()">语音验证(推荐)</a>
+								<a href="javascript:void;" class="button_blue fr" style="width:48px;margin:2px 6px 0 0" id="sendmobile" onclick="sendMobileValidSMSCode()">短信验证</a>
+							<span class="Validform_checktip"></span></p>
+							<div class="break_10"></div>
+							<input name="button" class="button_blue hover" value="确认" onclick="addbank()" style="padding:10px 0;font-size:14px" type="button">
+						</form>
+					</div>
+					<!-- 添加新的收货地址 end-->
+		</div>
+	</div>
+        </div>
+    </div>
+<!--城市数据-->
+	<script src="www.hellomoney.com/public/js/common/area.js"></script>
+	<script type="text/javascript">_init_area();</script>
+	<script type="text/javascript">
+
+		//提示信息
+		function bank_form_read(){
+			art.dialog({
+				lock: true,
+				opacity: 0.2,
+				fixed: true, 
+				padding:0,
+			    content:document.getElementById('bank_form_read'),
+			    init: function () {
+			    	var that = this, i = 12;
+			        var fn = function () {
+			            that.title(i + '秒后自动关闭');
+			            !i && that.close();
+			            i --;
+			        };
+			        timer = setInterval(fn, 1000);
+			        fn();
+			    },
+			    close: function () {
+			    	add_bank();
+			    	clearInterval(timer);
+			    }
+			});
+			$(".aui_buttons button").hide();
+		}
+
+		//添加其他银行
+		function selectBank1(obj){
+			if(obj.value=='other_bank'){
+				$('#otherbankname').show();
+				$('#otherbankname').focus();
+			}else{
+				$('#otherbankname').hide();
+			}
+			$('#otherbankname').val("");
+		}
+		//删除提现银行
+		function deleteaccount(ids){
+	 
+	if(confirm("是否确认删除？")==true){
+		$.post("http://www.hellomoney.com/index.php?c=userbank&a=deleteaccount",{id:ids},function(data){
+			
+			art.dialog({content:data.msg,ok: function () {
+				location.reload();
+				this.close();
+				return false;
+			}});
+		},'json');
+	}
+}	
+
+function sendMobileValidSMSCode(){
+	$.post("http://www.hellomoney.com/index.php?c=userbank&a=sendmobile",{token:$("#token").val()},function(data){
+		if(data.error==''){
+			djs.init('sendmobile',50);
+		}
+		art.dialog({content:data.msg,ok: function () {
+	    	this.close();
+	        return false;
+	    }});
+	$('#token').val(data.token);
+	},'json');
+}
+
+
+ function sendmobilesyy(){
+		$.post("http://www.hellomoney.com/index.php?c=userbank&a=findpwdactdh",{token:$("#token").val()},function(data){
+			if(data.error==''){
+				djs.init('sendmobileyy',50);
+			}
+			art.dialog({content:data.msg,ok: function () {
+				this.close();
+				return false;
+			}});
+		$('#token').val(data.token);
+		},'json');
+}
+
+function addbank(){
+	
+		$.post("http://www.hellomoney.com/index.php?c=userbank&a=addbank",$('#addbank').serialize(),function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+				art.dialog({content:data.msg,
+					close: function(){location.reload();},
+				    ok: function () {
+				    	location.reload();
+				        return false;
+				    }
+				});
+			}else{
+				art.dialog({content:data.msg,ok: function () {
+			    	this.close();
+			        return false;
+			    }});
+			}
+		$('#token').val(data.token);
+		},'json')
+	
+}
+
+
+		//表单验证
+		$(function(){
+			//tips
+			$('.yuyin_tips').poshytip({className: 'tip_min',alignTo: 'target',alignX: 'center',alignY: 'top',offsetX: 0,offsetY:6,showTimeout: 100,allowTipHover: false,});
+			$.extend($.Datatype,{
+				"e4-4" : /^[0-9a-zA-Z]{1}\w{3,3}$/,
+			});
+			$(".add_bank").Validform({
+				tiptype:3,
+			});
+		})
+
+		//添加新地址弹窗
+		function add_bank(){
+			art.dialog({
+				title: "添加新的银行卡",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('add_bank') 
+			});
+		}
+
+
+	</script>
+
+</body>
+</html>

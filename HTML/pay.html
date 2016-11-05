@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>立即充值</title>
+<link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/user_menu.js"></script>
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+<script type="text/javascript">
+		var myMenu;
+		window.onload = function() {
+			myMenu = new SDMenu("user_menu");
+			myMenu.init();
+		};
+	</script>
+</head>
+
+<body>
+	<!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <span class="fr"><a href="login.html" class="reg">亲，请登录</a> <a href="reg.html">免费注册</a></span>
+            </div>
+        </div>	        
+        <div class="header_top wrap_1200_content">
+            <a href="###" class="logo"><img src="images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+					<li class="nav_link on"><a href="index.html" title="首页">首页</a></li>
+					<li class="nav_link"><a href="Investment.html" title="投资">投资</a></li>
+					<li class="nav_link"><a href="about.html" title="关于我们">关于我们</a></li>
+					<li class="nav_link"><a href="xszy.html" title="新手指引">新手指引</a></li>
+					<li class="nav_link"><a href="help.html" title="帮助中心">帮助中心</a></li>
+				</ul>
+        </div>	
+	</div>
+	<!--header end-->
+	<div class="info">
+    	<p><a href="###">首页</a>><a href="###">用户管理</a>><a href="###">账户概况</a></p>
+    </div>
+	<div class="main">
+    	<div class="left">
+      	  <div id="user_menu" class="user_menu">
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_1"></span>账户管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+						<a href="user.html">账户概况</a>
+						<a href="userinfo.html">个人信息</a>
+						<a href="userbank.html">银行卡</a>
+						<a href="usermessage.html">系统信息</a>
+						<a href="login_usermessage.html">登录日志</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_2"></span>投资管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+                        <a href="totalrevenue.html">投资统计</a>
+						<a href="transactionpurchased.html">已投产品</a>
+						<a href="transactionissued.html">到期产品</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_3"></span>消化管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userpurchase.html">我的收购</a>                       
+						<a href="usersell.html">我的卖出</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_4"></span>资金管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userrecords.html">交易记录</a>
+						<a class="user_menu_on" href="pay.html">立即充值</a>
+						<a href="usertixian.html">马上提现</a>
+						<a href="usertixian2.html">提现记录</a>
+					</div>
+				</div>
+        </div>
+        <div class="right">
+        	<div class="user_right_content">
+		<h2 class="user_plate_title">账户充值</h2>
+		<div class="user_plate_box">
+			<div class="warn_box_min" style="width:90%; margin:0 auto;">
+				<div class="warn_box_min_conten">
+					<font style="font-size:14px;">充值完成后,请勿关闭任何页面,直至从银行付款成功页面跳转回本网站!(一般等待时间为30秒至2分钟)否则会出现充值失败的情况,如果操作失误,没有充值成功,请立即联系客服处理!
+					<div class="border_line" style="margin:10px 0"></div>
+					<font class="fl" style="font-size:16px;font-family:'微软雅黑';">财富车车充值采用的是第三方支付平台易生支付,所以您在充值的时候,显示的收款人为-<font color="red">渤海易生商务服务有限公司
+					</font><br><a href="####" target="_blank" style="text-decoration: underline;color:#000">查看易生支付资质</a>
+					</font>
+					<div class="clear"></div>
+				</font></div><font style="font-size:14px;">
+			</font></div><font style="font-size:14px;">
+			<div class="break_40"></div>
+			<div class="border_line"></div>
+			<div class="break_20"></div>
+
+			<form class="chongzhi_form" method="post" id="userzf" name="userzf" action="http://www.hellomoney.com/index.php?c=pay&amp;a=submitpay" target="_blank">
+				<table border="0" cellpadding="0" cellspacing="0" class="user_table_no_border">
+					<tbody><tr>
+						<td class="user_table_text_right " width="300px">帐户金额:</td>
+						<td colspan="2"><span class="account_maoney">0.00</span>元</td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right"><strong>*</strong>充值金额:</td>
+						<td colspan="2">
+							<p class="input_and_button">
+								<input type="text" value="" class="input" id="czje" name="czje" datatype="*1-10" errormsg="充值金额错误!" nullmsg="请填写充值金额" sucmsg="&nbsp;">
+							<span class="Validform_checktip Validform_right">&nbsp;</span></p>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="2">
+							<p>
+								<font class="font_red">1. 充值无手续费</font><br>
+								2. 由于第三方支付平台技术支持及遇政策调整等原因，如果充值时遇到充值未到账情况，请与客服联系！(特别是手机充值用户!) 
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="user_table_text_right"><strong>*</strong>交易密码:</td>
+						<td>
+						<p class="input_and_button">
+							<input type="password" class="input hover" datatype="*6-18" id="password" name="password" errormsg="密码为6到18个字符!" nullmsg="请填写交易密码" sucmsg="&nbsp;">
+						<span class="Validform_checktip"></span></p>
+						</td>
+						<td>
+							<a href="userinfo.html">修改交易密码<p style="color:red">初始交易密码为登录密码,为了账户安全请及时修改</p></a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<div class="border_line"></div>
+							<div class="break_30"></div> 
+							<a href="javascript:void(0)" class="button_red" style="padding:10px;margin:0 0 0 346px;" onclick="bank_info();">点击查看各银行网络交易限额表</a>
+							<div class="break_20"></div> 
+						</td>
+					</tr>
+                    <tr>
+						<td colspan="4" style="background:#fafafa;padding:10px 0 20px 23px!important;border:1px solid #ddd;position:relative">
+							<h2 style="width:97%;font-size:16px;font-family:'微软雅黑';text-align:center;border-bottom:1px solid #ddd;padding-bottom:10px">选择银行</h2>
+							<div class="break_20"></div> 
+							<div class="warn_box_min" style="width:95.8%;margin-left:6px;">
+								<div class="warn_box_min_conten">
+									您的充值金额由所属银行的网络交易限额所决定,本网站充值无限额,投资无限额.您可以点击上方红色按钮查看各银行限额!
+								</div>
+							</div>
+
+							<div class="break_10"></div> 
+							<ul class="bank_list">
+								<li>
+									<input type="radio" name="defaultbank" value="ICBC" id="ICBC" class="pr1" datatype="*" errormsg="请选择性别！">
+									<label for="ICBC" style="background-image:url(images/bank/icbc.png)" title="中工商银行"><span></span></label>
+								<span class="Validform_checktip"></span></li>	
+								<div class="Validform_checktip"></div>
+								<li>
+									<input type="radio" name="defaultbank" value="ABC" id="ABC">
+									<label for="ABC" style="background-image:url(images/bank/abc.png)" title="中国农业银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="CCB" id="CCB">
+									<label for="CCB" style="background-image:url(images/bank/ccb.png)" title="中国建设银行"><span></span></label>
+								</li>
+							    <li>
+									<input type="radio" name="defaultbank" value="CMB" id="CMB">
+									<label for="CMB" style="background-image:url(images/bank/cmb.png)" title="中国招商银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="BOC" id="BOC">
+									<label for="BOC" style="background-image:url(images/bank/boc.png)" title="中国银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="HCBC" id="HCBC">
+									<label for="HCBC" style="background-image:url(images/bank/bankcomm.png)" title="交通银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="CEB" id="CEB">
+									<label for="CEB" style="background-image:url(images/bank/ceb.png)" title="中国光大银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="CITIC" id="CITIC">
+									<label for="CITIC" style="background-image:url(images/bank/ecitic.png)" title="中信银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="SPDB" id="SPDB">
+									<label for="SPDB" style="background-image:url(images/bank/spdb.png)" title="浦发银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="SDB" id="SDB">
+									<label for="SDB" style="background-image:url(images/bank/pingan.png)" title="平安银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="CMBC" id="CMBC">
+									<label for="CMBC" style="background-image:url(images/bank/cmbc.png)" title="中国民生银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="HXB" id="HXB">
+									<label for="HXB" style="background-image:url(images/bank/hxb.png)" title="华夏银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="PSBC" id="PSBC">
+									<label for="PSBC" style="background-image:url(images/bank/psbc.png)" title="中国邮政银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="HSBK" id="HSBK">
+									<label for="HSBK" style="background-image:url(images/bank/hsbank.png)" title="微商银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="HZBANK" id="HZBANK">
+									<label for="HZBANK" style="background-image:url(images/bank/hccb.png)" title="杭州银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="NJB" id="NJB">
+									<label for="NJB" style="background-image:url(images/bank/njcb.png)" title="南京银行"><span></span></label>
+								</li>
+								<li>
+									<input type="radio" name="defaultbank" value="SHBANK" id="SHBANK">
+									<label for="SHBANK" style="background-image:url(images/bank/bos.png)" title="上海银行"><span></span></label>
+								</li>
+
+							</ul>
+						</td>
+					</tr>                    
+                   
+					<tr>
+						<td></td>
+						<td colspan="2">
+							<div class="break_20"></div>
+							<a href="javascript:void(0);" class="button_blue" style="font-size:14px;padding:12px 150px" onclick="return Refund();">充值</a>
+						</td>
+                        <td></td>
+					</tr>
+				</tbody></table>
+			  <div class="break_20"></div>
+			</form>
+		</font></div><font style="font-size:14px;">
+	</font></div>
+        </div>
+    </div>
+</body>
+</html>

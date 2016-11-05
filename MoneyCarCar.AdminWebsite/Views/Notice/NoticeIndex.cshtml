@@ -1,0 +1,292 @@
+﻿@{
+    ViewBag.Title = "NoticeIndex";
+}
+<style type="text/css">
+    .search m_left {
+        float: left;
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div class="tableShow" id="mainContent" data-options="region:'center',border:0">
+        <div id="toolbar" style="padding: 5px 1px;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="clear: both;">
+                            <div class="search">
+                                标题：<input type="text" id="title" style="width: 150px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.title" />
+                                审核状态： <select id="selState" class="easyui-combobox" name="selState" style="width: 100px;">
+                                    <option value="">---审核状态---</option>
+                                    <option value="0">未审核</option>
+                                    <option value="1">已审核</option>
+                                </select>
+                                日期：<input type="text" id="startdate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.startDate" />-
+                                <input type="text" id="enddate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.endDate" />
+                            </div>
+                        </div>
+                    </td>
+                    <td style=" text-align: center; vertical-align: middle;">
+                        <a id="btnSearch" href="javascript:void()" class="easyui-linkbutton" style="width:100px;" data-options="iconCls:'icon-search'" data-bind="click:$root.searchClick">查询</a>
+                        <a id="btnAdd" href="javascript:void()" class="easyui-linkbutton" style="width:100px;" data-options="iconCls:'icon-add'" data-bind="click: $root.showAddNotice()">新增</a>
+                        @*<a id="btnDel" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-remove'" data-bind="click: $root.patchDelNotice()">删除</a>*@
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="dg" class="easyui-datagrid" title="公告列表" data-optins="checkOnSelect:true">
+        <thead>
+            <tr bgcolor="#daeef5">
+                @*<th data-options="field:'ck',width:100,checkbox:true,align:'left'"></th>*@
+                <th data-options="field:'NoticeTitle',align:'center',width:160">标题</th>
+                @*<th data-options="field:'Content',width:80">内容</th>*@
+                <th data-options="field:'NoticeStatus',width:80,align:'center',sortable:true,formatter:vm.showStatus">状态</th>
+                <th data-options="field:'NoticeRealseAccount',align:'center',width:80">发布人</th>
+                <th data-options="field:'NoticeAddDate',width:80,sortable:true,align:'center',formatter:dateTimeFormater">发布日期</th>
+                <th data-options="field:'Id',width:150,align:'center',formatter:vm.formatEditNotice">操作</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@Html.Partial("AddNotice")
+@section scripts{  
+    <script src="/Scripts/common/extend.js"></script>
+    <script src="/Scripts/common/ko.custombinding.js"></script>
+    <script src="/Scripts/common/commonViewModel.js"></script>
+
+    <script src="/Scripts/Js/js_formGetData.js"></script>
+
+
+    <script type="text/javascript">
+        var vm={
+            d_grid:null,
+            w_AddNotice:null,
+            d_Sdate:null,
+            d_Edate:null,
+            model:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)),
+            init:function(){
+                try {
+                    //初始化控件和数据
+                    this.d_Sdate= $("#startdate");
+                    this.d_Edate= $("#enddate");
+                    this.d_grid= $('#dg');
+                    this.w_AddNotice = $("#w_AddNotice").window({
+                        modal: true,
+                        closed: true,
+                        minimizable:false,
+                        collapsible:false,
+                        iconCls: 'icon-save'
+                    });
+                    this.d_grid.datagrid({
+                        //data: this.model.list,
+                        url:this.model.urls.search,
+                        singleSelect: true,
+                        autoRowHeight: true,
+                        rownumbers: true,
+                        //multiSort:true,
+                        remoteSort:true,//--非本地排序
+                        pagination: true,
+                        pageSize: 10,
+                        // pageList:[10,20,30,40,50],
+                        toolbar: '#mainContent',
+                        nowrap: false,
+                        fit: true,
+                        queryParams: ko.toJS(this.model.searchForm)
+                    });
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            searchClick: function () {
+                var sdate=this.d_Sdate.datebox("getValue");
+                var edate=this.d_Edate.datebox("getValue");
+                var title=$("#title").textbox("getValue");
+                var status=$("#selState").combobox("getValue");
+                this.model.searchForm.title=title;
+                this.model.searchForm.status=status;
+                this.model.searchForm.startDate=sdate;
+                this.model.searchForm.endDate=edate;
+                vm.d_grid.datagrid('load', ko.toJS(this.model.searchForm));
+            },
+            showStatus:function(val,row,index)
+            {
+                return (val=="0"?'<b style="color:red;">未审核<b>':'<b style="color:green;">已审核</b>');
+            },
+            formatEditNotice:function(val,row,index)
+            {
+                //操作按钮的地方
+                var html= '<a  href="javascript:vm.AuditNotice('+index+')" >'+(row.NoticeStatus==0?"审核":"未审核")+'</a><br />';
+                html+= '<a  href="javascript:vm.showAddNotice('+index+')" >编辑</a><br />';
+                html+='<a href="javascript:vm.delNotice('+index+')" >删除</a></br>';
+                return html;
+            },
+            showAddNotice:function(index)
+            {
+                try {
+                    $("#gg").form("clear");
+                    if(index!=null&&index>=0){
+                        this.d_grid.datagrid('selectRow',index);
+                        var row=vm.d_grid.datagrid('getSelected',index);
+                        $("#gg").form("load",row);
+                        this.w_AddNotice.window('setTitle',"编辑公告");
+                    }
+                    //alert(JSON.stringify(currRow));
+                    //return;
+                    //打开窗口
+                    this.w_AddNotice.window('open');
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            closeNotice:function()
+            {
+                this.w_AddNotice.window('close');
+            },
+            AuditNotice:function(index){
+                try {
+                    this.d_grid.datagrid('selectRow',index);
+                    var notice=this.d_grid.datagrid('getSelected',index);
+                    var message='';
+                    if(notice.NoticeStatus==0)
+                    {
+                        message='审核';
+                        notice.NoticeStatus=1;
+                    }else  if(notice.NoticeStatus==1)
+                    {
+                        message='未审核';
+                        notice.NoticeStatus=0;
+                    }
+                    //alert(index);
+                    //return;
+                    //显示遮罩
+                    window.parent.showMask();
+                    //添加修改的数据
+                    //var data={notice:notice};
+                    $.post(
+                     this.model.urls.edit,
+                     notice,
+                     function (data) {
+                         try {
+                             data=JSON.parse(data);
+                             vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                             message=message+data.message;
+                             //隐藏遮罩
+                             window.parent.hideMask();
+                             window.parent.msgShow("提示",message,"info",function(){
+
+                             });
+                         } catch (e) {
+                             alert(e.message);
+                         }
+                     });
+                } catch (e) {
+                    alert(e.messages);
+                }
+            },
+            AddEditNotice:function()
+            {
+                try {
+                    var notice = getFormData('gg', true);
+                    if($.trim(notice.NoticeTitle)=="")
+                    {
+                        $.messager.alert("提示", "公告标题不能为空", "info");
+                    }
+                    else if($.trim(notice.NoticeContent)=="")
+                    {
+                        $.messager.alert("提示", "公告内容不能为空", "info");
+                    }else{
+                        //alert(JSON.stringify( data));
+                        // return ;
+                        //显示遮罩
+                        window.parent.showMask();
+                        $.post(
+                         this.model.urls.edit,
+                         notice,
+                         function (data) {
+                             try {
+                                 data=JSON.parse(data);
+                                 vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                 var message=(vm.IsEdit?"编辑":"添加")+"公告"+data.message;
+                                 //隐藏遮罩
+                                 window.parent.hideMask();
+                                 window.parent.msgShow("提示",message,"info",function(){
+                                 });
+                             } catch (e) {
+                                 alert(e.message);
+                             }
+                         });
+                    }
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            patchDelNotice:function()
+            {
+                /*
+                window.parent.showMask();
+                try {
+                    this.d_grid.datagrid('selectRow',index);
+                    var dArr=this.d_grid.datagrid('getSelections');
+                    $.post(
+                     this.model.urls.patchDel,
+                     dArr,
+                     function (data) {
+                         try {
+                             data=JSON.parse(data);
+                             vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                             var message="删除公告"+data.message;
+                             //隐藏遮罩
+                             window.parent.hideMask();
+                             window.parent.msgShow("提示",message ,"info",function(){
+
+                             });
+                         } catch (e) {
+                             alert(e.message);
+                         }
+                     });
+                } catch (e) {
+                    alert(e.message);
+                }*/
+            },
+            delNotice:function(index)
+            {
+                $.messager.confirm("提示","确定要删除该条公告？",
+                   function(r){
+                       if(r){
+                           try {
+                               //显示遮罩
+                               window.parent.showMask();
+                               vm.d_grid.datagrid('selectRow',index);
+                               var d=vm.d_grid.datagrid('getSelected',index);
+                               // alert(JSON.stringify(d) );return;
+                               $.post(
+                                vm.model.urls.del,
+                                d,
+                                function (data) {
+                                    try {
+                                        data=JSON.parse(data);
+                                        vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                        var message="删除公告"+data.message;
+                                        //隐藏遮罩
+                                        window.parent.hideMask();
+                                        window.parent.msgShow("提示",message ,"info",function(){
+
+                                        });
+                                    } catch (e) {
+                                        alert(e.message);
+                                    }
+                                });
+                           } catch (e) {
+                               alert(e.message);
+                           }
+                       }
+                   });
+            }
+        };
+        vm.init();
+        ko.applyBindings(vm);
+    </script>
+}

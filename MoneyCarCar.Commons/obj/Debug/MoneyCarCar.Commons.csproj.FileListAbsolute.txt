@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\MoneyCarCar.Commons.dll.config
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\MoneyCarCar.Commons.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\MoneyCarCar.Commons.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\System.Net.Http.resources.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\System.Net.Http.WebRequest.resources.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\obj\Debug\MoneyCarCar.Commons.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.Commons\obj\Debug\MoneyCarCar.Commons.pdb

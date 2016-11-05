@@ -1,0 +1,129 @@
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>Hello Money 安全保障体系</title>
+	<link rel="stylesheet" href="http://www.hellomoney.com/html_img/iod_2/css/style.css"> 
+	<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://libs.baidu.com/jqueryui/1.8.22/jquery-ui.min.js "></script>
+	<script src="http://www.hellomoney.com/html_img/iod_2/js/jquery.fullPage.min.js"></script>
+	<script>
+	    // 动画分页
+	    $(function () {
+	        if ($.browser.msie && $.browser.version < 10) {
+	            $('body').addClass('ltie10');
+	        }
+	        $.fn.fullpage({
+	            verticalCentered: false,
+	            anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],
+	            navigation: true,
+	            navigationTooltips: ['IOD投资模式', '权益保障', '担保物处置权', '整车抵押', '借款企业审核', '实地认证', '第三方担保', '第三方监管', '法律合作']
+	        });
+	    });
+
+	    // 判断是否为移动端运行环境,添加专属css
+	    if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+	        if (window.location.href.indexOf("?mobile") < 0) {
+	            try {
+	                document.write("<style>.bg22 img{width:90%}.section h3 img{width:96%}.bg3{margin-top:50%}.bg3 img{width:80%}.bg3{width:100%}.bg3 .bg32{left:32%}.active .bg52{left:10%}.active .bg51{left:10%}.active .bg52{left:40%}.active .bg53{right:10%}.active .bg55 img{width: 80%}.active .bg54 img{width:96%}.active .bg61 img,.active .bg62 img{width: 70%}.active .bg61{left:3%}.active .bg62{right:3%}.active .text61 img{width:96%}</style>")
+	            }
+	            catch (e) { }
+	        }
+	    }
+	    else {
+	        //显示器宽度低于1200px时加载的css
+	        if (window.screen.width < 1500) {
+	            document.write("<link href='http://www.hellomoney.com/html_img/iod_2/css/width.css?2014-9-22' rel=stylesheet>")
+	        }
+	    }
+	</script>
+</head>
+<body>
+	<div class="section section1">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section1.jpg" alt=""></div>
+		<div class="bg12"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg12.png"></div>
+		<div class="bg13"><img src="http://www.hellomoney.com/public/images/logo.png"></div>
+		<div class="text1"><img src="http://www.hellomoney.com/html_img/iod_2/img/text1.png"></div>
+	</div>
+
+	<div class="section section2">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section2.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<div class="bg21"><img src="http://www.hellomoney.com/html_img/iod_2/img/text21.png"></div>
+		<div class="bg22"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg2.png"></div>
+		<h3><img src="http://www.hellomoney.com/html_img/iod_2/img/text2.png"></h3>
+	</div>
+
+	<div class="section section3">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section3.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<div class="bg3">
+			<div class="bg31"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg31.png"></div>
+			<div class="bg32"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg32.png"></div>
+			<div class="bg33"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg33.png"></div>
+		</div>
+		<h3><img src="http://www.hellomoney.com/html_img/iod_2/img/text3.png"></h3>
+	</div>
+
+	<div class="section section9">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/car/img/section1.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<div class="bg91"><img src="http://www.hellomoney.com/html_img/car/img/bg11.png"></div>
+		<div class="bg92"><img src="http://www.hellomoney.com/html_img/car/img/bg12.png"></div>
+		<div class="text"><img src="http://www.hellomoney.com/html_img/iod_2/img/text9.png"></div>
+		<div class="text92"><img src="http://www.hellomoney.com/html_img/iod_2/img/text91.png"></div>
+		<div class="text9"><img src="http://www.hellomoney.com/html_img/iod_2/img/text9.png"></div>
+		<div class="bg93"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg93.png"></div>
+	</div>
+
+	<div class="section section4">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section4.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<div class="bg4 bg41"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg41.png"></div>
+		<div class="bg4 bg42"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg42.png"></div>
+		<div class="bg4 bg43"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg43.png"></div>
+		<div class="bg4 bg44"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg44.png"></div>
+		<h4><img src="http://www.hellomoney.com/html_img/iod_2/img/text41.png"></h4>
+		<h3><img src="http://www.hellomoney.com/html_img/iod_2/img/text4.png"></h3>
+	</div>
+
+	<div class="section section5">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section5.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<h3><img src="http://www.hellomoney.com/html_img/iod_2/img/text5.png"></h3>
+		<div class="bg51"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg51.png"></div>
+		<div class="bg52"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg52.png"></div>
+		<div class="bg53"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg53.png"></div>
+		<div class="bg54"><img src="http://www.hellomoney.com/html_img/iod_2/img/text51.png"></div>
+		<div class="bg55"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg54.png"></div>
+	</div>
+
+	<div class="section section8">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section8.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<h3><img src="http://www.hellomoney.com/html_img/iod_2/img/text8.png"></h3>
+		<h4><img src="http://www.hellomoney.com/html_img/iod_2/img/text81.png"></h4>
+		<div class="bg81"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg81.png"></div>
+	</div>
+
+	<div class="section section6">
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section6.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+		<div class="text6"><img src="http://www.hellomoney.com/html_img/iod_2/img/text6.png"></div>
+		<div class="bg61"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg61.png"></div>
+		<div class="bg62"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg62.png"></div>
+		<div class="text61"><img src="http://www.hellomoney.com/html_img/iod_2/img/text61.png"></div>
+		<div class="bg63"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg63.png"></div>
+		<div class="bg64"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg64.png"></div>
+	</div>
+	
+	<div class="section section7">
+		<div class="bg71"><img src="http://www.hellomoney.com/html_img/iod_2/img/bg71.png"></div>
+		<h3><img src="http://www.hellomoney.com/html_img/iod_2/img/text7.png"></h3>
+		<div class="bg"><img src="http://www.hellomoney.com/html_img/iod_2/img/section7.jpg" alt=""></div>
+		<a href="http://www.hellomoney.com" class="logo" target="_blank"></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计信息</title>
+<link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/user_menu.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- 弹窗组件-->
+<script type="text/javascript" src="http://www.hellomoney.com/public/js/artDialog.js?skin=opera"></script>
+<!--表单验证插件-->
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script> 
+    <!-- 验证码和短信倒计时 重要-->
+<script type="text/javascript" src="js/jquery.form.js"></script>
+	<!-- 特效库 重要-->
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.source.js"></script>
+	<!-- 其他效果 函数 重要-->
+<script type="text/javascript" src="js/other.js"></script> 
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+
+<script type="text/javascript">
+		var myMenu;
+		window.onload = function() {
+			myMenu = new SDMenu("user_menu");
+			myMenu.init();
+		};
+	</script>
+</head>
+
+<body>
+	<!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <span class="fr"><a href="login.html" class="reg">亲，请登录</a> <a href="reg.html">免费注册</a></span>
+            </div>
+        </div>	        
+        <div class="header_top wrap_1200_content">
+            <a href="###" class="logo"><img src="images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+					<li class="nav_link on"><a href="index.html" title="首页">首页</a></li>
+					<li class="nav_link"><a href="Investment.html" title="投资">投资</a></li>
+					<li class="nav_link"><a href="about.html" title="关于我们">关于我们</a></li>
+					<li class="nav_link"><a href="xszy.html" title="新手指引">新手指引</a></li>
+					<li class="nav_link"><a href="help.html" title="帮助中心">帮助中心</a></li>
+				</ul>
+        </div>	
+	</div>
+	<!--header end-->
+	<div class="info">
+    	<p><a href="###">首页</a>><a href="###">用户管理</a>><a href="###">账户概况</a></p>
+    </div>
+	<div class="main">
+    	<div class="left">
+      	  <div id="user_menu" class="user_menu">
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_1"></span>账户管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+						<a href="user.html">账户概况</a>
+						<a class="user_menu_on" href="userinfo.html">个人信息</a>
+						<a href="userbank.html">银行卡</a>
+						<a href="usermessage.html">系统信息</a>
+						<a href="login_usermessage.html">登录日志</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_2"></span>投资管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+                        <a href="totalrevenue.html">投资统计</a>
+						<a href="transactionpurchased.html">已投产品</a>
+						<a href="transactionissued.html">到期产品</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_3"></span>消化管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userpurchase.html">我的收购</a>                       
+						<a href="usersell.html">我的卖出</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_4"></span>资金管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userrecords.html">交易记录</a>
+						<a href="pay.html">立即充值</a>
+						<a href="usertixian.html">马上提现</a>
+						<a href="usertixian2.html">提现记录</a>
+					</div>
+				</div>
+        </div>
+        <div class="right">
+        	<div class="user_right_content"> 
+			<h2 class="user_plate_title">个人信息
+				<span class="title_hot_ico">您还没有进行实名认证</span>
+            </h2>
+		
+		<div class="user_plate_box">
+        	<ul class="userinfo_list">
+                <li><span class="input_box_span"><b>*</b>姓  名:</span><input readonly id="" name="" value="**" class="input" type="text"></li>
+                <li><span class="input_box_span"><b>*</b>身份证:</span><input readonly id="" name="" value=""  class="input" type="text"></li>
+                <li><span class="input_box_span"><b>*</b>现居地址:</span><input readonly id="" name="" value="" class="input" type="text"></li>
+                <div class="btn_position">
+            		<a href="javascript:void(0)" class="button_blue" onclick="sfrz_form_read();">添加</a>
+					<span class="no_ico">X</span><span class="no_ico_text">您还没有进行实名认证</span>
+           		</div>   
+            </ul>
+			<div class="clear"></div>
+			<div class="border_line"></div>
+            <ul class="userinfo_list2">
+                <li><span class="input_box_span"><b>*</b>手机号码:</span><input readonly id="" name="" value="********241" type="text" class="input"></li>
+                <div class="btn_position2">
+            		<a href="javascript:void(0)" class="button_blue" onclick="phone_step_1_form();">修改</a>
+					<span class="correct_ico">√</span><span class="correct_ico_text">手机已验证</span>
+           		</div>   
+            </ul>
+			<div class="clear"></div>
+			<div class="border_line"></div>
+            <ul class="userinfo_list2">
+                <li><span class="input_box_span"><b>*</b>交易密码:</span><input readonly id="" name="" value="************" type="password" class="input"></li>
+                <div class="btn_position2">
+            		<a href="javascript:void(0)" class="button_blue" onclick="trde_form();">修改</a>
+           		</div> 
+                <span class="title_hot_ico" style="display:block;width:370px;margin-left:26px">(初始交易密码为登录密码,为了您的资金安全,建议及时修改并牢记!)</span>  
+            </ul>
+            <div class="break_5"></div>
+			<div class="clear"></div>
+			<div class="border_line"></div>
+            <ul class="userinfo_list2">
+                <li><span class="input_box_span"><b>*</b>登录密码:</span><input readonly id="" name="" value="************" type="password" class="input"></li>
+                <div class="btn_position2">
+            		<a href="javascript:void(0)" class="button_blue" onclick="edit_login_form();">修改</a>
+           		</div> 
+            </ul>
+
+
+					<!--个人信息注意事项 start-->
+					<div id="sfrz_form_read" style="display:none;width:500px">
+						<div class="warn_box_min">
+							<div class="warn_box_min_conten">
+								<font style="font-size:16px;font-weight:bold;font-family:'微软雅黑'; line-height:25px; color:#ED3C3C;">实名认证里的信息会用于绑定银行卡和提现使用,请确保信息的真实性,否则会造成账户无法提现!<br>且实名认证一次绑定,不可修改,请认真填写!</font>
+							</div>
+						</div>
+					</div>
+
+					<!--个人信息 表单 start-->
+					<div id="sfrz_form" style="display:none;width:336px">
+						<form class="sfrz_form">
+							<div class="warn_box_min">
+								<div class="warn_box_min_conten">
+									<font color="#ED3C3C">实名认证里的信息会用于绑定银行卡和提现使用,请确保信息的真实性,否则会造成账户无法提现,且实名认证一次绑定,不可修改,请认真填写!</font>
+								</div>
+							</div>
+							<div class="break_5"></div>
+							<p class="input_lable"><strong>*</strong>姓名</p>
+							<p class="input_and_button">
+								<input class="input_100" datatype="zh2-20" errormsg="请填写中文姓名" sucmsg="&nbsp;" nullmsg="请填写姓名!" id="truename" type="text">
+							<span class="Validform_checktip"></span></p>
+							<p class="input_lable"><strong>*</strong>身份证号码</p>
+							<p class="input_and_button">
+                            <input class="input_100 hover yuyin_tips" datatype="idcard" errormsg="请填写正确的身份证号码" sucmsg="&nbsp;" nullmsg="请填写身份证号码!" id="idcard" type="text">
+							<span class="Validform_checktip"></span></p><p class="input_lable"><strong>*</strong>现居地址</p>
+								<select id="s_province" name="s_province" class="input" style="width:100px;padding:5px 0;"><option value="">省份</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="上海市">上海市</option><option value="重庆市">重庆市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西">广西</option><option value="海南省">海南省</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾省">台湾省</option></select>&nbsp;&nbsp;
+			    			    <select id="s_city" name="s_city" class="input" style="width:100px;padding:5px 0;"><option value="">地级市</option></select>&nbsp;&nbsp;
+			                    <select id="s_county" name="s_county" class="input" style="width:100px;padding:5px 0;"><option value="">市、县级市</option></select>
+							<div class="break_10"></div>
+							<div class="border_line"></div>
+					
+							<div class="clear"></div>
+							<p class="input_lable"><strong>*</strong>验证码</p>
+							<p class="input_and_button Validform_right_3">
+									<input class="input hover fl" datatype="e4-4" errormsg="验证码位数不正确,为4位!" sucmsg="&nbsp;" nullmsg="请填写验证码!" style="width:122px" id="txtResetCode" type="text">
+                                <input value="50379c188ae72093" id="tokensjrz" name="tokensjrz" type="hidden">							
+								<a href="javascript:void;" class="button_blue button_yellow yuyin_tips fr" style="width:90px;margin-top:2px;padding:5px" title="<b>推荐使用语音验证(推荐)</b>，您会接到本公司400电话400-697-6662为您语音播报验证码！" id="sendmobileyy" onclick="sendmobilesyy()">语音验证(推荐)</a>
+								<a href="javascript:void;" class="button_blue fr" style="width:50px;margin:2px 6px 0 0" id="sendphone" onclick="sendphone()">短信验证</a>
+							<span class="Validform_checktip"></span></p>
+							<div class="break_20"></div>
+                             
+							<input name="button" class="button_blue hover" value="确认" style="padding:10px 0;font-size:14px" onclick="yztruename()" type="button">
+							<div class="break_10"></div>
+						</form>
+					</div>
+                    
+                    <div id="sfrz_form_1" style="display:none;width:460px">
+							<div class="warn_box_min">
+								<div class="warn_box_min_conten">
+									<font style="font-size:20px;font-weight:bold;font-family:'微软雅黑'" color="#ED3C3C">为你的账户安全,实名认证为一次绑定,不可修改!</font>
+								</div>
+							</div>
+					</div>
+					<!--个人信息 表单 end-->
+
+					<!--手机修改 step_1 start-->
+					<div id="phone_step_1_form" style="width:330px;display:none">
+						<form class="phone_step_1_form">
+							<div class="break_10"></div>
+							<p class="input_lable"><strong>*</strong>验证码</p>
+							<p class="input_and_button Validform_right_3">
+								<input class="input fl" datatype="e4-4" errormsg="验证码位数不正确,为4位!" sucmsg="&nbsp;" nullmsg="请填写验证码!" style="width:110px" id="txtResetCode1" type="text">		
+                                <input value="50379c188ae72093" id="tokensjyz" name="tokensjyz" type="hidden">
+								<a href="javascript:void;" class="button_yellow yuyin_tips fr" style="width:90px;margin-top:2px;padding:5px" title="<b>推荐使用语音验证(推荐)</b>，您会接到本公司400电话400-697-6662为您语音播报验证码！" onclick="sendmobilesyy()">语音验证(推荐)</a>
+								<a href="javascript:void;" class="button_blue fr" style="width:50px;margin:2px 6px 0 0" onclick="sendphone()">短信验证</a>
+							<span class="Validform_checktip"></span></p>
+							<div class="break_20"></div>
+							<input name="button" class="button_blue hover" value="下一步" onclick="phone_step_2_form();" style="padding:10px 0;font-size:14px" type="button">						
+							<div class="break_10"></div>
+						</form>
+					</div>
+					<!--手机修改 step_1 end-->
+
+					<!--手机修改 step_2 start-->
+					<div id="phone_step_2_form" style="width:330px;display:none">
+						<form class="phone_step_2_form">
+							<div class="break_10"></div>
+							<p class="input_lable"><strong>*</strong>新的手机号</p>
+							<p class="input_and_button">
+                            <input value="50379c188ae72093" id="tokensjyz" name="tokensjyz" type="hidden">
+								<input class="input_text hover" datatype="m" errormsg="请填写正确的手机号码" sucmsg="&nbsp;" nullmsg="请填写手机号码!" name="newphone" id="newphone" type="text">
+							<span class="Validform_checktip"></span></p>
+							<p class="input_lable"><strong>*</strong>验证码</p>
+							<p class="input_and_button Validform_right_3">
+								<input class="input_text hover fl" datatype="e4-4" errormsg="验证码位数不正确,为4位!" sucmsg="&nbsp;" nullmsg="请填写验证码!" style="width:110px" id="txtResetCode2" type="text">		
+								<a href="javascript:void;" class="button_blue button_yellow yuyin_tips fr" style="width:90px;margin-top:2px;padding:5px" title="<b>推荐使用语音验证(推荐)</b>，您会接到本公司400电话400-697-6662为您语音播报验证码！" onclick="secondtimeyy()" id="secondtimeyy">语音验证(推荐)</a>
+								<a href="javascript:void;" class="button_blue fr" style="width:50px;margin:2px 6px 0 0" onclick="secondtimedx()" id="sendphone">短信验证</a>
+							<span class="Validform_checktip"></span></p>
+							<div class="break_20"></div>
+							<input name="button" class="button_blue hover" value="确认" style="padding:10px 0;font-size:14px" onclick="yznewphone()" type="button">
+							<div class="break_10"></div>
+						</form>
+					</div>
+					<!--手机修改 step_2 end-->
+					
+					<!--交易密码修改 start-->
+					<div id="trde_form" style="width:340px;display:none">
+						
+							<div class="warn_box_min">
+								<div class="warn_box_min_conten">
+									<font color="#ED3C3C">您可以通过经常性修改交易密码更好的保护您的账号安全，以避免您受到意外损失</font><br>
+									1.初始的交易密码与您的登录密码相同，为了您的资金安全，请修改您的交易密码<br>
+									2.经常性修改交易密码能有效的保护您的帐号安全<br>
+									3.涉及到您的资金安全，请勿设置简单的交易密码，不要设置和登录密码相同的交易密码<br>
+									<div class="break_10"></div>
+									<font color="#ED3C3C">忘记交易密码,请联系客服找回</font>&nbsp;<a href="http://crm2.qq.com/page/portalpage/wpa.php?uin=4006976662&amp;aty=0&amp;a=0&amp;curl=&amp;ty=1" class="button_blue" target="_blank">联系客服</a>
+								</div>
+							</div>
+							<div class="break_30"></div>
+							<div class="min_tab">
+								<div class="hd">
+									<li class="on">通过原交易密码找回</li>
+									<li>通过手机验证码找回</li>
+								</div>
+								<div class="break_10"></div>
+								<div class="bd">
+									<div>
+                         <form class="trde_form" id="payfm">  
+										<p class="input_lable"><strong>*</strong>原交易密码</p>
+										<p class="input_and_button">
+											<input class="input_100 hover" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写原交易密码" sucmsg="&nbsp;" id="oldpassword" name="oldpassword" type="password">
+										<span class="Validform_checktip"></span></p>
+                                        
+							<p class="input_lable"><strong>*</strong>新交易密码</p>
+							<p class="input_and_button">
+								<input class="input_100 hover" name="newpassword" id="newpassword" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写新交易密码" sucmsg="&nbsp;" type="password">
+							<span class="Validform_checktip"></span></p>
+							<p class="input_lable"><strong>*</strong>重复新交易密码</p>
+							<p class="input_and_button">
+							<input class="input_100 hover" name="newpassword1" id="newpassword1" recheck="newpassword" datatype="*6-18" errormsg="两次输入的密码不一致!" nullmsg="请重复新交易密码" sucmsg="&nbsp;" type="password">
+							<span class="Validform_checktip"></span></p>
+							<div class="break_20"></div>
+                            <input value="" id="token" name="token" type="hidden">
+							<input name="button" class="button_blue hover" value="确认" style="padding:10px 0;font-size:14px" onclick="editpaypass()" type="button">
+							<div class="break_10"></div>
+						</form>
+ 									</div>
+ 									<div style="display: none;">
+                          <form class="trde_formsjyz" id="payfmsjyz">   
+										<p class="input_lable"><strong>*</strong>手机验证码</p>
+										<p class="input_and_button Validform_right_3">
+											<input class="input hover fl" datatype="e4-4" errormsg="验证码位数不正确,为4位!" sucmsg="&nbsp;" nullmsg="请填写验证码!" style="width:110px" id="txtResetCode3" name="txtResetCode3" type="text">	
+                                           
+											<input class="button_blue button_yellow yuyin_tips fr" style="width:110px;margin-top:2px;padding:5px" onclick="secondtimeyys()" id="secondtimeyuyin" title="<b>推荐使用语音验证(推荐)</b>，您会接到本公司400电话400-697-6662为您语音播报验证码！" value="语音验证(推荐)" type="button">
+                                            
+											<input class="button_blue fr" style="width:96px;margin:2px 6px 0 0;padding:5px 1px" onclick="secondtimedx()" value="短信验证" id="sendphonepas" type="button">
+										</p>
+                                        <div class="break_10"></div>
+                               <p class="input_lable"><strong>*</strong>新交易密码</p>
+							<p class="input_and_button">
+								<input class="input_100 hover" name="newpassword2" id="newpassword2" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写新交易密码" sucmsg="&nbsp;" type="password">
+							</p>
+							<p class="input_lable"><strong>*</strong>重复新交易密码</p>
+							<p class="input_and_button">
+								<input class="input_100 hover" name="newpassword3" id="newpassword3" recheck="newpassword2" datatype="*6-18" errormsg="两次输入的密码不一致!" nullmsg="请重复新交易密码" sucmsg="&nbsp;" type="password">
+							</p>
+							<div class="break_20"></div>
+                              <input value="" id="tokesendphonepas" name="tokesendphonepas" type="hidden">
+							<input name="button" class="button_blue hover" value="确认" style="padding:10px 0;font-size:14px" onclick="editpaypassecond()" type="button">
+							<div class="break_10"></div>
+ 						</form>
+                        </div>
+ 									
+								</div>
+							</div> 
+ 							<div class="clear"></div>
+                      
+					</div>
+					<!--交易密码修改 start-->
+
+					<!--登录密码修改 start-->
+					<div id="edit_login_form" style="width:340px;display:none">
+						<form class="edit_login_form" id="loginfm">
+							<div class="warn_box_min">
+								<div class="warn_box_min_conten">
+									<font color="#ED3C3C">您可以通过经常性修改交易密码更好的保护您的账号安全，以避免您受到意外损失</font><br>
+									1.经常性修改登录密码能有效的保护您的帐号安全<br>
+									2.涉及到您的资金安全，请勿设置简单的登录密码，不要设置和其它网站相同的登录密码<br>
+								</div>
+							</div>
+							<div class="break_10"></div>
+							<p class="input_lable"><strong>*</strong>原登录密码</p>
+							<div class="clear"></div>
+							<p class="input_and_button">
+								<input class="input_100 hover" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写原登录密码" sucmsg="&nbsp;" id="oldpassword" name="oldpassword" type="password">
+							<span class="Validform_checktip"></span></p>
+							<p class="input_lable"><strong>*</strong>新登录密码</p>
+							<p class="input_and_button">
+								<input class="input_100 hover" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写新登录密码" sucmsg="&nbsp;" id="newpassword" name="newpassword" type="password">
+							<span class="Validform_checktip"></span></p>
+							<p class="input_lable"><strong>*</strong>重复新登录密码</p>
+							<p class="input_and_button">
+								<input class="input_100 hover" id="newpassword1" name="newpassword1" recheck="newpassword" datatype="*6-18" errormsg="两次输入的密码不一致!" nullmsg="请重复新登录密码" sucmsg="&nbsp;" type="password">
+							<span class="Validform_checktip"></span></p>
+							<div class="break_20"></div>
+                            <input value="" id="token" name="token" type="hidden">
+							<input name="button" class="button_blue hover" value="确认" style="padding:10px 0;font-size:14px" onclick="editloginpass()" type="button">
+							<div class="break_10"></div>
+						
+					</form></div>
+					<!--登录密码修改 start-->
+		</div>
+	</div>
+        </div>
+    </div>
+<script type="text/javascript">
+$( function() {
+			//tips_yellow
+			$('.no_hover_tips').poshytip({className: 'tip_min',alignTo: 'target',alignX: 'center',alignY: 'bottom',offsetX: 0,offsetY:6,showTimeout: 100,allowTipHover: false,});
+		});
+</script>
+<!--城市数据-->
+	<script src="http://www.hellomoney.com/public/js/common/area.js"></script>
+	<script type="text/javascript">_init_area();</script>
+	<script type="text/javascript">
+	jQuery(".min_tab").slide({easing:"easeOutElastic"});//tab选项卡
+
+	function  editloginpass() {
+	
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=changepasswordAct",$("#loginfm").serialize(),function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+				art.dialog({content:data.msg,
+					close: function(){location.reload();}
+				});
+			}else{
+				art.dialog({content:data.msg});
+			}
+			$('#token').val(data.token);
+			},'json');
+	
+}
+
+		//修改身份信息弹窗
+		function sfrz_form_read(){
+			art.dialog({
+				lock: true,
+				opacity: 0.2,
+				fixed: true, 
+				padding:0,
+			    content:document.getElementById('sfrz_form_read'),
+			    init: function () {
+			    	var that = this, i = 18;
+			        var fn = function () {
+			            that.title(i + '秒后自动关闭');
+			            !i && that.close();
+			            i --;
+			        };
+			        timer = setInterval(fn, 1000);
+			        fn();
+			    },
+			    close: function () {
+			    	sfrz_form()
+			    	clearInterval(timer);
+			    },
+				cancel:function(){
+					return false;
+				}
+			});
+			$(".aui_buttons button").hide();
+		}
+
+		function sfrz_form(){
+			art.dialog({
+				title: "添加身份信息",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('sfrz_form') 
+			});
+		}
+		
+		function sfrz_form1(){
+			art.dialog({
+				title: "提示",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('sfrz_form_1') 
+			});
+		}
+		function  editpaypass() {
+	
+		$.post("###",$("#payfm").serialize(),function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+				art.dialog({content:data.msg,
+					close: function(){location.reload();},ok: function () {
+				    	location.reload();
+				        return false;
+				    }
+				});
+			}else{
+				art.dialog({content:data.msg,ok: function () {
+			    	this.close();
+			        return false;
+			    }});
+			}
+			$('#token').val(data.token);
+			},'json');
+	
+}
+function  editpaypassecond() {
+	
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=changepaypwdsjyzAct",$("#payfmsjyz").serialize(),function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+				art.dialog({content:data.msg,
+					close: function(){location.reload();},ok: function () {
+				    	location.reload();
+				        return false;
+				    }
+				});
+			}else{
+				art.dialog({content:data.msg,ok: function () {
+			    	this.close();
+			        return false;
+			    }});
+			}
+			$('#token').val(data.token);
+			},'json');
+	
+}
+
+		//修改手机号弹窗1
+		function phone_step_1_form(){
+			art.dialog({
+				title: "修改手机号码",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('phone_step_1_form') 
+			});
+		}
+
+		//修改手机号弹窗2
+		function phone_step_2_form(){
+
+			$.post("http://www.hellomoney.com/index.php?c=userinfo&a=checkyz",{token:$("#tokensjyz").val(),txtResetCode:$("#txtResetCode1").val()},function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+				art.dialog({
+				title: "修改手机号码",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('phone_step_2_form') 
+			});
+			}else{
+				art.dialog({content:data.msg,ok: function () {
+			    	this.close();
+			        return false;
+			    }});
+			}
+		$('#tokensjyz').val(data.token);
+		},'json')
+
+		}
+		
+function secondtimedx(){
+
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=secondtimedx",{token:$("#tokesendphonepas").val(),myphone:$("#newphone").val()},function(data){
+			if(data.error==''){
+				djs.init('sendphonepas',50);
+			}
+			art.dialog({content:data.msg,ok: function () {
+		    	this.close();
+		        return false;
+		    }});
+		$('#tokesendphonepas').val(data.token);
+		$('#token').val(data.token);
+		},'json')
+	
+}
+	function secondtimeyys(){
+	
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=secondtimeyy",{tokensjrz:$("#tokesendphonepas").val(),newphone:$("#newphone").val()},function(data){
+			if(data.error==''){
+				//djs.init('secondtimeyuyin',50);
+			}
+			art.dialog({content:data.msg,ok: function () {
+				this.close();
+				return false;
+			}});
+		$('#tokesendphonepas').val(data.token);
+		$('#token').val(data.token);
+		},'json');
+	
+}
+function sendphone(){
+
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=sendphone",{token:$("#tokensjyz").val()},function(data){
+			if(data.error==''){
+				djs.init('sendphone',50);
+			}
+			art.dialog({content:data.msg,ok: function () {
+		    	this.close();
+		        return false;
+		    }});
+		$('#tokensjyz').val(data.token);
+		},'json')
+
+}
+
+
+
+		//修改交易密码弹窗
+		function trde_form(){
+			art.dialog({
+				title: "修改交易密码",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('trde_form') 
+			});
+		}
+		
+		//修改登录密码弹窗
+		function edit_login_form(){
+			art.dialog({
+				title: "修改交易密码",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('edit_login_form') 
+			});
+		}
+		
+		//表单验证
+		$(function(){
+			//tips
+			$('.yuyin_tips').poshytip({className: 'tip_min',alignTo: 'target',alignX: 'center',alignY: 'top',offsetX: 0,offsetY:6,showTimeout: 100,allowTipHover: false,});
+
+			$.extend($.Datatype,{
+				//中文
+				"zh2-20" : /^([\u4E00-\u9FA5\uf900-\ufa2d]){2,20}$/,
+				"e4-4" : /^[0-9a-zA-Z]{1}\w{3,3}$/,
+			});
+
+			$(".phone_step_1_form").Validform({
+				tiptype:3,
+			});
+			$(".phone_step_2_form").Validform({
+				tiptype:3,
+			});
+
+			$(".trde_form").Validform({
+				tiptype:3,
+			});
+
+			$(".edit_login_form").Validform({
+				tiptype:3,
+			});
+
+			$(".sfrz_form").Validform({
+				tiptype:3,
+				datatype:{ 
+					//身份证验证
+					"idcard":function(gets,obj,curform,datatype){
+						var Wi = [ 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2, 1 ];// 加权因子;
+						var ValideCode = [ 1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2 ];// 身份证验证位值，10代表X;
+					
+						if (gets.length == 15) {   
+							return isValidityBrithBy15IdCard(gets);   
+						}else if (gets.length == 18){   
+							var a_idCard = gets.split("");// 得到身份证数组   
+							if (isValidityBrithBy18IdCard(gets)&&isTrueValidateCodeBy18IdCard(a_idCard)) {   
+								return true;   
+							}   
+							return false;
+						}
+						return false;
+						
+						function isTrueValidateCodeBy18IdCard(a_idCard) {   
+							var sum = 0; // 声明加权求和变量   
+							if (a_idCard[17].toLowerCase() == 'x') {   
+								a_idCard[17] = 10;// 将最后位为x的验证码替换为10方便后续操作   
+							}   
+							for ( var i = 0; i < 17; i++) {   
+								sum += Wi[i] * a_idCard[i];// 加权求和   
+							}   
+							valCodePosition = sum % 11;// 得到验证码所位置   
+							if (a_idCard[17] == ValideCode[valCodePosition]) {   
+								return true;   
+							}
+							return false;   
+						}
+						
+						function isValidityBrithBy18IdCard(idCard18){   
+							var year = idCard18.substring(6,10);   
+							var month = idCard18.substring(10,12);   
+							var day = idCard18.substring(12,14);   
+							var temp_date = new Date(year,parseFloat(month)-1,parseFloat(day));   
+							// 这里用getFullYear()获取年份，避免千年虫问题   
+							if(temp_date.getFullYear()!=parseFloat(year) || temp_date.getMonth()!=parseFloat(month)-1 || temp_date.getDate()!=parseFloat(day)){   
+								return false;   
+							}
+							return true;   
+						}
+						
+						function isValidityBrithBy15IdCard(idCard15){   
+							var year =  idCard15.substring(6,8);   
+							var month = idCard15.substring(8,10);   
+							var day = idCard15.substring(10,12);
+							var temp_date = new Date(year,parseFloat(month)-1,parseFloat(day));   
+							// 对于老身份证中的你年龄则不需考虑千年虫问题而使用getYear()方法   
+							if(temp_date.getYear()!=parseFloat(year) || temp_date.getMonth()!=parseFloat(month)-1 || temp_date.getDate()!=parseFloat(day)){   
+								return false;   
+							}
+							return true;
+						}
+						
+					}
+					
+				}
+
+			});
+		})
+		
+		function sendmobilesyy(){
+
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=findpwdactdh",{tokensjrz:$("#tokensjrz").val()},function(data){
+			if(data.error==''){
+				djs.init('sendmobileyy',50);
+			}
+			art.dialog({content:data.msg,ok: function () {
+				this.close();
+				return false;
+			}});
+		$('#tokensjrz').val(data.token);
+		},'json');
+}
+function secondtimeyy(){
+	var fun=$.srw({
+		'#newphone': {nl: true,nl_err: '对不起，安全手机不能为空。',reg_err:'安全手机格式错误.'}
+	});
+	if(fun){
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=secondtimeyy",{tokensjrz:$("#tokensjrz").val(),newphone:$("#newphone").val()},function(data){
+			if(data.error==''){
+				djs.init('secondtimeyy',50);
+			}
+			art.dialog({content:data.msg,ok: function () {
+				this.close();
+				return false;
+			}});
+		$('#tokensjrz').val(data.token);
+		},'json');
+	}
+}
+function yznewphone() {
+
+		$.post("http://www.hellomoney.com/index.php?c=userinfo&a=yznewphone",{token:$("#tokensjyz").val(),txtResetCode:$("#txtResetCode2").val()},function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+
+				art.dialog({content:data.msg,ok: function () {
+			    	location.reload();
+			        return false;
+			    }});
+
+
+			}else{
+				art.dialog({content:data.msg,ok: function () {
+			    	this.close();
+			        return false;
+			    }});
+			}
+		$('#tokensjyz').val(data.token);
+		},'json')
+	
+}
+function yztruename(){
+
+			
+			$.post("http://www.hellomoney.com/index.php?c=userinfo&a=yztruename",{
+			token:$("#token").val(),
+			truename:$("#truename").val(),
+			idcard:$("#idcard").val(),
+			s_province:$("#s_province").val(),
+			s_city:$("#s_city").val(),
+			s_county:$("#s_county").val(),
+			txtResetCode:$("#txtResetCode").val(),
+			transactionsubid:$("#transactionsubid").val()
+			},function(data){
+			if(data.error==''){
+				var list = art.dialog.list;
+				for (var i in list) {
+				    list[i].close();
+				};
+				if(data.transactionsubid>0){
+					window.location.href="/index.php?c=transaction&a=gohistory&zltz=zltzw&transactionsubid="+data.transactionsubid;
+					
+				}else{
+					art.dialog({content:data.msg,
+				    close: function(){location.reload();},
+				    ok: function () {
+				    	location.reload();
+				        return false;
+				    }
+				});
+				}
+			}else{
+				art.dialog({content:data.msg,
+					ok: function () {
+				    	this.close();
+				        return false;
+				    }
+				});
+			}
+		$('#token').val(data.token);
+		},'json')
+	
+}
+
+
+
+	</script>
+</body>
+</html>

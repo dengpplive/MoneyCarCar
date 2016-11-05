@@ -1,0 +1,64 @@
+﻿<?xml version="1.0"?>
+<yeepay>
+  <payConfig>
+    <platformNo>10012425968</platformNo>
+    <!--<actionUrl>http://119.161.147.110:8088/member/bha/</actionUrl>
+    <serviceUrl>http://119.161.147.110:8088/member/bhaexter/bhaController</serviceUrl>-->
+    <actionUrl>https://member.yeepay.com/member/bha/</actionUrl>
+    <serviceUrl>https://member.yeepay.com/member/bhaexter/bhaController</serviceUrl>
+    <input_charset>UTF-8</input_charset>
+    <callbackUrl>http://211.149.204.89:81/YeePayCallBack/CallBack</callbackUrl>
+    <notifyUrl>http://211.149.204.89:81/YeePayNotify/Notify</notifyUrl>
+    <signUrl>http://211.149.204.89:8088/sign</signUrl>
+    <verifyUrl>http://211.149.204.89:8088/verify</verifyUrl>
+    <key>c2a5C77276jp44VdDm19fZv2ja4wp9f539fj253q1j7mPxZh5E1dl10F14l0</key>
+  </payConfig>
+  <callbackUrls>
+    <!--21 注册-->
+    <toRegister>http://localhost:8200/PayCallback/RegCallBack</toRegister>
+    <!--22 充值-->
+    <toRecharge>http://localhost:8200/PayCallback/RegCallBack</toRecharge>
+    <!--23 提现-->
+    <toWithdraw>http://localhost:8200/PayCallback/RegCallBack</toWithdraw>
+    <!--24 绑卡-->
+    <toBindBankCard>http://localhost:8200/PayCallback/BindBankCardCallBack</toBindBankCard>
+    <!--25 取消绑卡-->
+    <toUnbindBankCard>http://localhost:8200/PayCallback/UnbindBankCardCallBack</toUnbindBankCard>
+    <!--26 企业用户注册-->
+    <toEnterpriseRegister></toEnterpriseRegister>
+    <!--27 转账 1-->
+    <toCpTransaction_TRANSFER>http://localhost:8200/PayCallback/RegCallBack</toCpTransaction_TRANSFER>
+    <!--27 （2）投标［TENDER］-->
+    <toCpTransaction_TRANSFER>http://localhost:8200/PayCallback/RegCallBack</toCpTransaction_TRANSFER>
+    <!--27 （3）还款［REPAYMENT］-->
+    <toCpTransaction_TRANSFER>http://localhost:8200/PayCallback/RegCallBack</toCpTransaction_TRANSFER>
+    <!--27 （4）债权转让［CREDIT_ASSIGNMENT］-->
+    <toCpTransaction_TRANSFER></toCpTransaction_TRANSFER>
+    <!--28 自动投标授权-->
+    <toAuthorizeAutoTransfer></toAuthorizeAutoTransfer>
+    <!--29 自动还款授权-->
+    <toAuthorizeAutoRepayment>http://localhost:8200/PayCallback/RegCallBack</toAuthorizeAutoRepayment>
+    <!--31 账户查询-->
+    <account_info></account_info>
+    <!--32 资金冻结-->
+    <freeze></freeze>
+    <!--33 资金解冻-->
+    <unFreeze></unFreeze>
+    <!--34 直接转账-->
+    <direct_Transaction></direct_Transaction>
+    <!--35 自动转账授权-->
+    <auto_Transaction></auto_Transaction>
+    <!--36 单笔业务查询-->
+    <query></query>
+    <!--37 转账确认-->
+    <complete_Transaction></complete_Transaction>
+  </callbackUrls>
+  <expired>
+    <!--订单超时处理，单位：分钟-->
+    <expiredTime>65</expiredTime>
+  </expired>
+  <log>
+    <!--是否需要记录日志：1 记录，0 不记录-->
+    <islog>1</islog>
+  </log>
+</yeepay>

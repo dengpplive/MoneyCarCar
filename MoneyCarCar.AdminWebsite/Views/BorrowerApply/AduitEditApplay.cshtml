@@ -1,0 +1,694 @@
+﻿@{
+    ViewBag.Title = "AduitEditApplay";
+}
+<style type="text/css">
+    .red {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        width: 150px;
+    }
+
+    .green {
+        /*color: green;*/
+        font-size: 20px;
+        font-weight: bold;
+        width: 150px;
+    }
+</style>
+<div class="easyui-layout" fit="true">
+    <div class="easyui-panel" region="center" title='处理申请'>
+        <div style="width: 900px; height: 460px; padding: 0; margin: 0;" scroll="no">
+            <form id="form1" method="post">
+                <table cellpadding="5">
+                    <tr>
+                        <th>标题:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.Title</span>
+                                <input id="Title" style="display:none" type="text" name="Title" value="@Model.Claims.Title"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-textbox" id="Title" type="text" name="Title" data-options="required:true" value="@Model.Claims.Title"></input>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>标题图片（240x276）:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <img style="width: 64px; height: 64px;" border="0" src="@Model.Claims.TitleImagePath" />
+                                <input type="hidden" id="TitleImagePath" name="TitleImagePath" value="@Model.Claims.TitleImagePath"></input>
+                            }
+                            else
+                            {
+                                <input type="text" id="TitleImagePath" readonly="readonly" name="TitleImagePath" class="easyui-textbox" data-options="required:true" value="@Model.Claims.TitleImagePath"></input>
+                                <input type="file" id="titleImg" name="titleImg" value="上传" />
+                                <span id="sapn_16" style="display:@(!string.IsNullOrEmpty(Model.Claims.TitleImagePath) ? "block":"none" )">
+                                    <img style="width: 64px; height: 64px;" id="img_16" border="0" src="@Model.Claims.TitleImagePath" />
+                                    @if (!string.IsNullOrEmpty(Model.Claims.TitleImagePath))
+                                    {
+                                        <input type="button" id="delImg" value="删除" url="@Model.Claims.TitleImagePath" />
+                                    }
+                                </span>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>借款方:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.Borrower</span>
+                                <input type="hidden" name="Borrower" value="@Model.Claims.Borrower"></input>
+                            }
+                            else
+                            {
+                                <input type="text" name="Borrower" class="easyui-textbox" data-options="required:true" value="@Model.Claims.Borrower"></input>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>借款金额:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="red">@Model.Claims.LoanAmount</span><text>￥</text>
+                                <input type="hidden" name="LoanAmount" value="@Model.Claims.LoanAmount"></input>
+                            }
+                            else
+                            {
+                                <input class="red" validtype="money" type="text" id="LoanAmount" name="LoanAmount" data-options="required:true,width:50" value="@Model.Claims.LoanAmount"></input><text>￥</text>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>单份金额:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="red">@((int)Model.Claims.SingleAmount)</span><text>￥</text>
+                                <input type="hidden" name="SingleAmount" value="@((int)Model.Claims.SingleAmount)"></input>
+                            }
+                            else
+                            {
+                                <input class="red" validtype="tiplenum" type="text" id="SingleAmount" name="SingleAmount" data-options="required:true,width:50" value="@Model.Claims.SingleAmount"></input><text>￥</text>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>年利率:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="red">@((int)Model.Claims.APR)</span><text>%</text>
+                                <input type="hidden" name="APR" value="@Model.Claims.APR"></input>
+                            }
+                            else
+                            {
+                                <input class="red" validtype="intRange[0,100]" type="text" id="APR" name="APR" data-options="required:true,width:50" value="@((int)Model.Claims.APR)"></input><text>%</text>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>借款期限:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="red">@Model.Claims.LoanPeriod</span><text>个月</text>
+                                <input type="hidden" name="LoanPeriod" value="@Model.Claims.LoanPeriod"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-textbox" validtype="integer" type="text" name="LoanPeriod" data-options="required:true" value="@Model.Claims.LoanPeriod"></input><text>个月</text>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>担保方式:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.GuaranteeWay</span>
+                                <input type="hidden" name="GuaranteeWay" value="@Model.Claims.GuaranteeWay"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-textbox" type="text" name="GuaranteeWay" data-options="required:true" value="@Model.Claims.GuaranteeWay"></input>
+                            }
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>还款方式:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.RepaymentWat</span>
+                                <input type="hidden" name="RepaymentWat" value="@Model.Claims.RepaymentWat"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-textbox" type="text" name="RepaymentWat" data-options="required:true" value="@Model.Claims.RepaymentWat"></input>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>投资结束日期:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.InvestmentEndTime</span>
+                                <input type="hidden" name="InvestmentEndTime" value="@Model.Claims.InvestmentEndTime"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-datebox" validtype="isDateTime['date']" type="text" name="InvestmentEndTime" data-options="required:true" value="@Model.Claims.InvestmentEndTime"></input>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>收益起始时间:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.EarningsStartTime</span>
+                                <input type="hidden" name="EarningsStartTime" value="@Model.Claims.EarningsStartTime"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-datebox" validtype="isDateTime['date']" type="text" name="EarningsStartTime" data-options="required:true" value="@Model.Claims.EarningsStartTime"></input>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>抵押物规格:</th>
+                        <td>
+                            @if (Model.Claims.IsApproved)
+                            {
+                                <span class="green">@Model.Claims.PawnSpec</span>
+                                <input type="hidden" name="PawnSpec" value="@Model.Claims.PawnSpec"></input>
+                            }
+                            else
+                            {
+                                <input class="easyui-textbox" type="text" name="PawnSpec" data-options="required:true" value="@Model.Claims.PawnSpec"></input>
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>动态小图标:</th>
+                        <td>
+                            <div>
+                                @for (int j = 0; j < Model.ShowAttrCode.Count; j++)
+                                {
+                                    <label for="__@j" title="@Model.ShowAttrCode[j].ToString()">
+                                        @if (Model.ShowAttrCode[j].IsOpen)
+                                        {
+                                            <input type="radio" id="__@j" name="rdyicons" checked="checked" value="@Model.ShowAttrCode[j].ToString()" />
+                                        }
+                                        else
+                                        {
+                                            <input type="radio" id="__@j" name="rdyicons" value="@Model.ShowAttrCode[j].ToString()" />
+                                        }
+                                        @Model.ShowAttrCode[j].AddShow
+                                    </label>
+                                }
+                                <br />
+                                @for (int i = 0; i < Model.ShowIcons.Count; i++)
+                                {
+                                    <label for="_@i" title="@Model.ShowIcons[i].ToString()">
+                                        @if (Model.ShowIcons[i].IsOpen)
+                                        {
+                                            <input type="checkbox" id="_@i" name="dyicons" checked="checked" value="@Model.ShowIcons[i].ToString()" />
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" id="_@i" name="dyicons" value="@Model.ShowIcons[i].ToString()" />
+                                        }
+                                        @Model.ShowIcons[i].AddShow
+                                    </label>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>图片1:</th>
+                        <td>
+                            <span style="color:red;">*</span> 上传图片后请设置宽度,注意图片宽度不能大于700像素<br />
+                            <textarea name="DetailsImages1" id="myeditor1" data-options="required:true" style="width: 100%; height: 100%">@Model.Claims.DetailsImages1</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>图片2:</th>
+                        <td>
+                            <span style="color:red;">*</span> 上传图片后请设置宽度,注意图片宽度不能大于700像素<br />
+                            <textarea name="DetailsImages2" id="myeditor2" data-options="required:true" style="width: 100%; height: 100%">@Model.Claims.DetailsImages2</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>图片3:</th>
+                        <td>
+                            <span style="color:red;">*</span> 上传图片后请设置宽度,注意图片宽度不能大于700像素<br />
+                            <textarea name="DetailsImages3" id="myeditor3" data-options="required:true" style="width: 100%; height: 100%">@Model.Claims.DetailsImages3</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>图片4:</th>
+                        <td>
+                            <span style="color:red;">*</span> 上传图片后请设置宽度,注意图片宽度不能大于700像素<br />
+                            <textarea name="DetailsImages4" id="myeditor4" data-options="required:true" style="width: 100%; height: 100%">@Model.Claims.DetailsImages4</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>图片5:</th>
+                        <td>
+                            <span style="color:red;">*</span> 上传图片后请设置宽度,注意图片宽度不能大于700像素<br />
+                            <textarea name="DetailsImages5" id="myeditor5" data-options="required:true" style="width: 100%; height: 100%">@Model.Claims.DetailsImages5</textarea>
+                        </td>
+                    </tr>
+                </table>
+                @*其他的隐藏信息可以不填  *@
+                <input type="hidden" name="ID" value="@Model.Claims.ID"></input>
+                <input type="hidden" name="BorrowerID" value="@Model.Claims.BorrowerID"></input>
+                <input type="hidden" name="ClaimsApplayID" value="@Model.Claims.ClaimsApplayID"></input>
+                <input type="hidden" name="AlreadyAmount" value="@Model.Claims.AlreadyAmount"></input>
+                <input type="hidden" name="SellingPrice" value="@Model.Claims.SellingPrice"></input>
+                <input type="hidden" name="Publisher" value="@Model.Claims.Publisher"></input>
+                <input type="hidden" name="PublishTime" value="@Model.Claims.PublishTime"></input>
+                <input type="hidden" name="IsApproved" value="@Model.Claims.IsApproved"></input>
+                <input type="hidden" name="ApproverUserName" value="@Model.Claims.ApproverUserName"></input>
+                <input type="hidden" name="ApproverTime" value="@Model.Claims.ApproverTime"></input>
+            </form>
+            <div id="QID" class="fileQueue"></div>
+        </div>
+    </div>
+    <div region="south" style="height: 30px; text-align: center;">
+        <a id="btnSave" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @*<a id="btnAduitNoPass" class="easyui-linkbutton">审核未通过</a>*@
+        @if (!Model.Claims.IsApproved)
+        {
+            <a id="btnAduitPass" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存并审核通过</a>
+        }
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a id="btnGo" href='@Url.Action("ApplayUserIndex", "BorrowerApply")' class="easyui-linkbutton" data-options="iconCls:'icon-undo'">返回</a>
+    </div>
+</div>
+
+@section scripts{   
+    <script src="/kindeditor-4.1.4/kindeditor.js"></script>
+    <script src="/Scripts/Js/js_formGetData.js"></script>
+    <script src="/Scripts/Js/js_Validate.js"></script>
+    <link href="/Scripts/uploadify-v2.1.4/uploadify.css" rel="stylesheet" />
+    <script src="/Scripts/uploadify-v2.1.4/swfobject.js"></script>
+    <script src="/Scripts/uploadify-v2.1.4/jquery.uploadify.v2.1.4.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#titleImg").uploadify({
+                'uploader': '../Scripts/uploadify-v2.1.4/uploadify.swf',//进度条，Uploadify里面含有
+                'script': '../Scripts/uploadify-v2.1.4/UploadHandler.ashx',//一般处理程序
+                'cancelImg': '../Scripts/uploadify-v2.1.4/cancel.png',//取消图片路径
+                'folder': '../UploadImage/ClaimsImage',//上传文件夹名
+                'auto': true, //文件添加到上传队列后，自动进行上传。默认为false
+                'multi': false,//是否允许多文件上传。默认为false
+                'fileExt': '*.gif;*.jpg;*.jpeg;*.png',//允许上传的文件类型，使用分号(”;)”分割 例如:*.jpg;*.gif,默认为null(所有文件类型)
+                'fileDesc': '不超过2M的图片 (*.gif;*.jpg;*.png)',
+                //fileDataName ：'Filedata',//设置一个名字，在服务器处理程序中根据该名字来取上传文件的数据。默认为Filedata
+                //queueSizeLimit ：999, 当允许多文件生成时，设置选择文件的个数，默认值：999 。
+                'sizeLimit': 20480000,  //允许上传的文件大小(kb)  此为20M
+                //'buttonText': '浏览...',
+                'wmode': 'transparent',
+                //'buttonImg': 'images/browse.jpg',
+                'onSelectOnce': function (event, data) { //在单文件或多文件上传时，选择文件时触发
+                    //event 事件对象(the event object)
+                    //data 选择的操作信息
+                    //data.filesSelected 选择文件操作中选中的文件数量
+                    $('#status-message').text(data.filesSelected + ' 文件正在等待上传…….');
+                    window.parent.showMask();
+                },
+                'onComplete': function (event, queueID, fileObj, response, data) {//当单个文件上传完成后触发
+                    try {
+                        window.parent.hideMask();
+                        var date = response.split('##')[0];
+                        var filename = response.split('##')[1];
+                        $("#img_16").attr("src", "../UploadImage/ClaimsImage/" + date + "/64_" + filename);
+                        var url = "/UploadImage/ClaimsImage/" + date + "/" + filename;
+                        $("#sapn_16").show();
+                        var TitleImagePath = $("#TitleImagePath");
+                        TitleImagePath.textbox("setValue", url);
+                        TitleImagePath.textbox("setText", url);
+                    } catch (e) {
+
+                    }
+                },
+                'onError': function (event, queueID, fileObj) {//当单个文件上传出错时触发
+                    alert("文件:" + fileObj.name + " 上传失败！");
+                },
+                // 'buttonImg': 'Images/bn_04.gif',//浏览按钮的图片路径
+                'width': 60,//浏览按钮的宽和高
+                'height': 24,
+                'queueID': 'QID'//页面上作为文件上传队列的元素的ID
+            });
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+            try {
+                window.parent.showMask();
+                $.parser.onComplete = function () {
+                    try {
+                        if (window.parent != null && window.parent.hideMask != null)
+                            window.parent.hideMask();
+                    } catch (e) {
+                    }
+                };
+                $.parser.parse();
+                $("#titleImg").show();
+                disable();
+                // 关闭过滤模式，保留所有标签
+                //KindEditor.options.filterMode = false;
+                KindEditor.basePath = '../kindeditor-4.1.4/';
+                //创建多个编辑器共同显示
+                window.editor1 = KindEditor.create('textarea[name="DetailsImages1"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 800,
+                    height: 300,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor2 = KindEditor.create('textarea[name="DetailsImages2"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 800,
+                    height: 300,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor3 = KindEditor.create('textarea[name="DetailsImages3"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 800,
+                    height: 300,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor4 = KindEditor.create('textarea[name="DetailsImages4"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 800,
+                    height: 300,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+                window.editor5 = KindEditor.create('textarea[name="DetailsImages5"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 800,
+                    height: 300,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+        //禁用输入
+        function disable() {
+            var IsApproved = $("#IsApproved").val();
+            if (IsApproved == true || IsApproved == 1) {
+                $("#LoanAmount").attr("readonly", true);
+                $("#APR").attr("readonly", true);
+                $("#SingleAmount").attr("readonly", true);
+            } else {
+                $("#LoanAmount").removeAttr("readonly");
+                $("#APR").removeAttr("readonly");
+                $("#SingleAmount").removeAttr("readonly");
+            }
+        }
+
+        //处理
+        function Handle(flag) {
+            try {
+                var form = $("#form1");
+                var claims = getFormData('form1', true);
+
+                var errMsg = "";
+                var b1 = (/^(([1-9]\d*)|\d)(\.\d{1,2}(0{0,2})?)?$/).test(claims.LoanAmount) && parseFloat(claims.LoanAmount, 10) > 0;
+                if (!b1) {
+                    errMsg = "输入借款金额错误";
+                }
+                var re = /^[0-9]*[0-9](\.0{0,100})?$/i;
+                if (!(re.test(claims.SingleAmount)
+                    && (claims.SingleAmount % 100 === 0))) {
+                    errMsg = "输入单份金额只能是100的整数倍";
+                }
+
+                if (!(/^[1-9]\d*(\.0{1,4})?$/.test(claims.APR)
+                    && (parseInt(claims.APR, 10) >= 0 && parseInt(claims.APR, 10) < 100))) {
+                    errMsg = "输入年利率只能是[0-100]之间的正整数";
+                }
+                if (errMsg != "") {
+                    window.parent.msgShow("提示", errMsg, "info"); return;
+                }
+                var selIcons = [];
+                var selArr = $("input[name='dyicons']:checked");
+                for (var i = 0; i < selArr.length; i++) {
+                    selIcons.push(selArr[i].value);
+                }
+                var selArrCode = $("input[name='rdyicons']:checked");
+                for (var i = 0; i < selArrCode.length; i++) {
+                    selIcons.push(selArrCode[i].value);
+                }
+                var iconsStr = selIcons.join('|');
+                //alert(iconsStr);
+                //return;
+                claims.Icons = escape(iconsStr);
+                claims.clickType = flag;
+                claims.DetailsImages1 = escape(claims.DetailsImages1);
+                claims.DetailsImages2 = escape(claims.DetailsImages2);
+                claims.DetailsImages3 = escape(claims.DetailsImages3);
+                claims.DetailsImages4 = escape(claims.DetailsImages4);
+                claims.DetailsImages5 = escape(claims.DetailsImages5);
+
+                var isPass = $("#form1").form('validate');
+                if (isPass) {
+                    // alert(JSON.stringify(claims));
+                    var url = '@Url.Action("AddUpdateClaims", "BorrowerApply")';
+                    //显示遮罩
+                    window.parent.showMask();
+                    $.post(url, claims, function (data) {
+                        try {
+                            data = JSON.parse(data);
+                            var desc = "保存";
+                            if (flag == 0) {
+                                desc = "保存";
+                            } else if (flag == 1) {
+                                desc = "审核未通过";
+                            } else if (flag == 2) {
+                                desc = "审核通过";
+                            }
+                            var message = desc + data.message;
+                            //隐藏遮罩
+                            window.parent.hideMask();
+                            window.parent.msgShow("提示", message, "info", function () {
+                                //....
+                                if (flag == 2) {
+                                    var gourl = '@Url.Action("AduitEditApplay", "BorrowerApply")?Id=' + claims.Id;
+                                    window.parent.showMask();
+                                    location.href = gourl;
+                                }
+                            });
+                        } catch (e) {
+                            alert(e.message);
+                        }
+                    });
+                }
+            } catch (e) {
+                alert(e.message);
+            }
+        }
+
+        $("#btnSave").click(function () {
+            //保存资料
+            Handle(0);
+        });
+        $("#btnAduitNoPass").click(function () {
+            $.messager.confirm('提示', '确认审核未通过吗', function (r) {
+                if (r) {
+                    //审核未通过
+                    Handle(1);
+                }
+            });
+        });
+        $("#btnAduitPass").click(function () {
+            var LoanAmount = $("#LoanAmount").val();
+            var APR = $("#APR").val();
+            var SingleAmount = $("#SingleAmount").val();
+            var LoanAmount = $("#LoanAmount").val();
+            $.messager.confirm('提示', '借款金额:' + LoanAmount + ',单份金额:' + SingleAmount + ',<br />年利率:' + APR + '审核通过后部分资料<br />不可更改,确认审核通过吗', function (r) {
+                if (r) {
+                    //审核通过
+                    Handle(2);
+                }
+            });
+        });
+        $("#delImg").click(function () {
+            var url = '@Url.Action("DelImage", "Claims")?imgUrl=' + $("#delImg").attr("url") + "&Id=" + $("input[name='ID']").val();
+            $("#delImg").attr("disable", true);
+            //显示遮罩
+            window.parent.showMask();
+            $.get(url, function (data) {
+                //隐藏遮罩
+                window.parent.hideMask();
+                $("#delImg").attr("disable", false);
+                data = JSON.parse(data);
+                if (data.status == 1) {
+                    $("#img_16").attr("src", "");
+                    $("#sapn_16").hide();
+                    var TitleImagePath = $("#TitleImagePath");
+                    TitleImagePath.textbox("setValue", "");
+                    TitleImagePath.textbox("setText", "");
+                }
+                alert(data.message);
+            });
+        });
+    </script>
+}

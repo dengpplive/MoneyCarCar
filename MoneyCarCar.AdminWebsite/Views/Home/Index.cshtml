@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "后台管理页面";
+}
+@Html.Partial("Login")
+@section scripts{
+    <link href="/Scripts/easyui/themes/icon.css" rel="stylesheet" />
+    <link href="/Scripts/easyui/themes/default/easyui.css" rel="stylesheet" />
+    <script src="/Scripts/easyui/jquery.js"></script>
+    <script src="/Scripts/jquery.layout-latest.js"></script>
+    <script src="/Scripts/json2.js"></script>
+    <script src="/Scripts/easyui/jquery.easyui.js"></script>
+    <script src="/Scripts/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="~/Scripts/easyui/plugins/jquery.mask.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if (top.window != window) {
+                top.location.href = '@Url.Action("Index", "Home")';
+                return;
+            }
+            $("#vcode").click(function () {
+                $("#vcode").attr("src", '@Url.Action("GetCode", "Home")');
+            });
+            $("#btnLogin").click(function () {
+                Commit();
+            });
+            $(window.document).keyup(function (event) {
+                if (event.keyCode == 13) {
+                    Commit();
+                }
+            });
+            function Commit() {
+                var isPass = $("#loginform").form('validate');
+                if (isPass) {
+                    $("#logindiv").mask();
+                    var url = $("#loginform").attr("action");
+                    $.post(url, $("#loginform").serialize(), function (data) {
+                        try {
+                            if (data != null && data != "" && data.status != null) {
+                                if (data.status > 0) {
+                                    location.href = '@Url.Action("Index", "Admin")';
+                                } else {
+                                    $("#logindiv").mask("hide");
+                                    $.messager.alert("提示", data.message, "info", function (d) {
+                                        if (data.status == -1) {
+                                            $("#vcode").val("");
+                                            $("#vcode").focus();
+                                        } else if (data.status == -2) {
+                                            $("#pwd").val();
+                                            $("#pwd").focus();
+                                        }
+                                        else if (data.status == -3) {
+                                            $("#account").select();
+                                            $("#account").focus();
+                                        }
+                                    });
+                                }
+                            } else {
+                                $.messager.alert("提示", "登陆超时", "info");
+                            }
+                        } catch (e) {
+                            $.messager.alert("提示", e.message, "info");
+                        } finally {
+                        }
+                    }, "json");
+                }
+            }
+        });
+    </script>
+}
+
+

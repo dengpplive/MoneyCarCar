@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "AddNews1";
+}
+<div class="easyui-layout" fit="true" border="false" style="overflow-y: hidden" scroll="no">
+    <div region="center" class="easyui-panel" title='@(Model.Id > 0 ? "编辑新闻" : "添加新闻")'>
+        <form id="form1" method="post">
+            <table cellpadding="5">
+                <tr>
+                    <td>标题:</td>
+                    <td>
+                        <input class="easyui-textbox" style="height:32px;" type="text" validtype="maxLength[200]" name="NewsTitle" data-options="required:true" value="@Model.NewsTitle"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>发布状态:</td>
+                    <td>
+                        <label for="NewsStatus1">
+                            <input type="radio" id="NewsStatus1" name="NewsStatus" @(Model.NewsStatus == 1 ? "checked=true" : "") value="1"></input>启用
+                        </label>
+                        <label for="NewsStatus2">
+                            <input type="radio" id="NewsStatus2" name="NewsStatus" @(Model.NewsStatus == 0 ? "checked=true" : "") value="0"></input>禁用
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>内容:</td>
+                    <td>
+                        <textarea name="NewsContent" id="myeditor" validtype="isEmpty" data-options="required:true" style="width: 100%; height: 100%">@Model.NewsContent</textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="Id" value="@Model.Id"></input>
+            <input type="hidden" name="UserId" value="@Model.UserId"></input>
+            <input type="hidden" name="UserName" value="@Model.UserName"></input>
+            <input type="hidden" name="NewsRealseTime" value="@Model.NewsRealseTime"></input>
+
+        </form>
+    </div>
+    <div region="south" style="height: 30px; text-align: center;">
+        <a id="btnSave" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+        <a id="btnGo" href='@Url.Action("NewsIndex", "News")' class="easyui-linkbutton" data-options="iconCls:'icon-undo'">返回</a>
+    </div>
+</div>
+@section scripts
+{  
+    <script src="/Scripts/common/extend.js"></script>
+    <script src="/Scripts/common/ko.custombinding.js"></script>
+    <script src="/Scripts/common/commonViewModel.js"></script>
+
+    <script src="/kindeditor-4.1.4/kindeditor.js"></script>
+    <script src="/Scripts/Js/js_formGetData.js"></script>
+    <script src="/Scripts/Js/js_Validate.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            try {
+                // 关闭过滤模式，保留所有标签
+                //KindEditor.options.filterMode = false;
+                KindEditor.basePath = '../kindeditor-4.1.4/';
+                //创建多个编辑器共同显示
+                window.editor = KindEditor.create('textarea[name="NewsContent"]',
+                {
+                    cssPath: '../kindeditor-4.1.4/plugins/code/prettify.css',
+                    uploadJson: '../kindeditor-4.1.4/asp.net/upload_json.ashx',
+                    fileManagerJson: '../kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                    allowFileManager: true,
+                    resizeType: 0,
+                    width: 900,
+                    height: 300,
+                    afterCreate: function () {
+                        var self = this;
+                        K.ctrl(document, 13, function () {
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                        K.ctrl(self.edit.doc, 13, function () {
+                            //将编辑器的内容设置到原来的textarea控件里
+                            self.sync();
+                            //K('form[name=form1]')[0].submit();
+                        });
+                    },
+                    //添加要显示的工具
+                    //items: ["image", "fullscreen"],
+                    //关键代码
+                    afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    },
+                    afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                        this.sync();
+                    }
+                });
+            } catch (e) {
+                alert(e.message);
+            }
+            $("#btnSave").click(function () {
+                try {
+                    var form = $("#form1");
+                    var news = getFormData('form1', true);
+                    //var v = window.editor.text("myeditor");
+                    //var b = window.editor.isEmpty("myeditor");
+                    if ($.trim(news.NewsTitle) == "") {
+                        $.messager.alert("提示", "新闻标题不能为空", "info");
+                        return;
+                    }
+                    if ($.trim(news.NewsContent) == "") {
+                        $.messager.alert("提示", "新闻内容不能为空", "info");
+                        return;
+                    }
+                    news.NewsContent = escape(news.NewsContent);
+                    var isPass = $("#form1").form('validate');
+                    if (isPass) {
+                        var url = '@Url.Action("AddUpdateNews", "News")';
+                        //显示遮罩
+                        window.parent.showMask();
+                        //alert(JSON.stringify(news));
+                        $.post(
+                        url,
+                         news,
+                         function (data) {
+                             try {
+                                 data = JSON.parse(data);
+                                 var message = data.message;
+                                 //隐藏遮罩
+                                 window.parent.hideMask();
+                                 window.parent.msgShow("提示", message, "info", function () {
+                                 });
+                             } catch (e) {
+                                 alert(e.message);
+                             }
+                         });
+                    }
+                } catch (e) {
+                    alert(e.message);
+                }
+            });
+        });
+        //删除编辑器
+        //$("input[name=setcp]").click(function () {
+        //    KindEditor.remove('textarea[name="' + name + '"]');
+        //});
+
+    </script>
+}
+
+

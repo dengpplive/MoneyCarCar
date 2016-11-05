@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计信息</title>
+<link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/user_menu.js"></script>
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+<script type="text/javascript">
+		var myMenu;
+		window.onload = function() {
+			myMenu = new SDMenu("user_menu");
+			myMenu.init();
+		};
+	</script>
+</head>
+
+<body>
+	<!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <span class="fr"><a href="login.html" class="reg">亲，请登录</a> <a href="reg.html">免费注册</a></span>
+            </div>
+        </div>	        
+        <div class="header_top wrap_1200_content">
+            <a href="###" class="logo"><img src="images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+					<li class="nav_link on"><a href="index.html" title="首页">首页</a></li>
+					<li class="nav_link"><a href="Investment.html" title="投资">投资</a></li>
+					<li class="nav_link"><a href="about.html" title="关于我们">关于我们</a></li>
+					<li class="nav_link"><a href="xszy.html" title="新手指引">新手指引</a></li>
+					<li class="nav_link"><a href="help.html" title="帮助中心">帮助中心</a></li>
+				</ul>
+        </div>	
+	</div>
+	<!--header end-->
+	<div class="info">
+    	<p><a href="###">首页</a>><a href="###">用户管理</a>><a href="###">账户概况</a></p>
+    </div>
+	<div class="main">
+    	<div class="left">
+      	  <div id="user_menu" class="user_menu">
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_1"></span>账户管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+						<a href="user.html">账户概况</a>
+						<a href="userinfo.html">个人信息</a>
+						<a href="userbank.html">银行卡</a>
+						<a href="usermessage.html">系统信息</a>
+						<a href="login_usermessage.html">登录日志</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_2"></span>投资管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+                        <a class="user_menu_on" href="totalrevenue.html">投资统计</a>
+						<a href="transactionpurchased.html">已投产品</a>
+						<a href="transactionissued.html">到期产品</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_3"></span>消化管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userpurchase.html">我的收购</a>                       
+						<a href="usersell.html">我的卖出</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_4"></span>资金管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userrecords.html">交易记录</a>
+						<a href="pay.html">立即充值</a>
+						<a href="usertixian.html">马上提现</a>
+						<a href="usertixian2.html">提现记录</a>
+					</div>
+				</div>
+        </div>
+        <div class="right">
+        	<div class="user_right_content">
+		<h2 class="user_plate_title">总收益--明细</h2>
+
+			<!--投资统计 strat-->
+			<div class="touzi_tj">
+				<div class="break_10"></div>
+				<div class="break_1.0"></div>
+				<ul class="touzi_tj_info">
+                	<li class="tj_info_list_on hover">
+                    <a href="###" class="tj_info_list tj_info_ico_2"><span></span><b>总收益: 0元</b></a>
+                    </li>
+					<li class=" hover">
+                    <a href="###" class="tj_info_list tj_info_ico_1">
+                    <span></span><b>总投资: 0元</b>
+                    </a>
+                    </li>
+					<li class="hover">
+                    <a href="###" class="tj_info_list tj_info_ico_3"><span></span><b>收益明细</b></a>
+                    </li>
+				</ul>
+			</div> 
+			<!--投资统计 end-->
+
+		<div class="break_30"></div>
+		<div class="user_plate_box">
+			<h2 class="user_plate_title_min">详细数据</h2>
+			<div class="tj_data_info"> 
+				<div class="break_5"></div>	
+				<div class="fl">
+					<span>搜索:</span>
+                    <a href="###" class="on">全部</a>
+					<a href="###">一周</a>
+					<a href="###">一月</a>
+					<a href="###">一年</a>
+				</div>
+				<form class="fr" method="post" action="###" name="searchform" id="searchform">
+                 <input class="input" value="起始日期" type="text">
+				 <font>至</font>
+                 <input class="input" value="结束日期" type="text"> 
+				 <input class="button_blue hover" value="搜索" type="submit"> 
+				</form>
+				<div class="break_10"></div> 
+			</div>
+
+			<div class="break_20"></div>
+			<table class="tb" border="0" cellpadding="0" cellspacing="0">
+           		<thead>
+            	<tr style="background:#fafafa!important">
+					<td colspan="6"><font style="font-size:18px;font-weight:bold;font-family:'微软雅黑';color:#666;text-align:left!important">全部收益明细</font></td>
+				</tr>
+                </thead>
+				<thead class="user_table_title">
+					<tr>
+						<th width="100">利息</th>
+						<th width="120">消化提成</th>
+						<th width="100">推广返利</th>
+						<th width="100">推广</th>
+						<th width="100">总金额</th>
+                       	<th width="100">操作</th>
+					</tr>
+				</thead>				
+				<tbody><tr>
+					<td class="user_table_green">0元</td>
+					<td class="user_table_green">0元</td>
+					<td class="user_table_green">0元</td>
+					<td class="user_table_green">0元</td>
+					<td class="user_table_green">0元</td>
+                    <td class="user_table_edit">
+                    <a href="http://www.hellomoney.com/index.php?c=userinvestment&amp;a=userrecords" class="button_blue">查看明细</a>
+                    </td>
+				</tr>	
+			</tbody></table>
+		</div>
+	</div>
+        </div>
+    </div>
+</body>
+</html>

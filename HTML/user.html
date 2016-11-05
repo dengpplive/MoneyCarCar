@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>统计信息</title>
+<link href="css/userinfo.css" rel="stylesheet" type="text/css" />
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/user_menu.js"></script>
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+	<!-- 弹窗组件-->
+<script type="text/javascript" src="http://www.hellomoney.com/public/js/artDialog.js?skin=opera"></script>
+<!--表单验证插件-->
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script> 
+    <!-- 验证码和短信倒计时 重要-->
+<script type="text/javascript" src="js/jquery.form.js"></script>
+	<!-- 特效库 重要-->
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.source.js"></script>
+	<!-- 其他效果 函数 重要-->
+<script type="text/javascript" src="js/other.js"></script> 
+<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+
+<script type="text/javascript">
+		var myMenu;
+		window.onload = function() {
+			myMenu = new SDMenu("user_menu");
+			myMenu.init();
+		};
+	</script>
+</head>
+
+<body>
+	<!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <span class="fr"><a href="login.html" class="reg">亲，请登录</a> <a href="reg.html">免费注册</a></span>
+            </div>
+        </div>	        
+        <div class="header_top wrap_1200_content">
+            <a href="###" class="logo"><img src="images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+					<li class="nav_link on"><a href="index.html" title="首页">首页</a></li>
+					<li class="nav_link"><a href="Investment.html" title="投资">投资</a></li>
+					<li class="nav_link"><a href="about.html" title="关于我们">关于我们</a></li>
+					<li class="nav_link"><a href="xszy.html" title="新手指引">新手指引</a></li>
+					<li class="nav_link"><a href="help.html" title="帮助中心">帮助中心</a></li>
+				</ul>
+        </div>	
+	</div>
+	<!--header end-->
+	<div class="info">
+    	<p><a href="###">首页</a>><a href="###">用户管理</a>><a href="###">账户概况</a></p>
+    </div>
+	<div class="main">
+    	<div class="left">
+      	  <div id="user_menu" class="user_menu">
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_1"></span>账户管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+						<a  class="user_menu_on" href="user.html">账户概况</a>
+						<a href="userinfo.html">个人信息</a>
+						<a href="userbank.html">银行卡</a>
+						<a href="usermessage.html">系统信息</a>
+						<a href="login_usermessage.html">登录日志</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_2"></span>投资管理<span class="user_menu_hide hover">+</span>
+                        <span class="user_menu_show hover">-</span></h2>
+                        <a href="totalrevenue.html">投资统计</a>
+						<a href="transactionpurchased.html">已投产品</a>
+						<a href="transactionissued.html">到期产品</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_3"></span>消化管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userpurchase.html">我的收购</a>                       
+						<a href="usersell.html">我的卖出</a>
+					</div>
+					<div class="user_menu_link">
+						<h2><span class="user_menu_ico user_menu_ico_4"></span>资金管理<span class="user_menu_hide hover">+</span><span class="user_menu_show hover">-</span></h2>
+						<a href="userrecords.html">交易记录</a>
+						<a href="pay.html">立即充值</a>
+						<a href="usertixian.html">马上提现</a>
+						<a href="usertixian2.html">提现记录</a>
+					</div>
+				</div>
+        </div>
+        <div class="right">
+        	<div class="user_info">
+				<div class="user_info_content">
+					<p>用户名: <span class="bt">tobenet</span></p>
+					<p class="account_balance"><span>账户余额: </span><b>￥0.000</b><a href="javascript:void(0)" class="button_blue"  onclick="account_recharge();">充值</a><a href="###" class="button_blue" >提现</a></p>
+					<p class="invest_profit">
+						<span>不可用金额: </span><b>￥0.000</b>(日息发放时间,为每天23:30-23:59分)
+						<span class="question_ico hover no_hover_tips" title="不可用金额为您<span class='red'>未确认的到账资金或者是已经在商城购买产品使用过的资金</span>，请注意左边竖排导航条有红色数字图标提示的栏目，进入相应栏目确认对应资金到账，即可转为可用资金.">?</span>
+					</p>
+					<p>
+                    	<span class="fl">账户安全: </span>
+                    </p><div class="account_security">
+						<div class="account_security_bg account_tips" title="为了你的账户安全,请进行实名认证">
+						<div class="account_security_step_1"></div>
+					</div> 
+					<span class="fr">较高</span>
+                </div>
+				</div>
+				</div>
+            <!--账户充值-->
+            	<div id="account_recharge" style="width:340px;display:none">
+						<form class="account_recharge">
+							<div class="break_10"></div>
+							<p class="input_lable"><strong>*</strong>帐户金额</p>
+							<div class="clear"></div>
+							<p class="input_and_button">
+								<div class="input_100"><span class="account_maoney">0.00</span>元</div>
+							<span class="Validform_checktip"></span></p>
+							<p class="input_lable"><strong>*</strong>充值金额</p>
+							<p class="input_and_button">
+								<input class="input_100 hover" datatype="*6-18" errormsg="密码为6到18个字符!" nullmsg="请填写新登录密码" sucmsg="&nbsp;" id="newpassword" name="newpassword" type="password">
+							<span class="Validform_checktip"></span></p>
+							<div class="break_20"></div>
+                            <input value="" id="token" name="token" type="hidden">
+							<input name="button" class="button_blue hover" value="确 认" style="padding:10px 0;font-size:14px" onclick="editloginpass()" type="button">
+							<div class="break_10"></div>						
+					</form>
+                 </div>
+					
+            <div class="user_info_bottom">
+                    
+						<div class="fl rz_box">
+							<span class="rz_info_ico fl"></span>
+							<div class="fl">
+								<b>实名认证<span>(**)</span></b>
+								<span class="no_ico">×</span><a href="userinfo.html">添加</a>
+							</div>
+							<div class="break_10"></div>
+							<p>为了你的账户安全,以及享受更多的服务,请进行实名认证</p>
+						</div>
+						<div class="fl rz_box">													
+							<span class="rz_phone_ico fl"></span>
+							<div class="fl">
+								<b>手机认证 <span>(********241)</span></b>
+								<span class="correct_ico">√</span><a href="userinfo.html">修改</a>
+							</div>
+							<div class="break_10"></div>
+							<p>您可享有手机相关的服务  </p>
+						</div>
+					</div>
+        </div>
+    </div>
+<script type="text/javascript">
+$( function() {
+			//tips_yellow
+			$('.no_hover_tips').poshytip({className: 'tip_min',alignTo: 'target',alignX: 'center',alignY: 'bottom',offsetX: 0,offsetY:6,showTimeout: 100,allowTipHover: false,});
+		});
+</script>
+<script type="text/javascript">
+	
+	
+		//充值弹窗1
+		function account_recharge(){
+			art.dialog({
+				title: "充值",
+				lock: true,
+				opacity: 0.2,
+				fixed: true,
+				padding:0,
+			    content:document.getElementById('account_recharge') 
+			});
+		}
+
+		
+	</script>
+</body>
+</html>

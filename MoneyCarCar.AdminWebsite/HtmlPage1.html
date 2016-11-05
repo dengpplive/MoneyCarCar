@@ -1,0 +1,108 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+    <script type="text/javascript" charset="utf-8" src="easyui/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="easyui/jquery.easyui.js"></script>
+
+    <!-- 第一步：引入UDEITOR编辑器的js文件 -->
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+</head>
+
+<body>
+    <div style="margin: 20px 0;">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="showEdit()">LoadLocal</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="loadRemote()">LoadRemote</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">Clear</a>
+    </div>
+    <!-- 第二步：初始化 UDEITOR编辑器，更多的参数可以看说明文档-->
+    <script type="text/javascript">
+
+
+        function loadLocal() {
+            $('#ff').form('load', {
+                name: 'myname',
+                email: 'mymail@gmail.com',
+                subject: 'subject',
+                message: 'message',
+                language: 'en'
+            });
+            //var ue = UE.getEditor({ textarea: "Textarea1" });
+            //ue.render('Textarea1');
+            //ue = UE.getEditor('Textarea1');
+        }
+        function showEdit() {
+            UE.getEditor('myeditor');
+            UE.getEditor('myeditor1');
+        }
+
+        function loadRemote() {
+            $('#ff').form('load', 'form_data1.json');
+        }
+        function clearForm() {
+            $('#ff').form('clear');
+        }
+        //自定义工具栏        //    UE.getEditor('editor', {
+        //        toolbars: [
+        //             ['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic',
+        //'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily',
+        //'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify',
+        //'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch',
+        //'autotypeset', 'blockquote', 'pasteplain', '|', 'forecolor', 'backcolor',
+        //'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'link',
+        //'unlink', 'emotion', 'help']
+        //        ]
+        //    });
+    </script>
+    <div class="easyui-panel" title="New Topic" style="width: 800px; height: 400px;" resize="true">
+        <form id="ff" method="post">
+            <table cellpadding="5">
+                <tr>
+                    <td>Name:</td>
+                    <td>
+                        <input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+                </tr>
+                <tr>
+                    <td>Subject:</td>
+                    <td>
+                        <input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td>
+                        <!--<input class="easyui-textbox" name="message" data-options="multiline:true" style="height: 60px"></input>-->
+                        <!-- 第三步：用于显示UDEITOR编辑器，可以是<textarea>，也可以是<script>... -->
+                        <textarea name="content" id="myeditor" style="width: 100%; height: 100%">默认值..</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td>
+                        <!--<input class="easyui-textbox" name="message" data-options="multiline:true" style="height: 60px"></input>-->
+                        <!-- 第三步：用于显示UDEITOR编辑器，可以是<textarea>，也可以是<script>... -->
+                        <textarea name="content" id="myeditor1" style="width: 100%; height: 100%">默认值myeditor1..</textarea>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Language:</td>
+                    <td>
+                        <select class="easyui-combobox" name="language">
+                            <option value="ar">Arabic</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

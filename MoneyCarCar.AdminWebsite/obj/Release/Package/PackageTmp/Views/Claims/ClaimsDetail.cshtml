@@ -1,0 +1,110 @@
+﻿@{
+    ViewBag.Title = "ClaimsDetail";
+}
+<style type="text/css">
+    .table {
+        border: 1px solid #c5c5c5;
+        border-width: 1px 0 0 0px;
+    }
+
+
+
+        .table td {
+            line-height: 20px;
+            border: 1px dashed #c5c5c5;
+            border-width: 0 1px 1px 0;
+            color: #999;
+            padding: 0 5px;
+        }
+
+            .table td span {
+                display: block;
+                width: 95%;
+                text-align: right;
+                margin-right: 20px;
+                color: #333;
+            }
+
+    #table1, #table1 tr th, #table1 tr td, #table1 tr {
+        border: 0;
+    }
+</style>
+@model MoneyCarCar.Models.ModelDto.ResParam.ClaimsDetailsDto
+
+@if (Model.UserInfoList.Count == 0)
+{
+    <p>暂无数据</p>
+}
+else
+{
+    <div>
+        @foreach (var itemUser in Model.UserInfoList)
+        {
+            <table id="table1">
+                <tr>
+                    <td width="100px" align="right">用户: </td>
+                    <td width="100px" align="left">@itemUser.User.UserName</td>
+                    <td width="100px" align="right">姓名:</td>
+                    <td width="100px" align="left">@itemUser.User.RealName</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="8" align="left">
+                        @foreach (var item in itemUser.ClaimsDetailsList)
+                        {
+                            <table class="table">
+                                @*<tr>
+                                        <td >债权编号: </td>
+                                        <td>@item.ClaimsID </td>
+                                        <td >投资人用户ID:</td>
+                                        <td>@item.InvestorsID</td>
+                                    </tr>*@
+                                <tr>
+                                    <td width="100px"><span>手机号码:</span> </td>
+                                    <td width="100px">@item.InvestorsCellPhone</td>
+                                    <td width="100px"><span>投资金额:</span></td>
+                                    <td width="100px">@item.InvestorMoney</td>
+                                    <td width="100px"><span>投资时间: </span></td>
+                                    <td width="100px">@item.InvestorsTime</td>
+                                    <td width="100px"><span>到期收益:</span></td>
+                                    <td width="100px">@item.ExpireEarnings</td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>认购状态:</span> </td>
+                                    <td colspan="7">
+                                        @if (item.PayStatus == 0)
+                                        {
+                                            <b>未认购</b>
+                                        }
+                                        else if (item.PayStatus == 1)
+                                        {
+                                            <b>认购中</b>
+                                        }
+                                        else if (item.PayStatus == 2)
+                                        {
+                                            <b>认购完成</b>
+                                        }
+                                        else if (item.PayStatus == 3)
+                                        {
+                                            <b>认购失败-过期</b>
+                                        }
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span>支付说明:</span></td>
+                                    <td colspan="7">@item.PayMark</td>
+                                </tr>
+                            </table>
+
+                        }
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+}
+

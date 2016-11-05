@@ -1,0 +1,196 @@
+﻿@{
+    ViewBag.Title = "ApplayUserIndex";
+}
+<style type="text/css">
+    .search m_left {
+        float: left;
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div class="tableShow" id="mainContent" data-options="region:'center',border:0">
+        <div id="toolbar" style="padding: 5px 1px;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="clear: both;">
+                            <div class="search">
+                                姓名：<input type="text" id="borrowerName" class="easyui-textbox" style="width: 120px;" data-bind="value: $root.model.searchForm.borrowerName" />
+                                审核状态:<select id="borrowerType" class="easyui-combobox" data-optins="panelHeight:'auto'" name="borrowerType" style="width: 100px;">
+                                    <option value="">---申请状态---</option>
+                                    <option value="1">未审核</option>
+                                    <option value="2">正在审核</option>
+                                    <option value="3">未通过</option>
+                                    <option value="4">已通过</option>
+                                </select>
+                                申请时间：<input type="text" id="startdate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.startDate" />-
+                                <input type="text" id="enddate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.endDate" />
+                            </div>
+
+                        </div>
+                    </td>
+                    <td style="width: 150px; text-align: center; vertical-align: middle;">
+                        <a id="btnSearch" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-search'" data-bind="click:$root.searchClick">查询</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="dg" class="easyui-datagrid" title="借贷申请管理" data-optins="checkOnSelect:true">
+        <thead data-options="frozen:true">
+            <tr>
+                @*<th data-options="field:'ck',width:100,checkbox:true,align:'left'"></th>*@
+                <th data-options="field:'Id',width:100,align:'center',formatter:vm.operHTML">操作</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr bgcolor="#daeef5">
+                @*<th data-options="field:'BorrowerID',align:'center',width:160">账号</th>*@
+                <th data-options="field:'BorrowerName',width:80">借款人姓名</th>
+                <th data-options="field:'LoanAmount',width:80">借款金额￥</th>
+                <th data-options="field:'BorrowerTime',width:150">申请时间</th>
+                <th data-options="field:'BorrowerType',width:80,formatter:vm.showStatus">审核状态</th>
+                <th data-options="field:'BorrowerReason',width:280">借款原因</th>
+                <th data-options="field:'CollateralDesc',width:280">抵押物描述</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section scripts{
+    @*@Styles.Render("~/easyui/css")
+        @Scripts.Render("~/bundles/easyui")
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/common")*@
+    <link href="/Scripts/easyui/themes/icon.css" rel="stylesheet" />
+    <link href="/Scripts/easyui/themes/default/easyui.css" rel="stylesheet" />
+
+    <script src="/Scripts/easyui/jquery.js"></script>
+    <script src="/Scripts/easyui/jquery.easyui.js"></script>
+    <script src="/Scripts/easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    <script src="/Scripts/knockout-2.2.0.debug.js"></script>
+    <script src="/Scripts/knockout-3.1.0.debug.js"></script>
+    <script src="/Scripts/knockout.mapping-latest.debug.js"></script>
+
+    <script src="/Scripts/common/extend.js"></script>
+    <script src="/Scripts/common/ko.custombinding.js"></script>
+    <script src="/Scripts/common/commonViewModel.js"></script>
+
+    <script type="text/javascript">
+        var vm={
+            d_grid:null,
+            d_Sdate:null,
+            d_Edate:null,
+            d_SelBorrowerType:null,
+            model:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)),
+            init:function(){
+                try {
+                    //初始化控件和数据
+                    this.d_Sdate= $("#startdate");
+                    this.d_Edate= $("#enddate");
+                    this.d_grid= $('#dg');
+                    this.d_SelBorrowerType=$("#borrowerType");
+                    this.d_grid.datagrid({
+                        //data: this.model.list,
+                        url:this.model.urls.search,
+                        singleSelect: true,
+                        autoRowHeight: true,
+                        rownumbers: true,
+                        //multiSort:true,
+                        remoteSort:true,//--非本地排序
+                        pagination: true,
+                        pageSize: 10,
+                        // pageList:[10,20,30,40,50],
+                        toolbar: '#mainContent',
+                        nowrap: false,
+                        fit: true,
+                        queryParams: ko.toJS(this.model.searchForm)
+                    });
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            searchClick: function () {
+                var sdate=this.d_Sdate.datebox("getValue");
+                var edate=this.d_Edate.datebox("getValue");
+                var borrowerName=$("#borrowerName").textbox("getValue");
+                var selBorrowerType= this.d_SelBorrowerType.combobox("getValue");
+                this.model.searchForm.borrowerName=borrowerName;
+                this.model.searchForm.borrowerType=selBorrowerType;
+                //日期赋值
+                this.model.searchForm.startDate=sdate;
+                this.model.searchForm.endDate=edate;
+                vm.d_grid.datagrid('load', ko.toJS(this.model.searchForm));
+            },
+            showStatus:function(val,row,index)
+            {
+                var html='';
+                switch(val)
+                {
+                    case 1:
+                        {
+                            html='<b style="color:red;">未审核</b>';
+                        }
+                        break;
+                    case 2:
+                        {
+                            html='<b style="color:red;">正在审核</b>';
+                        }
+                        break;
+                    case 3:
+                        {
+                            html='<b style="color:red;">未通过</b>';
+                        }
+                        break;
+                    case 4:
+                        {
+                            html='<b style="color:green;">已通过</b>';
+                        }
+                        break;
+                    default:
+                        html='<b style="color:red;">未审核</b>';
+                        break;
+                }
+                return html;
+            },
+            operHTML:function(val,row,index)
+            {
+                var html= '';
+                if(row.BorrowerType==1)
+                {
+                    html= '<a href=javascript:vm.handApplay('+val+'); >处理申请</a>';
+                }else if(row.BorrowerType==2)
+                {
+                    html= '<a href=@Url.Action("AduitEditApplay", "BorrowerApply")?Id='+val+' >编辑</a>';
+                }
+                return html;
+            },
+            handApplay:function(id)
+            {
+                //显示遮罩
+                window.parent.showMask();
+                $.get(this.model.urls.hand+"?Id="+id,
+                function (data) {
+                    try {
+                        data=JSON.parse(data);
+                        if(data.status==1){
+                            vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                        }
+                        var message=data.message;
+                        //隐藏遮罩
+                        window.parent.hideMask();
+                        window.parent.msgShow("提示",message ,"info");
+                    } catch (e) {
+                        alert(e.message);
+                    }
+                });
+            }
+        };
+        vm.init();
+        ko.applyBindings(vm);
+    </script>
+}
+
+

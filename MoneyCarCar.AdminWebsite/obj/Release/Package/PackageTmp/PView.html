@@ -1,0 +1,147 @@
+﻿<div style="width: 500px; height: 400px;">
+    <form id="form1" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td>
+                    <input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td>
+                    <textarea name="content1" id="myeditor" style="width: 100%; height: 100%">@Model.Content</textarea>
+
+                    <textarea name="content2" id="myeditor1" style="width: 100%; height: 100%">@Model.Content</textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Language:</td>
+                <td>
+                    <select class="easyui-combobox" name="language">
+                        <option value="ar">Arabic</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+        $(function () {
+            $.getScript('kindeditor-4.1.4/kindeditor-min.js', function () {
+                KindEditor.basePath = 'kindeditor-4.1.4/';
+                try {
+                    // 关闭过滤模式，保留所有标签
+                    //KindEditor.options.filterMode = false;
+                    //创建多个编辑器共同显示
+                    window.editor = KindEditor.create('textarea[name="content1"]',
+                    {
+                        cssPath: 'kindeditor-4.1.4/plugins/code/prettify.css',
+                        uploadJson: 'kindeditor-4.1.4/asp.net/upload_json.ashx',
+                        fileManagerJson: 'kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                        allowFileManager: true,
+                        resizeType: 0,
+                        afterCreate: function () {
+                            var self = this;
+                            K.ctrl(document, 13, function () {
+                                self.sync();
+                                //K('form[name=form1]')[0].submit();
+                            });
+                            K.ctrl(self.edit.doc, 13, function () {
+                                //将编辑器的内容设置到原来的textarea控件里
+                                self.sync();
+                                //K('form[name=form1]')[0].submit();
+                            });
+                        },
+                        //添加要显示的工具
+                        items: ["image", "fullscreen"],
+                        //关键代码                        
+                        afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                            this.sync();
+                        },
+                        afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                            this.sync();
+                        },
+                        afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                            this.sync();
+                        }
+                    });
+                    window.editor1 = KindEditor.create('textarea[name="content2"]',
+                    {
+                        cssPath: 'kindeditor-4.1.4/plugins/code/prettify.css',
+                        uploadJson: 'kindeditor-4.1.4/asp.net/upload_json.ashx',
+                        fileManagerJson: 'kindeditor-4.1.4/asp.net/file_manager_json.ashx',
+                        allowFileManager: true,
+                        afterCreate: function () {
+                            var self = this;
+                            K.ctrl(document, 13, function () {
+                                self.sync();
+                                K('form[name=form1]')[0].submit();
+                            });
+                            K.ctrl(self.edit.doc, 13, function () {
+                                self.sync();
+                                K('form[name=form1]')[0].submit();
+                            });
+                        },
+                        //关键代码                        
+                        afterCreate: function () { //kindeditor创建后，将编辑器的内容设置到原来的textarea控件里
+                            this.sync();
+                        },
+                        afterChange: function () { //编辑器内容发生变化后，将编辑器的内容设置到原来的textarea控件里
+                            this.sync();
+                        },
+                        afterBlur: function () { //编辑器聚焦后，将编辑器的内容设置到原来的textarea控件里
+                            this.sync();
+                        }
+                    });
+                    $("input[name=getcp]").click(function () {
+                        //window.editor.sync();
+                        // 取得HTML内容
+
+                        var html = window.editor.html();
+                        alert(html);
+                    });
+                    $("input[name=setcp]").click(function () {
+                        // 设置HTML内容
+                        var html = window.editor.html("设置html1212");
+                        //KindEditor.html('#myeditor', '设置编辑器');
+                    });
+                    $("input[name=getcp1]").click(function () {
+                        // 取得HTML内容
+                        var html = window.editor1.html();
+                        // var html = KindEditor.html('#myeditor1');
+                        alert(html);
+                    });
+                    $("input[name=setcp1]").click(function () {
+                        // 取得HTML内容
+                        window.editor1.html("设置111");
+                        //KindEditor.html('#myeditor1', '设置编辑器1');
+                    });
+                    // prettyPrint();
+                } catch (e) {
+                    alert(e.message);
+                }
+            });
+
+            //删除编辑器
+            //$("input[name=setcp]").click(function () {
+            //    KindEditor.remove('textarea[name="' + name + '"]');
+            //});
+        });
+    </script>
+</div>
+<input type="button" name="setcp" value="设置数据" />
+<input type="button" name="getcp" value="获取数据" />
+
+<input type="button" name="setcp1" value="设置数据1" />
+<input type="button" name="getcp1" value="获取数据1" />

@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4493A002-856C-4400-B191-BDC58AF3C8ED}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoneyCarCar.Website</RootNamespace>
+    <AssemblyName>MoneyCarCar.Website</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ApplicationPropertys.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IodController.cs" />
+    <Compile Include="Controllers\PayCallbackController.cs" />
+    <Compile Include="Controllers\SMS.cs" />
+    <Compile Include="Controllers\SubmitController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Contents\css\animator.css" />
+    <Content Include="Contents\css\global.css" />
+    <Content Include="Contents\css\index.css" />
+    <Content Include="Contents\css\msgbox.css" />
+    <Content Include="Contents\css\userinfo.css" />
+    <Content Include="Contents\images\bank\abc.png" />
+    <Content Include="Contents\images\bank\bankcomm.png" />
+    <Content Include="Contents\images\bank\boc.png" />
+    <Content Include="Contents\images\bank\bos.png" />
+    <Content Include="Contents\images\bank\ccb.png" />
+    <Content Include="Contents\images\bank\ceb.png" />
+    <Content Include="Contents\images\bank\cmb.png" />
+    <Content Include="Contents\images\bank\cmbc.png" />
+    <Content Include="Contents\images\bank\ecitic.png" />
+    <Content Include="Contents\images\bank\hccb.png" />
+    <Content Include="Contents\images\bank\hsbank.png" />
+    <Content Include="Contents\images\bank\hxb.png" />
+    <Content Include="Contents\images\bank\icbc.png" />
+    <Content Include="Contents\images\bank\njcb.png" />
+    <Content Include="Contents\images\bank\pingan.png" />
+    <Content Include="Contents\images\bank\psbc.png" />
+    <Content Include="Contents\images\bank\spdb.png" />
+    <Content Include="Contents\images\banner\banner.jpg" />
+    <Content Include="Contents\images\banner\banner1.jpg" />
+    <Content Include="Contents\images\banner\banner2.jpg" />
+    <Content Include="Contents\images\banner\tz_bg.jpg" />
+    <Content Include="Contents\images\bg.png" />
+    <Content Include="Contents\images\dropdown_arrow_blue_bottom.png" />
+    <Content Include="Contents\images\Error_icon.png" />
+    <Content Include="Contents\images\gb_tip_layer.png" />
+    <Content Include="Contents\images\gb_tip_layer_ie6.png" />
+    <Content Include="Contents\images\ico.png" />
+    <Content Include="Contents\images\link_bg.jpg" />
+    <Content Include="Contents\images\loading.gif" />
+    <Content Include="Contents\images\lock.png" />
+    <Content Include="Contents\images\login_bg.png" />
+    <Content Include="Contents\images\logo.png" />
+    <Content Include="Contents\images\logo2.png" />
+    <Content Include="Contents\images\partner\01.jpg" />
+    <Content Include="Contents\images\partner\02.jpg" />
+    <Content Include="Contents\images\partner\03.jpg" />
+    <Content Include="Contents\images\partner\04.jpg" />
+    <Content Include="Contents\images\partner\05.jpg" />
+    <Content Include="Contents\images\partner\1.jpg" />
+    <Content Include="Contents\images\partner\10.jpg" />
+    <Content Include="Contents\images\partner\11.jpg" />
+    <Content Include="Contents\images\partner\12.jpg" />
+    <Content Include="Contents\images\partner\13.jpg" />
+    <Content Include="Contents\images\partner\14.jpg" />
+    <Content Include="Contents\images\partner\15.jpg" />
+    <Content Include="Contents\images\partner\16.jpg" />
+    <Content Include="Contents\images\partner\2.jpg" />
+    <Content Include="Contents\images\partner\3.jpg" />
+    <Content Include="Contents\images\partner\4.jpg" />
+    <Content Include="Contents\images\partner\5.jpg" />
+    <Content Include="Contents\images\partner\6.jpg" />
+    <Content Include="Contents\images\partner\7.jpg" />
+    <Content Include="Contents\images\partner\8.jpg" />
+    <Content Include="Contents\images\partner\9.jpg" />
+    <Content Include="Contents\images\phone.jpg" />
+    <Content Include="Contents\images\phone_min.png" />
+    <Content Include="Contents\images\products_end.png" />
+    <Content Include="Contents\images\products_no.png" />
+    <Content Include="Contents\images\qq_button.png" />
+    <Content Include="Contents\images\reg_bg.png" />
+    <Content Include="Contents\images\safe_ico.png" />
+    <Content Include="Contents\images\sfz.png" />
+    <Content Include="Contents\images\step_ico_0.png" />
+    <Content Include="Contents\images\step_ico_2.png" />
+    <Content Include="Contents\images\step_ico_5.png" />
+    <Content Include="Contents\images\step_ico_6.png" />
+    <Content Include="Contents\images\Success_icon.png" />
+    <Content Include="Contents\images\sun_ico.png" />
+    <Content Include="Contents\images\tel.png" />
+    <Content Include="Contents\images\tick_ico.png" />
+    <Content Include="Contents\images\tip_min_arrow.png" />
+    <Content Include="Contents\images\tj_ico.png" />
+    <Content Include="Contents\images\user_icon.png" />
+    <Content Include="Contents\images\user_info_step_1.png" />
+    <Content Include="Contents\images\user_menu_hover.png" />
+    <Content Include="Contents\images\user_menu_ico_1.png" />
+    <Content Include="Contents\images\user_menu_ico_2.png" />
+    <Content Include="Contents\images\user_menu_ico_3.png" />
+    <Content Include="Contents\images\user_menu_ico_4.png" />
+    <Content Include="Contents\images\user_menu_ico_5.png" />
+    <Content Include="Contents\images\user_menu_ico_6.png" />
+    <Content Include="Contents\images\user_nav_line.png" />
+    <Content Include="Contents\images\warn_ico.png" />
+    <Content Include="Contents\images\warn_min_ico.png" />
+    <Content Include="Contents\iod\002.html" />
+    <Content Include="Contents\iod\iod.html" />
+    <Content Include="Contents\js\area.js" />
+    <Content Include="Contents\js\artDialog.js" />
+    <Content Include="Contents\js\Countdown.js" />
+    <Content Include="Contents\js\iframeTools.js" />
+    <Content Include="Contents\images\image1.gif" />
+    <Content Include="Contents\images\image2.gif" />
+    <Content Include="Contents\js\jquery.form.js" />
+    <Content Include="Contents\js\jquery.lazyload.js" />
+    <Content Include="Contents\js\jquery.min.js" />
+    <Content Include="Contents\js\jquery.myPagination6.0.js" />
+    <Content Include="Contents\js\jquery.poshytip.min.js" />
+    <Content Include="Contents\js\jquery.SuperSlide.2.1.1.source.js" />
+    <Content Include="Contents\js\js_form.js" />
+    <Content Include="Contents\js\js_Pagination.js" />
+    <Content Include="Contents\js\js_Validate.js" />
+    <Content Include="Contents\js\msgbox.js" />
+    <Content Include="Contents\js\other.js" />
+    <Content Include="Contents\css\page.css" />
+    <Content Include="Contents\js\time.js" />
+    <Content Include="Contents\js\ToPay.js" />
+    <Content Include="Contents\js\user_menu.js" />
+    <Content Include="Contents\js\Validform_v5.3.2_min.js" />
+    <Content Include="Contents\js\wow.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Help.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\Investment.aspx" />
+    <Content Include="Views\Home\InvestmentDetail.aspx" />
+    <Content Include="Views\Home\Login.aspx" />
+    <Content Include="Views\Home\NoviceGuide.aspx" />
+    <Content Include="Views\Home\PhoneValidate.aspx" />
+    <Content Include="Views\Home\Reg.aspx" />
+    <Content Include="Views\Home\TransactionAct.aspx" />
+    <Content Include="Views\Iod\Iod.aspx" />
+    <Content Include="Views\Home\Safe.aspx" />
+    <Content Include="Views\PayCallback\Index.aspx" />
+    <Content Include="Views\User\ApplyBorrower.aspx" />
+    <Content Include="Views\User\ApplyRecord.aspx" />
+    <Content Include="Views\User\BuiedClaims.aspx" />
+    <Content Include="Views\User\ExpireClaims.aspx" />
+    <Content Include="Views\User\Index.aspx" />
+    <Content Include="Views\User\TotalInvestment.aspx" />
+    <Content Include="Views\User\Totalrevenue.aspx" />
+    <Content Include="Views\User\TotalrevenueDetails.aspx" />
+    <Content Include="Views\User\TransactionRecord.aspx" />
+    <Content Include="Views\User\UserBank.aspx" />
+    <Content Include="Views\User\UserInfo.aspx" />
+    <Content Include="Views\User\UserMessage.aspx" />
+    <Content Include="Views\User\UserRecord.aspx" />
+    <Content Include="Views\User\WithdrawRecord.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="YeePayConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyCarCar.Commons\MoneyCarCar.Commons.csproj">
+      <Project>{eb17e382-156f-4d15-af1b-54e2400266e4}</Project>
+      <Name>MoneyCarCar.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyCarCar.Models\MoneyCarCar.Models.csproj">
+      <Project>{91ae5fc8-957b-4bce-80bc-3cc2e3e3bb8a}</Project>
+      <Name>MoneyCarCar.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\MoneyCarCar.pubxml" />
+    <Content Include="Views\Shared\Users.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1770</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8200/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

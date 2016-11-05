@@ -1,0 +1,351 @@
+记录时间：2015/1/10 18:56:49
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 18:56:49
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:03:58
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:03:58
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:05:27
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:05:27
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:06:36
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:06:36
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:08:27
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:08:27
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:08:31
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:08:31
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:09:10
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:09:10
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:09:43
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:09:43
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:10:34
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:10:34
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:10:56
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:10:56
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:11:53
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:11:53
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:21:59
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:21:59
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:26:38
+内    容: ACCOUNT_INFO(request)service=ACCOUNT_INFO&req=<?xml version="1.0" encoding="UTF-8" standalone="yes"?><request platformNo="10040011137"><platformUserNo>10040011137</platformUserNo></request>&sign=sign:serviceUrlhttp://119.161.147.110:8088/member/bhaexter/bhaController
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+
+记录时间：2015/1/10 19:26:38
+内    容: ACCOUNT_INFO(request_return)<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response platformNo="10040011137">
+    <code>1</code>
+    <description>操作成功</description>
+    <activeStatus>ACTIVATED</activeStatus>
+    <balance>100100090000.00</balance>
+    <availableAmount>100100089500.00</availableAmount>
+    <freezeAmount>500.00</freezeAmount>
+    <cardNo>*****6789</cardNo>
+    <cardStatus>VERIFYING</cardStatus>
+    <bank>SPDB</bank>
+    <autoTender>false</autoTender>
+</response>
+
+      IP：::1
+  Request.HttpMethod:GET
+----------------------------------------------------------------------------------------------------
+
+

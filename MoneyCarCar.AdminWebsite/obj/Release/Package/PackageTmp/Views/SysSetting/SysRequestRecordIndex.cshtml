@@ -1,0 +1,214 @@
+﻿@{
+    ViewBag.Title = "SysRequestRecordIndex";
+}
+<style type="text/css">
+    .search m_left {
+        float: left;
+        padding-left: 20px;
+        width: 60px;
+        text-align: right;
+    }
+</style>
+<div class="easyui-layout" data-options="fit:true">
+    <div class="tableShow" id="mainContent" data-options="region:'center',border:0">
+        <div id="toolbar" style="padding: 5px 1px;">
+            <table>
+                <tr>
+                    <td>
+                        <div style="clear: both;">
+                            <div class="search">
+                                请求流水号:<input type="text" id="requestNo" style="width: 100px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.requestNo" />
+                                请求金额:<input type="text" id="requestMoney" style="width: 100px;" class="easyui-textbox" data-bind="value: $root.model.searchForm.requestMoney" />
+                                请求类型:<select id="requestType" class="easyui-combobox" data-optins="panelHeight:'auto'" name="requestType" style="width: 100px;">
+                                    <option value="">---请求类型---</option>
+                                    <option value="1">注册</option>
+                                    <option value="2">充值</option>
+                                    <option value="3">投资</option>
+                                    <option value="4">提现</option>
+                                    <option value="5">查询</option>
+                                    <option value="6">绑卡</option>
+                                    <option value="7">解绑</option>
+                                </select>
+                                处理状态：<select id="operStatus" class="easyui-combobox" data-optins="panelHeight:'auto'" name="operStatus" style="width: 100px;">
+                                    <option value="">---处理状态---</option>
+                                    <option value="1">处理中</option>
+                                    <option value="2">已处理</option>
+                                    <option value="3">已过期</option>
+                                </select>
+                                请求日期：<input type="text" id="startdate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.startDate" />-
+                                <input type="text" id="enddate" class="easyui-datebox" style="width: 100px;" data-bind="value: $root.model.searchForm.endDate" />
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width: 150px; text-align: center; vertical-align: middle;">
+                        <a id="btnSearch" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-search'" data-bind="click:$root.searchClick">查询</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table id="dg" class="easyui-datagrid" title="请求日志列表" data-optins="checkOnSelect:true">
+        <thead data-options="frozen:true">
+            <tr>
+                <th data-options="field:'ck',width:100,align:'center',formatter:vm.operHTML">操作</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr bgcolor="#daeef5">
+                <th data-options="field:'Id',align:'center',width:100">请求流水号</th>
+                <th data-options="field:'UserId',width:80">用户id</th>
+                <th data-options="field:'BussnessId',width:80">业务id</th>
+                <th data-options="field:'RequestMoney',width:80,align:'center'">请求金额</th>
+                <th data-options="field:'RequestType',align:'center',width:80,formatter:vm.showType">请求类型</th>
+                <th data-options="field:'RequestOperStatus',width:80,sortable:true,align:'center',formatter:vm.showStatus">处理状态</th>
+                <th data-options="field:'RequestDate',width:80,sortable:true,align:'center',formatter:dateTimeFormater">请求日期</th>
+                <th data-options="field:'RequestMark',width:80">备注</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section scripts{
+    @Styles.Render("~/easyui/css")
+    @Scripts.Render("~/bundles/easyui")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/common")
+    <script type="text/javascript">
+        var vm={
+            d_grid:null,
+            d_Sdate:null,
+            d_Edate:null,
+            IsEdit:false,
+            model:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)),
+            init:function(){
+                try {
+                    //初始化控件和数据
+                    this.d_Sdate= $("#startdate");
+                    this.d_Edate= $("#enddate");
+                    this.d_grid= $('#dg');
+                    this.d_grid.datagrid({
+                        url:this.model.urls.search,
+                        singleSelect: true,
+                        autoRowHeight: true,
+                        rownumbers: true,
+                        remoteSort:true,//--非本地排序
+                        pagination: true,
+                        pageSize: 10,
+                        toolbar: '#mainContent',
+                        nowrap: false,
+                        fit: true,
+                        queryParams: ko.toJS(this.model.searchForm)
+                    });
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            searchClick: function () {
+                try {
+                    var sdate=this.d_Sdate.datebox("getValue");
+                    var edate=this.d_Edate.datebox("getValue");
+                    var requestNo=$("#requestNo").textbox("getValue");
+                    var requestMoney=$("#requestMoney").textbox("getValue");
+                    var operStatus=$("#operStatus").combobox("getValue");
+                    var requestType=$("#requestType").combobox("getValue");
+
+                    this.model.searchForm.requestNo=requestNo;
+                    this.model.searchForm.requestMoney=requestMoney;
+                    this.model.searchForm.requestType=requestType;
+                    this.model.searchForm.operStatus=operStatus;
+                    this.model.searchForm.startDate=sdate;
+                    this.model.searchForm.endDate=edate;
+                    vm.d_grid.datagrid('load', ko.toJS(this.model.searchForm));
+                } catch (e) {
+                    alert(e.message);
+                }
+            },
+            showType:function(val,row,index)
+            {
+                if(val=="1")
+                {
+                    val='注册';
+                }else if(val=="2")
+                {
+                    val='充值';
+                }else if(val=="3")
+                {
+                    val='投资';
+                }else if(val=="4")
+                {
+                    val='提现';
+                }
+                else if(val=="5")
+                {
+                    val='查询';
+                }
+                else if(val=="6")
+                {
+                    val='绑卡';
+                }
+                else if(val=="7")
+                {
+                    val='解绑';
+                }else if(val=="8")
+                {
+                    val='结息';
+                }
+                return val;
+            },
+            showStatus:function(val,row,index)
+            {
+                if(val=="1")
+                {
+                    val='处理中';
+                }else if(val=="2")
+                {
+                    val='已处理';
+                }else if(val=="3")
+                {
+                    val='已过期';
+                }
+                return val;
+            },
+            operHTML:function(val,row,index)
+            {
+                var status=row.RequestOperStatus;
+                var rqType=row.RequestType;
+                var html='';
+                if(status==1)
+                {
+                    html='<a href="javascript:vm.HandSync('+index+');" >同步</a>';
+                }
+                return html;
+            },
+            HandSync:function(index)
+            {
+                try {
+                    vm.d_grid.datagrid('selectRow',index);
+                    var row=vm.d_grid.datagrid('getSelected',index);
+                    //alert(JSON.stringify(row));
+                    //return;
+                    if(row!=null){
+                        window.parent.showMask();
+                        $.post(this.model.urls.hand,row,
+                        function(d)
+                        {
+                            try {
+                                var  data=JSON.parse(d);
+                                vm.d_grid.datagrid('load', ko.toJS(vm.model.searchForm));
+                                var message=data.message;
+                                //隐藏遮罩
+                                window.parent.hideMask();
+                                window.parent.msgShow("提示",message ,"info");
+                            } catch (e) {
+                                alert(e.message);
+                            }
+                        });
+                    }
+                } catch (e) {
+                    alert(e.message);
+                }
+            }
+        };
+        vm.init();
+        ko.applyBindings(vm);
+    </script>
+}

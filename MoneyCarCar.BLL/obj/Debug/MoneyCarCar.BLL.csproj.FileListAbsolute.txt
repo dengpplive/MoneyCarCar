@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\AutoMapper.Net4.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.BLL.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.BLL.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.Commons.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.DAL.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.Models.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\AutoMapper.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.Commons.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.DAL.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\MoneyCarCar.Models.pdb
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\bin\Debug\AutoMapper.xml
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\obj\Debug\MoneyCarCar.BLL.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\obj\Debug\MoneyCarCar.BLL.dll
+C:\Users\user\Desktop\MoneyCarCar\MoneyCarCar.BLL\obj\Debug\MoneyCarCar.BLL.pdb

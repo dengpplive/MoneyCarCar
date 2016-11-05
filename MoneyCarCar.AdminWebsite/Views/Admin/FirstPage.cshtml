@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "FirstPage";
+}
+<div title="首页">
+    <div title="账户金额" style="display:none;">
+        @*class="easyui-panel"*@
+        <div class="main">
+            <table class="table" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="15%" class="title_td">账户余额:</td>
+                    <td width="10%"><span id="s_balance">0.00</span></td>
+                    <td width="15%" class="title_td">可用余额:</td>
+                    <td width="10%"><span id="s_availableAmount">0.00</span></td>
+                    <td width="15%" class="title_td">冻结金额:</td>
+                    <td width="10%"><span id="s_freezeAmount">0.00</span></td>
+                    <td style="text-align:center;">
+                        <b><a id="btnQueryAccount" class="easyui-linkbutton" style="width:100px;" data-options="iconCls:'icon-search'">查询</a></b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br />
+    <div class="easyui-panel" title="数据统计" style="overflow:hidden;">
+        <div class="main">
+            <table class="table" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="15%" class="title_td">用户总数:</td>
+                    <td width="10%"><span id="s_UserCount">0</span></td>
+                    <td width="15%" class="title_td">已投资用户总数:</td>
+                    <td width="10%"><span id="tzCount">0</span></td>
+
+                    <td width="15%" class="title_td">已发债权总数:</td>
+                    <td width="10%"><span id="pbCount">0</span></td>
+                    <td width="15%" class="title_td"></td>
+                    <td></td>
+                    @*<td width="15%" class="title_td">平台资金余额:</td>
+                        <td width="10%"><span id="ptMoneyCount">￥0.00</span></td>*@
+                </tr>
+                <tr>
+                    <td class="title_td">已满标债权总数:</td>
+                    <td><span id="s_OverFull">0</span></td>
+                    <td class="title_td">未满标债权总数:</td>
+                    <td><span id="s_Available">0</span></td>
+                    <td class="title_td">已投资总金额:</td>
+                    <td><span id="tzMoney">￥0.00</span></td>
+                    <td class="title_td">已产生利息总金额:</td>
+                    <td><span id="lxMoney" class="green">￥0.00</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+@*金额格式化库*@
+<script src="~/Scripts/easyui/plugins/accounting.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnQueryAccount").click(function () {
+            query();
+        });
+        var options = {
+            symbol: "￥",
+            decimal: ".",
+            thousand: ",",
+            precision: 2,
+            format: "%s%v"
+        };
+        function query() {
+            showMask();
+            var url = '@Url.Action("GetPlatformAcountQuery", "SysSetting")';
+            $.get(url, function (data) {
+                try {
+                    data = JSON.parse(data);
+                    var res = data.data;
+
+                    //msgShow("提示", JSON.stringify(data), "info");
+                    var balance = accounting.formatMoney(res.balance, options);
+                    var availableAmount = accounting.formatMoney(res.availableAmount, options);
+                    var freezeAmount = accounting.formatMoney(res.freezeAmount, options);
+
+                    $("#s_balance").html('<b style="color:red">' + balance + '</b>');
+                    //平台资金余额
+                    //$("#ptMoneyCount").html(balance);
+                    $("#s_availableAmount").html('<b style="color:red">' + availableAmount + '</b>');
+                    $("#s_freezeAmount").html('<b style="color:red">' + freezeAmount + '</b>');
+                    if (data.status != 1) {
+                        msgShow("提示", data.message, "info");
+                    }
+                } catch (e) {
+                    //alert(data.message);
+                    msgShow("提示", data.message, "info");
+                    $("#s_balance").html('<b style="color:red">￥0</b>');
+                    $("#s_availableAmount").html('<b style="color:red">￥0</b>');
+                    $("#s_freezeAmount").html('<b style="color:red">￥0</b>');
+                } finally {
+                    //隐藏遮罩
+                    hideMask();
+                }
+            });
+        }
+        var url = '@Url.Action("ShowStatistiIndex","Admin")';
+        $.get(url, function (data) {
+            try {
+                //设置显示数据
+                if (typeof data == "string") {
+                    data = JSON.parse(data);
+                }
+                data = data.data;
+                //msgShow("提示", JSON.stringify(data), "info");
+
+                //显示统计数据
+                //用户总数
+                $("#s_UserCount").html(data.UserCount);
+                //已投资用户总数
+                $("#tzCount").html(data.InvestUserCount);
+
+                //已发债权总数
+                $("#pbCount").html(data.PubClaimsCount);
+                //已满标债权总数
+                $("#s_OverFull").html(data.OverFullClaimsCount);
+                //未满标债权总数
+                $("#s_Available").html(data.AvailableClaimsCount);
+                //已投资总金额
+                $("#tzMoney").html("￥" + data.TotalInvestMoney);
+                //已产生利息总金额
+                $("#lxMoney").html('￥' + data.TotalInterestMoney);
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+        //query();
+    });
+</script>

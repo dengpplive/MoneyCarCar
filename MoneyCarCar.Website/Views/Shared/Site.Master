@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server">财富车车!全球首创IOD投资模式，真正安全理性高收益！</asp:ContentPlaceHolder></title>
+    <meta name="keywords" content="财富车车,财富,你好,网络理财，互联网金融，个人理财，网络借贷,网络借贷平台,网上借贷,P2P网络借贷,赚钱,网络赚钱，网络创业，本金保障,高收益,投资,借贷,理财,个人借贷,民间借贷,P2P借贷,仓单质押,货物抵押,创业,零成本,销售,渠道，网络兼职，副业，第二职业，闲置资金使用，金融信息服务 " />
+	<meta name="description" content="财富车车是全网最有安全保障，投资者获益最大的投资理财平台，兼顾投资理财和零成本创业等先进互联网金融理念，帮助企业商家实现融资需求！" />
+    <asp:ContentPlaceHolder ID="SEOContent" runat="server" />
+	<link rel="stylesheet" type="text/css" href="/Contents/css/page.css" />
+	<link rel="stylesheet" type="text/css" href="/Contents/css/msgbox.css" />
+    <asp:ContentPlaceHolder ID="StyleContent" runat="server">
+    <link rel="stylesheet" type="text/css" href="/Contents/css/global.css" />
+	<link rel="stylesheet" type="text/css" href="/Contents/css/index.css" />
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="/Contents/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Contents/js/ToPay.js"></script>
+    <script type="text/javascript" src="/Contents/js/jquery.myPagination6.0.js"></script>
+    <script type="text/javascript" src="/Contents/js/msgbox.js"></script>
+    <!-- 弹窗组件-->
+    <script src="http://www.hellomoney.com/public/js/artDialog.js?skin=opera" type="text/javascript"></script>	
+    <!-- 特效库 重要-->
+	<script type="text/javascript" src="/Contents/js/jquery.SuperSlide.2.1.1.source.js"></script>
+    <script type="text/javascript">
+        function LoginOut() {
+            if (confirm("确认退出？")) { }
+            $.post("/submit/logout", {}, function (result) {
+                location.href = "/";
+            });
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="ScriptionContent" runat="server" />
+</head>
+<body>
+    <!--header start-->
+	<div class="header">    	
+        <div class="header_bg">
+            <div class="header_tips">
+            	<span class="fl">客服热线： 400-888-8888</span>
+                <%if (null == Session["UserInfo"]){%>
+                <span class="fr"><a href="/home/login" class="Reg">亲，请登录</a>&nbsp;&nbsp;<a href="/home/reg">免费注册</a></span>
+                <%
+                    }else{
+                        SystemUsers userInfo = (SystemUsers)Session["UserInfo"];  
+                %>
+                <ul class="user_nav fr hover">
+					<li><a href="#"><span class="messages_ico"></span>信息<span class="messages_num">0</span></a></li>			
+					<li class="user_nav_link">
+						<a href="/User/Index" class="user_nav_last">我的账户<b class="dropdown_ico dropdown_ico_blue"></b></a>
+						<!--user 下拉菜单-->
+						<div class="user_dropdown" style="display: none;">
+							<a class="text" href="###">用户名:<%=userInfo.UserName%></a>
+							<div class="clear"></div>
+                            <a href="###" class="fl w">用户设置</a>
+							<a href="###" class="fr w">充值</a>
+							<a href="###" class="balance_button">余额:<%=userInfo.Balance.ToMoney()%>元</a>
+							<div class="border_line"></div> 
+							<a href="###" class="fl w urder_dropdown_boder">已投产品</a>
+							<a href="#" onclick="return LoginOut()" class="fr w">退出</a>
+						</div>
+					</li>
+				</ul>
+                <%}%>
+            </div>
+        </div>
+        <div class="header_top wrap_1200_content">
+            <a href="/" class="logo"><img src="/Contents/images/logo.png" alt="" /></a>
+            <ul class="nav fr hover">
+                <li class="nav_link <%= (ViewBag.OnIndex == 1)?"on":""%>"><a href="/" title="首页">首页</a></li>
+				<li class="nav_link <%= (ViewBag.OnIndex == 2)?"on":""%>"><a href="/home/investment" title="投资">投资</a></li>
+				<li class="nav_link <%= (ViewBag.OnIndex == 3)?"on":""%>"><a href="/home/about" title="关于我们">关于我们</a></li>
+				<li class="nav_link <%= (ViewBag.OnIndex == 4)?"on":""%>"><a href="/home/noviceguide" title="新手指引">新手指引</a></li>
+				<li class="nav_link <%= (ViewBag.OnIndex == 5)?"on":""%>"><a href="/home/help" title="帮助中心">帮助中心</a></li>
+			</ul>
+        </div>	
+	</div>
+	<!--header end-->
+    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        //user 菜单下拉
+        jQuery(".user_nav").slide({ type: "menu", titCell: ".user_nav_link", targetCell: ".user_dropdown", delayTime: 200, triggerTime: 100, defaultPlay: false, returnDefault: true });
+
+        $(document).ready(function () {
+            var a = $(".index_xh li");
+            a.bind("mouseover", function () {
+                a.removeClass("FlipInY FlipInY_shadow");
+                $(this).addClass("FlipInY FlipInY_shadow");
+            });
+
+            var a = $(".index_step li");
+            a.bind("mouseover", function () {
+                $(".index_step li img").removeClass("FlipInY FlipInY_shadow");
+                $(this).find('img').addClass("FlipInY FlipInY_shadow");
+            });
+        });
+    </script>
+    <!--footer start-->
+	<div class="copyright_wrap">
+		<div class="wrap_1200_content">
+			© 2010-2014 财富车车 . All Rights Reserved. <a target="_blank" href="###">蜀ICP备13029147号-1 </a>	
+		</div>
+	</div>
+	<!--footer end-->
+</body>
+</html>

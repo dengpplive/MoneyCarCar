@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<style type="text/css">
+    body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font: 12px "微软雅黑","Arial Narrow",HELVETICA;
+        background: #323c45;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .main {
+        width: 500px;
+        height: 400px;
+        margin: 7% auto;
+        background: #fff;
+        border-radius: 5px;
+        border-top: 10px solid #3598db;
+    }
+
+    .title {
+        width: 80%;
+        margin: 20px auto;
+        color: #575d61;
+        font-weight: normal;
+        font-size: 31px;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 20px;
+    }
+
+    .a_login_list {
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .a_login_list li {
+            list-style: none;
+            line-height: 40px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+            .a_login_list li span {
+                display: inline-block;
+                width: 60px;
+                text-align: left;
+                font-size: 14px;
+                color: #9aa3a9;
+            }
+
+    .l_input {
+        width: 320px;
+        border: 2px solid #d0d5dc;
+        border-radius: 3px;
+        font-size: 20px;
+        padding: 10px 0 10px 10px;
+    }
+
+    .yzm_input {
+        width: 190px;
+        border: 2px solid #d0d5dc;
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 10px 0 10px 10px;
+    }
+
+    .yzm {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        display: block;
+        width: 120px;
+        background: #ddd;
+        height: 40px;
+        text-align: center;
+    }
+
+    .shuaxin {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        text-decoration: none;
+    }
+
+    .admin_btn {
+        width: 100%;
+        background: #37a8ea;
+        border-radius: 3px;
+        font-size: 18px;
+        padding: 10px 0;
+        border-style: none;
+        color: #fff;
+        margin-top: 15px;
+    }
+
+        .admin_btn:hover {
+            background: #1a86c5;
+        }
+</style>
+<div class="main" id="logindiv">
+    <h4 class="title">Money carcar 后台管理系统</h4>
+    <form id="loginform" action='@Url.Action("Login", "Home")' method="post">
+        <ul class="a_login_list">
+            <li><span>账&nbsp;&nbsp;&nbsp;号：</span><input type="text" value="" class="easyui-validatebox l_input" name="account" data-options="required:true" /></li>
+            <li><span>密&nbsp;&nbsp;&nbsp;码：</span><input value="" class="l_input easyui-validatebox" type="password" name="pwd" validtype="length[4,15]" data-options="required:true" /></li>
+            <li>
+                <span>验证码：</span><input type="text" value="" class="easyui-validatebox yzm_input"  maxlength="5" name="vcode" />
+                <img id="vcode" class="yzm" style="cursor: pointer;" src="@Url.Action("GetCode", "Home")" alt="获取验证码" />
+            </li>
+            <li><input type="button" value="登 录" class="admin_btn" id="btnLogin" /></li>
+        </ul>
+    </form>
+</div>

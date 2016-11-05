@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\ApiTest.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\App.g.cs
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\ApiTest_MarkupCompile.cache
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\ApiTest.g.resources
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\ApiTest.Properties.Resources.resources
+C:\Users\user\Desktop\MoneyCarCar\ApiTest\obj\Debug\ApiTest.csproj.GenerateResource.Cache

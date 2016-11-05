@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91AE5FC8-957B-4BCE-80BC-3CC2E3E3BB8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoneyCarCar.Models</RootNamespace>
+    <AssemblyName>MoneyCarCar.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="IconModel.cs" />
+    <Compile Include="ModelDto\ResParam\ApplayClaimsDto.cs" />
+    <Compile Include="ModelDto\ResParam\BaseResultDto.cs" />
+    <Compile Include="ModelDto\ResParam\ClaimsDetailsDto.cs" />
+    <Compile Include="ModelDto\ResParam\StatisticalDto.cs" />
+    <Compile Include="ModelDto\RQParam\GiveVirtualMoneyDto.cs" />
+    <Compile Include="ModelDto\RQParam\RQAduitApplay.cs" />
+    <Compile Include="ModelDto\RQParam\RQApplyData.cs" />
+    <Compile Include="ModelDto\RQParam\RQHandExecDto.cs" />
+    <Compile Include="ModelDto\RQParam\RQIDCardAuthenticate.cs" />
+    <Compile Include="ModelDto\RQParam\RQIdModel.cs" />
+    <Compile Include="ModelDto\RQParam\RQPagerDto.cs" />
+    <Compile Include="ModelByCount.cs" />
+    <Compile Include="ModelDto\RQParam\RQProcParam.cs" />
+    <Compile Include="ModelDto\RQParam\RQPwdDto.cs" />
+    <Compile Include="ModelDto\RQParam\RQSalesmanDto.cs" />
+    <Compile Include="ModelDto\RQParam\RQSubmitOrder.cs" />
+    <Compile Include="ModelDto\RQParam\RQUpdate.cs" />
+    <Compile Include="ModelDto\RQParam\RQUserListDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propertys\UserLogin.cs" />
+    <Compile Include="Propertys\UserReg.cs" />
+    <Compile Include="SMS\ResponseInfo.cs" />
+    <Compile Include="SMS\SendInfo.cs" />
+    <Compile Include="Statisticals\Parameter\Earnings.cs" />
+    <Compile Include="Statisticals\Parameter\TransactionRecord.cs" />
+    <Compile Include="Statisticals\Return\Earnings.cs" />
+    <Compile Include="Statisticals\Return\TransactionRecord.cs" />
+    <Compile Include="SystemBorrowerApply.cs" />
+    <Compile Include="SystemBounty.cs" />
+    <Compile Include="SystemClaims.cs" />
+    <Compile Include="SystemClaimsDetails.cs" />
+    <Compile Include="SystemDictionary.cs" />
+    <Compile Include="SystemFeedback.cs" />
+    <Compile Include="SystemHelp.cs" />
+    <Compile Include="SystemInterestSettlement.cs" />
+    <Compile Include="SystemLog.cs" />
+    <Compile Include="SystemMoenyDetail.cs" />
+    <Compile Include="SystemNews.cs" />
+    <Compile Include="SystemNotice.cs" />
+    <Compile Include="SystemRequestRecord.cs" />
+    <Compile Include="SystemSmsRecord.cs" />
+    <Compile Include="SystemSmsTemplate.cs" />
+    <Compile Include="SystemUsers.cs" />
+    <Compile Include="SystemBankCard.cs" />
+    <Compile Include="Propertys\PhoneOrNameCheck.cs" />
+    <Compile Include="SystemVirtualMoney.cs" />
+    <Compile Include="YeePay\BaseNotify.cs" />
+    <Compile Include="YeePay\BaseRequest.cs" />
+    <Compile Include="YeePay\BaseResponse.cs" />
+    <Compile Include="YeePay\CallbackUrl.cs" />
+    <Compile Include="YeePay\Enum\EnumYeePay.cs" />
+    <Compile Include="YeePay\notify.cs" />
+    <Compile Include="YeePay\NotifyModel\toBindBankCard\notify.cs" />
+    <Compile Include="YeePay\NotifyModel\toWithdraw\notify.cs" />
+    <Compile Include="YeePay\PostBaseYeePayPar.cs" />
+    <Compile Include="YeePay\RequestModel\Account_Info.cs" />
+    <Compile Include="YeePay\RequestModel\Auto_Transaction.cs" />
+    <Compile Include="YeePay\RequestModel\Complete_Transaction.cs" />
+    <Compile Include="YeePay\RequestModel\Direct_Transaction.cs" />
+    <Compile Include="YeePay\RequestModel\Freeze.cs" />
+    <Compile Include="YeePay\RequestModel\Query.cs" />
+    <Compile Include="YeePay\RequestModel\Reconciliation.cs" />
+    <Compile Include="YeePay\RequestModel\ToAuthorizeAutoRepayment.cs" />
+    <Compile Include="YeePay\RequestModel\ToAuthorizeAutoTransfer.cs" />
+    <Compile Include="YeePay\RequestModel\ToBindBankCard.cs" />
+    <Compile Include="YeePay\RequestModel\ToCpTransaction.cs" />
+    <Compile Include="YeePay\RequestModel\ToCpTransactionDetail.cs" />
+    <Compile Include="YeePay\RequestModel\ToCpTransaction_CREDIT_ASSIGNMENT.cs" />
+    <Compile Include="YeePay\RequestModel\ToCpTransaction_REPAYMENT.cs" />
+    <Compile Include="YeePay\RequestModel\ToCpTransaction_TENDER.cs" />
+    <Compile Include="YeePay\RequestModel\ToCpTransaction_TRANSFER.cs" />
+    <Compile Include="YeePay\RequestModel\ToEnterpriseRegister.cs" />
+    <Compile Include="YeePay\RequestModel\ToRecharge.cs" />
+    <Compile Include="YeePay\RequestModel\ToRegister.cs" />
+    <Compile Include="YeePay\RequestModel\ToUnbindBankCard.cs" />
+    <Compile Include="YeePay\RequestModel\ToWithdraw.cs" />
+    <Compile Include="YeePay\RequestModel\UnFreeze.cs" />
+    <Compile Include="YeePay\response.cs" />
+    <Compile Include="YeePay\Response\ACCOUNT_INFO\response.cs" />
+    <Compile Include="YeePay\Response\AUTO_TRANSACTION\response.cs" />
+    <Compile Include="YeePay\Response\COMPLETE_TRANSACTION\response.cs" />
+    <Compile Include="YeePay\Response\DIRECT_TRANSACTION\response.cs" />
+    <Compile Include="YeePay\Response\FREEZE\response.cs" />
+    <Compile Include="YeePay\Response\QUERY\CP_TRANSACTION\response.cs" />
+    <Compile Include="YeePay\Response\QUERY\RECHARGE_RECORD\response.cs" />
+    <Compile Include="YeePay\Response\QUERY\response.cs" />
+    <Compile Include="YeePay\Response\QUERY\WITHDRAW_RECORD\response.cs" />
+    <Compile Include="YeePay\Response\RECONCILIATION\Record.cs" />
+    <Compile Include="YeePay\Response\RECONCILIATION\response.cs" />
+    <Compile Include="YeePay\Response\UNFREEZE\response.cs" />
+    <Compile Include="YeePay\YeePayCallBack.cs" />
+    <Compile Include="YeePay\YeePayConfig.cs" />
+    <Compile Include="YeePay\YeePayNotify.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyCarCar.Commons\MoneyCarCar.Commons.csproj">
+      <Project>{eb17e382-156f-4d15-af1b-54e2400266e4}</Project>
+      <Name>MoneyCarCar.Commons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
